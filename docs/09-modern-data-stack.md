@@ -383,3 +383,8 @@ FULL OUTER JOIN store AS s
 [^metric-time]: MetricFlow は、各セマンティックモデルの既定の時間軸（agg_time_dimension）を metric_time という共通の名前に束ね、問い合わせの時間の切り口として使う。ファクトごとにどの日付で数えるかという決定が、問い合わせの側から宣言の側へ移る。
 
 [^sl-query]: dbt Semantic Layer の CLI では dbt sl query --metrics total_revenue --group-by metric_time__month,book__title のような形になる。BI ツールからは JDBC などの API で同じ問い合わせを発行する。
+
+## 演習と音声
+
+- [第9章 演習問題](exercises/09-modern-data-stack.md)：四択で章の理解を確認できる。
+- [読み上げ音声（mp3）](audio/09-modern-data-stack.mp3)：聴いて復習できる（[原稿](audio-scripts/09-modern-data-stack.md)）。

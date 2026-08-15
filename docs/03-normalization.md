@@ -301,3 +301,8 @@ HAVING COUNT(DISTINCT title) > 1
 [^kent-slogan]: この標語は、Kent の 1983 年の解説論文（参考文献に挙げる）にある「非キー属性は、キーについての、キー全体についての、キー以外の何ものでもない事実を述べなければならない」という要約の言い換えとして流布している。
 
 [^bcnf]: 名称は Raymond F. Boyce と E. F. Codd による 1974 年の定式化にちなむ。第3正規形（1971 年）の定義に残った穴を塞ぐ再定義であり、系列の順序としては第3正規形と第4正規形の間に位置づけられる。
+
+## 演習と音声
+
+- [第3章 演習問題](exercises/03-normalization.md)：四択で章の理解を確認できる。
+- [読み上げ音声（mp3）](audio/03-normalization.mp3)：聴いて復習できる（[原稿](audio-scripts/03-normalization.md)）。

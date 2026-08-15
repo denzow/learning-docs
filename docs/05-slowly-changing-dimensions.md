@@ -354,3 +354,8 @@ dim_customers を注文以外のプロセス（出荷や問い合わせ対応な
 [^snapshot]: snapshot には、比較する列を指定する check strategy のほかに、ソースの更新時刻列を使う timestamp strategy がある。ソースに信頼できる updated_at 列があるなら、全列を比較せずに済む timestamp の方が負荷が小さい。本文は、ソースの列に頼らず動く check で示した。
 
 [^surrogate-key]: Kimball の伝統的な流儀は意味を持たない整数の連番だが、採番の状態を持たず、どの環境でも同じ計算で同じキーを再現できるハッシュ方式が、分散処理と相性がよく dbt では標準的である。generate_surrogate_key は指定した列の値を連結して MD5 ハッシュを取るマクロである。
+
+## 演習と音声
+
+- [第5章 演習問題](exercises/05-slowly-changing-dimensions.md)：四択で章の理解を確認できる。
+- [読み上げ音声（mp3）](audio/05-slowly-changing-dimensions.mp3)：聴いて復習できる（[原稿](audio-scripts/05-slowly-changing-dimensions.md)）。

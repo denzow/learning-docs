@@ -326,3 +326,8 @@ obt_order_items には、その列を写す一行を足して再構築する。
 [^allocation]: 全額計上のまま著者別の合計を足し合わせると、共著書の分が重複して総売上を超える。均等に按分するなら amount を ARRAY_LENGTH(authors) で割ればよい。この係数は、第4章の脚注で触れたブリッジテーブルの按分係数（weighting factor）に相当する。
 
 [^incremental]: 実務では、日付パーティションを利用した増分構築（incremental モデル）で再構築の範囲を絞る。ただし Type 1 属性の変更は過去の行にも及ぶため増分では反映できず、定期的な全再構築と組み合わせて運用することが多い。
+
+## 演習と音声
+
+- [第8章 演習問題](exercises/08-one-big-table.md)：四択で章の理解を確認できる。
+- [読み上げ音声（mp3）](audio/08-one-big-table.mp3)：聴いて復習できる（[原稿](audio-scripts/08-one-big-table.md)）。

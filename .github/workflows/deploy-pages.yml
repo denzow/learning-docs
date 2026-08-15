@@ -46,6 +46,7 @@ jobs:
         working-directory: develop
         env:
           SITE_URL: https://denzow.github.io/study-for-data-modeling/develop/
+          SITE_NAME: データモデリングの学習ドキュメント（develop プレビュー）
       - uses: actions/configure-pages@v5
         with:
           enablement: true

@@ -335,3 +335,8 @@ dim_customers は stg_customers の写しだから、顧客が氏名やメール
 [^string-agg]: STRING_AGG は BigQuery と PostgreSQL の関数で、Snowflake では LISTAGG ... WITHIN GROUP が相当する。
 
 [^bridge]: 多対多のディメンションとファクトの間に、対応 1 組を 1 行とする中間テーブルを挟み、必要なら按分の係数（weighting factor）を持たせて金額を著者に配分する技法。結合も解釈も複雑になるため、その問いが実際に届くまで導入しないのが普通の判断である。
+
+## 演習と音声
+
+- [第4章 演習問題](exercises/04-dimensional-modeling.md)：四択で章の理解を確認できる。
+- [読み上げ音声（mp3）](audio/04-dimensional-modeling.mp3)：聴いて復習できる（[原稿](audio-scripts/04-dimensional-modeling.md)）。
