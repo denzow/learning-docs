@@ -9,8 +9,11 @@
 ## Web サイト
 
 全文を <https://denzow.github.io/study-for-data-modeling/> で公開している。
-MkDocs（Material テーマ）でビルドし、develop への push を契機に GitHub Actions で
-GitHub Pages へ自動デプロイされる。
+公開版は main の内容で、develop の内容は
+<https://denzow.github.io/study-for-data-modeling/develop/> でプレビューできる。
+MkDocs（Material テーマ）でビルドし、main または develop への push を契機に
+GitHub Actions で両ブランチをビルドして GitHub Pages へ自動デプロイされる。
+公開版の更新は develop から main へのマージで行う。
 演習問題のページでは、ブラウザ上で選択肢を選ぶと正誤と解説がその場で表示される。
 ローカルでは `pip install -r requirements.txt` のうえ `mkdocs serve` でプレビューできる。
 

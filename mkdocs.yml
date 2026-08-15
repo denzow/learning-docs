@@ -1,6 +1,6 @@
 site_name: データモデリングの学習ドキュメント
 site_description: データエンジニアの視点でデータモデリングを学ぶためのドキュメント群
-site_url: https://denzow.github.io/study-for-data-modeling/
+site_url: !ENV [SITE_URL, "https://denzow.github.io/study-for-data-modeling/"]
 repo_url: https://github.com/denzow/study-for-data-modeling
 repo_name: denzow/study-for-data-modeling
 

@@ -3,6 +3,7 @@ name: deploy-pages
 on:
   push:
     branches:
+      - main
       - develop
   workflow_dispatch:
 
@@ -15,16 +16,36 @@ concurrency:
   group: pages
   cancel-in-progress: true
 
+# GitHub Pages は 1 リポジトリ 1 サイトで、deploy-pages はサイト全体を
+# 置き換える。片方のブランチだけをビルドすると他方が消えるため、
+# どちらのブランチへの push でも main と develop の両方をビルドして
+# 1 つのアーティファクトにまとめる。
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main
+      - uses: actions/checkout@v4
+        with:
+          ref: develop
+          path: develop
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install -r requirements.txt
-      - run: mkdocs build --strict
+      - run: pip install -r main/requirements.txt -r develop/requirements.txt
+      - name: Build main (公開版)
+        run: mkdocs build --strict --site-dir ../site
+        working-directory: main
+        env:
+          SITE_URL: https://denzow.github.io/study-for-data-modeling/
+      - name: Build develop (プレビュー)
+        run: mkdocs build --strict --site-dir ../site/develop
+        working-directory: develop
+        env:
+          SITE_URL: https://denzow.github.io/study-for-data-modeling/develop/
       - uses: actions/configure-pages@v5
         with:
           enablement: true
