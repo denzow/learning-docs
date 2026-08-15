@@ -19,3 +19,19 @@
 9. [現代のデータスタックでのモデリング](docs/09-modern-data-stack.md)
 10. [NoSQL のデータモデリング](docs/10-nosql-modeling.md)
 11. [総合演習](docs/11-capstone.md)
+
+## 演習問題
+
+第 1〜10 章には、章の理解を確認する四択の演習問題（解答と解説つき）がある。
+第 11 章は章全体が総合演習のため対象外とする。
+
+1. [第1章 演習問題](docs/exercises/01-overview.md)
+2. [第2章 演習問題](docs/exercises/02-relational-basics.md)
+3. [第3章 演習問題](docs/exercises/03-normalization.md)
+4. [第4章 演習問題](docs/exercises/04-dimensional-modeling.md)
+5. [第5章 演習問題](docs/exercises/05-slowly-changing-dimensions.md)
+6. [第6章 演習問題](docs/exercises/06-dwh-architecture.md)
+7. [第7章 演習問題](docs/exercises/07-data-vault.md)
+8. [第8章 演習問題](docs/exercises/08-one-big-table.md)
+9. [第9章 演習問題](docs/exercises/09-modern-data-stack.md)
+10. [第10章 演習問題](docs/exercises/10-nosql-modeling.md)
