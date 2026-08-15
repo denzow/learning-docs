@@ -6,6 +6,14 @@
 各章は、概念の解説、具体例（SQL や dbt モデル）、参考文献の三部構成とする。
 例は特定製品に依存させず、BigQuery や Snowflake 相当の一般的な SQL で書く。
 
+## Web サイト
+
+全文を <https://denzow.github.io/study-for-data-modeling/> で公開している。
+MkDocs（Material テーマ）でビルドし、develop への push を契機に GitHub Actions で
+GitHub Pages へ自動デプロイされる。
+演習問題のページでは、ブラウザ上で選択肢を選ぶと正誤と解説がその場で表示される。
+ローカルでは `pip install -r requirements.txt` のうえ `mkdocs serve` でプレビューできる。
+
 ## 目次
 
 1. [データモデリングの全体像](docs/01-overview.md)
