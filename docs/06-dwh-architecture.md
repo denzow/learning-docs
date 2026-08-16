@@ -405,3 +405,8 @@ dbt が ref から組み立てる依存グラフは、バスマトリクスの�
 [^dbt-structure]: 参考文献に挙げた公式ガイドを参照。intermediate 層は必須ではなく、staging から marts への変換が込み入ってきたときに導入するものと位置づけられている。
 
 [^medallion]: レイクハウス系の製品では、同型の層構成が **medallion アーキテクチャ**（bronze、silver、gold の三層）の名で呼ばれることが多い。bronze がソースの生の写し、silver が整形と統合、gold が利用者向けの層に相当する。
+
+## 演習と音声
+
+- [第6章 演習問題](exercises/06-dwh-architecture.md)：四択で章の理解を確認できる。
+- [読み上げ音声（mp3）](audio/06-dwh-architecture.mp3)：聴いて復習できる（[原稿](audio-scripts/06-dwh-architecture.md)）。
