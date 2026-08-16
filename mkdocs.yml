@@ -46,10 +46,13 @@ markdown_extensions:
 extra_css:
   - css/quiz.css
   - css/audio-progress.css
+  - css/audio-highlight.css
 
 extra_javascript:
   - js/quiz.js
   - js/audio-progress.js
+  # audio-progress.js が入れる案内やプレイヤーの高さを前提にするため、後に読み込む
+  - js/audio-highlight.js
 
 nav:
   - ホーム: index.md

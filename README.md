@@ -56,6 +56,11 @@ GitHub Actions で両ブランチをビルドして GitHub Pages へ自動デプ
 音声は [edge-tts](https://pypi.org/project/edge-tts/) の日本語音声で合成した機械音声である。
 原稿を更新したら `scripts/generate-audio.sh` で再生成できる。
 
+公開サイトの読み上げ原稿ページでは、再生中の一文がハイライトされ、画面から出るときは
+自動でスクロールする。文をクリックすると、その文の先頭から再生できる。この対応づけには
+`docs/audio/*.timing.json`（edge-tts の字幕から作った文ごとの開始時刻）を使う。
+mp3 を差し替えずにタイミングだけ作り直すときは `scripts/generate-audio.sh --timings-only` を使う。
+
 1. [第1章 音声](docs/audio/01-overview.mp3)（[原稿](docs/audio-scripts/01-overview.md)）
 2. [第2章 音声](docs/audio/02-relational-basics.mp3)（[原稿](docs/audio-scripts/02-relational-basics.md)）
 3. [第3章 音声](docs/audio/03-normalization.mp3)（[原稿](docs/audio-scripts/03-normalization.md)）
