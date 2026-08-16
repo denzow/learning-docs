@@ -1,6 +1,6 @@
 # 第10章 演習問題
 
-対象章：[第10章 NoSQL のデータモデリング](../10-nosql-modeling.md)
+対象章：[第10章 NoSQL のデータモデリング](../10-nosql-modeling.md)（[読み上げ原稿](../audio-scripts/10-nosql-modeling.md)）
 
 ## 問題
 

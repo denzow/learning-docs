@@ -1,6 +1,6 @@
 # 第7章 演習問題
 
-対象章：[第7章 Data Vault](../07-data-vault.md)
+対象章：[第7章 Data Vault](../07-data-vault.md)（[読み上げ原稿](../audio-scripts/07-data-vault.md)）
 
 ## 問題
 

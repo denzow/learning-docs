@@ -1,6 +1,6 @@
 # 第5章 演習問題
 
-対象章：[第5章 Slowly Changing Dimensions](../05-slowly-changing-dimensions.md)
+対象章：[第5章 Slowly Changing Dimensions](../05-slowly-changing-dimensions.md)（[読み上げ原稿](../audio-scripts/05-slowly-changing-dimensions.md)）
 
 ## 問題
 

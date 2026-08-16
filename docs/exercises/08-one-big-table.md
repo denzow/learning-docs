@@ -1,6 +1,6 @@
 # 第8章 演習問題
 
-対象章：[第8章 ワイドテーブルと One Big Table](../08-one-big-table.md)
+対象章：[第8章 ワイドテーブルと One Big Table](../08-one-big-table.md)（[読み上げ原稿](../audio-scripts/08-one-big-table.md)）
 
 ## 問題
 

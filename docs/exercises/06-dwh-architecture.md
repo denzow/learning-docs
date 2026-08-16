@@ -1,6 +1,6 @@
 # 第6章 演習問題
 
-対象章：[第6章 DWH アーキテクチャ](../06-dwh-architecture.md)
+対象章：[第6章 DWH アーキテクチャ](../06-dwh-architecture.md)（[読み上げ原稿](../audio-scripts/06-dwh-architecture.md)）
 
 ## 問題
 

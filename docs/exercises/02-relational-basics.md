@@ -1,6 +1,6 @@
 # 第2章 演習問題
 
-対象章：[第2章 リレーショナルモデルの基礎](../02-relational-basics.md)
+対象章：[第2章 リレーショナルモデルの基礎](../02-relational-basics.md)（[読み上げ原稿](../audio-scripts/02-relational-basics.md)）
 
 ## 問題
 
