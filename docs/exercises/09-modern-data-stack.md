@@ -1,6 +1,6 @@
 # 第9章 演習問題
 
-対象章：[第9章 現代のデータスタックでのモデリング](../09-modern-data-stack.md)
+対象章：[第9章 現代のデータスタックでのモデリング](../09-modern-data-stack.md)（[読み上げ原稿](../audio-scripts/09-modern-data-stack.md)）
 
 ## 問題
 

@@ -1,6 +1,6 @@
 # 第3章 演習問題
 
-対象章：[第3章 正規化](../03-normalization.md)
+対象章：[第3章 正規化](../03-normalization.md)（[読み上げ原稿](../audio-scripts/03-normalization.md)）
 
 ## 問題
 

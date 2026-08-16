@@ -1,6 +1,6 @@
 # 第4章 演習問題
 
-対象章：[第4章 ディメンショナルモデリング](../04-dimensional-modeling.md)
+対象章：[第4章 ディメンショナルモデリング](../04-dimensional-modeling.md)（[読み上げ原稿](../audio-scripts/04-dimensional-modeling.md)）
 
 ## 問題
 

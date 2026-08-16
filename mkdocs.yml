@@ -21,7 +21,8 @@ theme:
         icon: material/brightness-4
         name: ライトモードに切り替え
   features:
-    - navigation.tabs
+    # nav を章単位にまとめたので、種類別のタブは置かず、サイドバーの入れ子で辿る。
+    # 現在の章だけが開き、他の章は畳まれた状態で並ぶ
     - navigation.top
     - navigation.footer
     - toc.follow
@@ -46,45 +47,58 @@ markdown_extensions:
 extra_css:
   - css/quiz.css
   - css/audio-progress.css
+  - css/audio-highlight.css
 
 extra_javascript:
   - js/quiz.js
   - js/audio-progress.js
+  # audio-progress.js が入れる案内やプレイヤーの高さを前提にするため、後に読み込む
+  - js/audio-highlight.js
 
+# 章ごとに本文、演習問題、読み上げ原稿をまとめ、章の中を行き来できるようにする。
+# 各章の先頭は本文で、見出しをそのままラベルに使うためタイトルを書かない
 nav:
   - ホーム: index.md
-  - 本文:
-      - 第1章 データモデリングの全体像: 01-overview.md
-      - 第2章 リレーショナルモデルの基礎: 02-relational-basics.md
-      - 第3章 正規化: 03-normalization.md
-      - 第4章 ディメンショナルモデリング: 04-dimensional-modeling.md
-      - 第5章 Slowly Changing Dimensions: 05-slowly-changing-dimensions.md
-      - 第6章 DWH アーキテクチャ: 06-dwh-architecture.md
-      - 第7章 Data Vault: 07-data-vault.md
-      - 第8章 ワイドテーブルと One Big Table: 08-one-big-table.md
-      - 第9章 現代のデータスタックでのモデリング: 09-modern-data-stack.md
-      - 第10章 NoSQL のデータモデリング: 10-nosql-modeling.md
-      - 第11章 総合演習: 11-capstone.md
-  - 演習問題:
+  - 第1章 データモデリングの全体像:
+      - 01-overview.md
       - 第1章 演習問題: exercises/01-overview.md
-      - 第2章 演習問題: exercises/02-relational-basics.md
-      - 第3章 演習問題: exercises/03-normalization.md
-      - 第4章 演習問題: exercises/04-dimensional-modeling.md
-      - 第5章 演習問題: exercises/05-slowly-changing-dimensions.md
-      - 第6章 演習問題: exercises/06-dwh-architecture.md
-      - 第7章 演習問題: exercises/07-data-vault.md
-      - 第8章 演習問題: exercises/08-one-big-table.md
-      - 第9章 演習問題: exercises/09-modern-data-stack.md
-      - 第10章 演習問題: exercises/10-nosql-modeling.md
-  - 読み上げ原稿:
       - 第1章 読み上げ原稿: audio-scripts/01-overview.md
+  - 第2章 リレーショナルモデルの基礎:
+      - 02-relational-basics.md
+      - 第2章 演習問題: exercises/02-relational-basics.md
       - 第2章 読み上げ原稿: audio-scripts/02-relational-basics.md
+  - 第3章 正規化:
+      - 03-normalization.md
+      - 第3章 演習問題: exercises/03-normalization.md
       - 第3章 読み上げ原稿: audio-scripts/03-normalization.md
+  - 第4章 ディメンショナルモデリング:
+      - 04-dimensional-modeling.md
+      - 第4章 演習問題: exercises/04-dimensional-modeling.md
       - 第4章 読み上げ原稿: audio-scripts/04-dimensional-modeling.md
+  - 第5章 Slowly Changing Dimensions:
+      - 05-slowly-changing-dimensions.md
+      - 第5章 演習問題: exercises/05-slowly-changing-dimensions.md
       - 第5章 読み上げ原稿: audio-scripts/05-slowly-changing-dimensions.md
+  - 第6章 DWH アーキテクチャ:
+      - 06-dwh-architecture.md
+      - 第6章 演習問題: exercises/06-dwh-architecture.md
       - 第6章 読み上げ原稿: audio-scripts/06-dwh-architecture.md
+  - 第7章 Data Vault:
+      - 07-data-vault.md
+      - 第7章 演習問題: exercises/07-data-vault.md
       - 第7章 読み上げ原稿: audio-scripts/07-data-vault.md
+  - 第8章 ワイドテーブルと One Big Table:
+      - 08-one-big-table.md
+      - 第8章 演習問題: exercises/08-one-big-table.md
       - 第8章 読み上げ原稿: audio-scripts/08-one-big-table.md
+  - 第9章 現代のデータスタックでのモデリング:
+      - 09-modern-data-stack.md
+      - 第9章 演習問題: exercises/09-modern-data-stack.md
       - 第9章 読み上げ原稿: audio-scripts/09-modern-data-stack.md
+  - 第10章 NoSQL のデータモデリング:
+      - 10-nosql-modeling.md
+      - 第10章 演習問題: exercises/10-nosql-modeling.md
       - 第10章 読み上げ原稿: audio-scripts/10-nosql-modeling.md
+  - 第11章 総合演習:
+      - 11-capstone.md
       - 第11章 読み上げ原稿: audio-scripts/11-capstone.md

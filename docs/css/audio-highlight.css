@@ -1,0 +1,38 @@
+/* 再生中の一文のハイライトと、追従のオン・オフ */
+
+/* 文はクリックでその位置から再生できる。カーソルでそれを示す */
+.md-typeset .audio-cue {
+  cursor: pointer;
+}
+
+/* 行をまたぐ文でも塗り残しが出ないよう、背景は文全体に敷く。
+   ライトとダークで地の明るさが違うため、濃度を分けて指定する */
+.md-typeset .audio-cue-active {
+  background: rgba(255, 196, 0, 0.35);
+  border-radius: 0.1rem;
+  box-shadow: 0 0 0 0.1rem rgba(255, 196, 0, 0.35);
+  transition: background-color 0.15s;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .audio-cue-active {
+  background: rgba(255, 213, 79, 0.24);
+  box-shadow: 0 0 0 0.1rem rgba(255, 213, 79, 0.24);
+}
+
+/* 追従のトグル。プレイヤーと同じ行に並べ、上部に貼り付いたまま操作できるようにする */
+.audio-follow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2em;
+  margin-left: 0.6em;
+  font-size: 0.7rem;
+  color: var(--md-default-fg-color--light);
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+}
+
+.audio-follow input {
+  margin: 0;
+  cursor: pointer;
+}
