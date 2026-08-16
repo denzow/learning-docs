@@ -64,6 +64,30 @@
     return !!data.done || (data.duration > 0 && data.duration - data.time < DONE_REMAINING_SEC);
   }
 
+  // 原稿ページ：プレイヤーを画面上部に貼り付け、スクロールしても操作できるようにする。
+  // 貼り付ける位置はヘッダの高さで決まるが、Material はヘッダ高の CSS 変数を公開して
+  // いないため、実測して CSS 変数に渡す
+  function setupSticky(audio) {
+    // ビルド後の HTML では <audio> は <p> に包まれる。案内テキストも同じ <p> に入るので、
+    // <p> ごと貼り付ければ両方が一緒に動く
+    var target = audio.parentNode && audio.parentNode.tagName === "P" ? audio.parentNode : audio;
+    target.classList.add("audio-sticky");
+    // 「ページトップへ戻る」ボタン（.md-top, top: 3.2rem 固定）が貼り付けたプレイヤーと
+    // 重なるので、このページだけボタンをプレイヤーの下へ逃がす
+    document.body.classList.add("audio-sticky-page");
+
+    var header = document.querySelector(".md-header");
+    var root = document.documentElement.style;
+    var applyMetrics = function () {
+      if (header) root.setProperty("--audio-sticky-top", header.offsetHeight + "px");
+      root.setProperty("--audio-sticky-height", target.offsetHeight + "px");
+    };
+    applyMetrics();
+    window.addEventListener("resize", applyMetrics);
+    // 案内テキストの削除やコントロールの折り返しで高さが変わるため、追随させる
+    if (window.ResizeObserver) new ResizeObserver(applyMetrics).observe(target);
+  }
+
   // 原稿ページ：再生位置の保存と復元、案内表示
   function setupPlayer(audio) {
     var slug = slugFromUrl(audio.getAttribute("src") || audio.currentSrc);
@@ -77,12 +101,21 @@
       noticeText =
         "前回の続き " + formatTime(saved.time) + " から再生できます（" + percent(saved) + "% 聴取済み）";
     }
+    var notice = null;
     if (noticeText) {
-      var notice = document.createElement("span");
+      notice = document.createElement("span");
       notice.className = "audio-progress-notice";
       notice.textContent = noticeText;
       audio.parentNode.insertBefore(notice, audio.nextSibling);
     }
+    // 案内が意味を持つのは再生を始めるまでなので、始まったら消す。
+    // プレイヤーは画面上部に貼り付いたままなので、その分だけ本文の見える範囲が広がる
+    audio.addEventListener("play", function () {
+      if (notice && notice.parentNode) {
+        notice.parentNode.removeChild(notice);
+        notice = null;
+      }
+    });
 
     // 聴了した章は先頭から。聴きかけの章だけ保存位置に復元する（自動再生はしない）
     if (saved && !isDone(saved) && saved.time > 0) {
@@ -138,7 +171,10 @@
   function init() {
     if (/\/audio-scripts\//.test(window.location.pathname)) {
       var audio = document.querySelector(".md-typeset audio");
-      if (audio) setupPlayer(audio);
+      if (audio) {
+        setupSticky(audio);
+        setupPlayer(audio);
+      }
       return;
     }
     injectBadges();

@@ -1,3 +1,25 @@
+/* 読み上げ原稿は本文が数千字あり、聴きながら読むとプレイヤーが画面外へ流れて
+   シークも一時停止もできなくなる。プレイヤーをヘッダの直下に貼り付けて、
+   スクロールしても操作できるようにする。sticky なので通常フローの高さは変わらず、
+   本文の行位置はずれない */
+.audio-sticky {
+  position: sticky;
+  /* ヘッダの実測高さを JS が入れる。取れないときは Material の既定のヘッダ高 */
+  top: var(--audio-sticky-top, 2.4rem);
+  z-index: 2;
+  /* 本文の文字が背後に透けないよう、背景で塗る範囲を上下に少し広げる */
+  padding: 0.3rem 0;
+  background: var(--md-default-bg-color);
+  box-shadow: 0 0.2rem 0.3rem -0.2rem var(--md-default-fg-color--lightest);
+}
+
+/* 貼り付けたプレイヤーと「ページトップへ戻る」ボタンが重ならないよう、
+   読み上げ原稿ページではボタンをプレイヤーの下へ下げる */
+.audio-sticky-page .md-top {
+  /* Material の JS がヘッダ高から算出した top をインラインで書き込むため、!important で上書きする */
+  top: calc(var(--audio-sticky-top, 2.4rem) + var(--audio-sticky-height, 0px) + 0.4rem) !important;
+}
+
 /* 音声の再開案内と進捗バッジ。ダークモード（slate）でも見えるようテーマの色変数を使う */
 .audio-progress-notice {
   display: block;
