@@ -39,9 +39,11 @@ markdown_extensions:
 
 extra_css:
   - css/quiz.css
+  - css/audio-progress.css
 
 extra_javascript:
   - js/quiz.js
+  - js/audio-progress.js
 
 nav:
   - ホーム: index.md

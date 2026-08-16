@@ -1,0 +1,23 @@
+/* 音声の再開案内と進捗バッジ。ダークモード（slate）でも見えるようテーマの色変数を使う */
+.audio-progress-notice {
+  display: block;
+  margin: 0.4em 0 0;
+  font-size: 0.7rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.audio-progress-badge {
+  display: inline-block;
+  margin-left: 0.4em;
+  padding: 0 0.4em;
+  border-radius: 0.6rem;
+  font-size: 0.6rem;
+  font-weight: 700;
+  background: var(--md-default-fg-color--lightest);
+  color: var(--md-default-fg-color--light);
+}
+
+.audio-progress-badge.audio-progress-done {
+  background: rgba(76, 175, 80, 0.18);
+  color: var(--md-default-fg-color);
+}
