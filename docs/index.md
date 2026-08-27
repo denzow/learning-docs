@@ -7,7 +7,8 @@
 ## 目次
 
 各章の本文、演習問題、読み上げ音声を章ごとにまとめる。
-演習問題は四択で、選択肢を選ぶと正誤と解説がその場で表示される（第 11 章は章全体が総合演習のため対象外）。
+演習問題は四択で、選択肢を選ぶと正誤と解説がその場で表示される。
+第 11 章の演習問題は、全章の知識を横断的に復習する全 30 問の総合演習問題である。
 音声は聴取用の読み上げ原稿から生成した mp3 で、移動中などのハンズフリー学習に使える。
 
 | 章 | 本文 | 演習問題 | 音声 |
@@ -22,4 +23,4 @@
 | 第8章 | [ワイドテーブルと One Big Table](08-one-big-table.md) | [演習問題](exercises/08-one-big-table.md) | [mp3](audio/08-one-big-table.mp3)（[原稿](audio-scripts/08-one-big-table.md)） |
 | 第9章 | [現代のデータスタックでのモデリング](09-modern-data-stack.md) | [演習問題](exercises/09-modern-data-stack.md) | [mp3](audio/09-modern-data-stack.mp3)（[原稿](audio-scripts/09-modern-data-stack.md)） |
 | 第10章 | [NoSQL のデータモデリング](10-nosql-modeling.md) | [演習問題](exercises/10-nosql-modeling.md) | [mp3](audio/10-nosql-modeling.mp3)（[原稿](audio-scripts/10-nosql-modeling.md)） |
-| 第11章 | [総合演習](11-capstone.md) | （対象外） | [mp3](audio/11-capstone.mp3)（[原稿](audio-scripts/11-capstone.md)） |
+| 第11章 | [総合演習](11-capstone.md) | [総合演習問題](exercises/11-capstone.md) | [mp3](audio/11-capstone.mp3)（[原稿](audio-scripts/11-capstone.md)） |

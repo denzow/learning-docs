@@ -101,4 +101,5 @@ nav:
       - 第10章 読み上げ原稿: audio-scripts/10-nosql-modeling.md
   - 第11章 総合演習:
       - 11-capstone.md
+      - 総合演習問題: exercises/11-capstone.md
       - 第11章 読み上げ原稿: audio-scripts/11-capstone.md
