@@ -496,6 +496,7 @@ member_sk の割り当ては fct_checkins と同じ期間照合であり、種�
 
 [^offset]: 分母を前月末の値にずらす部分は、MetricFlow では offset_window を指定した派生指標として書く。セマンティックモデル側の宣言（entities、dimensions、measures）も第9章と同じ要領なので、本文では指標の構造だけを示した。
 
-## 音声
+## 演習と音声
 
+- [総合演習問題](exercises/11-capstone.md)：全章の知識を四択で復習できる。
 - [読み上げ音声（mp3）](audio/11-capstone.mp3)：聴いて復習できる（[原稿](audio-scripts/11-capstone.md)）。
