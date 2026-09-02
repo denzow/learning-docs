@@ -40,12 +40,12 @@ jobs:
         run: mkdocs build --strict --site-dir ../site
         working-directory: main
         env:
-          SITE_URL: https://denzow.github.io/study-for-data-modeling/
+          SITE_URL: https://denzow.github.io/learning-docs/
       - name: Build develop (プレビュー)
         run: mkdocs build --strict --site-dir ../site/develop
         working-directory: develop
         env:
-          SITE_URL: https://denzow.github.io/study-for-data-modeling/develop/
+          SITE_URL: https://denzow.github.io/learning-docs/develop/
           SITE_NAME: 学習教材集（develop プレビュー）
       - uses: actions/configure-pages@v5
         with:
