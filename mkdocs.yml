@@ -1,7 +1,7 @@
 # site_name は develop プレビューのビルドだけ SITE_NAME で差し替え、
 # どちらのサイトを開いているかをヘッダで判別できるようにする
-site_name: !ENV [SITE_NAME, "データモデリングの学習ドキュメント"]
-site_description: データエンジニアの視点でデータモデリングを学ぶためのドキュメント群
+site_name: !ENV [SITE_NAME, "学習教材集"]
+site_description: データエンジニアの視点で書いた学習教材集。本文、演習問題、読み上げ音声を教材ごとにまとめる
 site_url: !ENV [SITE_URL, "https://denzow.github.io/study-for-data-modeling/"]
 repo_url: https://github.com/denzow/study-for-data-modeling
 repo_name: denzow/study-for-data-modeling
@@ -21,8 +21,10 @@ theme:
         icon: material/brightness-4
         name: ライトモードに切り替え
   features:
-    # nav を章単位にまとめたので、種類別のタブは置かず、サイドバーの入れ子で辿る。
-    # 現在の章だけが開き、他の章は畳まれた状態で並ぶ
+    # 教材ごとにタブを分け、サイドバーにはその教材の章だけを章単位の入れ子で並べる。
+    # navigation.indexes により、教材の見出しは docs/<教材>/index.md へのリンクになる
+    - navigation.tabs
+    - navigation.indexes
     - navigation.top
     - navigation.footer
     - toc.follow
@@ -55,50 +57,50 @@ extra_javascript:
   # audio-progress.js が入れる案内やプレイヤーの高さを前提にするため、後に読み込む
   - js/audio-highlight.js
 
-# 章ごとに本文、演習問題、読み上げ原稿をまとめ、章の中を行き来できるようにする。
-# 各章の先頭は本文で、見出しをそのままラベルに使うためタイトルを書かない
+# 教材の追加とそのファイル構成は hooks/materials.py に集約する。nav には教材ごとに
+# 「ラベル: ディレクトリ名/」の 1 行だけを書き、章ごとの入れ子（本文、演習問題、
+# 読み上げ原稿）と章末の導線は hook が docs/<ディレクトリ>/ のファイルから組み立てる。
+# hooks/redirects.py は extra.redirects の旧 URL に転送ページを置く
+hooks:
+  - hooks/materials.py
+  - hooks/redirects.py
+
 nav:
   - ホーム: index.md
-  - 第1章 データモデリングの全体像:
-      - 01-overview.md
-      - 第1章 演習問題: exercises/01-overview.md
-      - 第1章 読み上げ原稿: audio-scripts/01-overview.md
-  - 第2章 リレーショナルモデルの基礎:
-      - 02-relational-basics.md
-      - 第2章 演習問題: exercises/02-relational-basics.md
-      - 第2章 読み上げ原稿: audio-scripts/02-relational-basics.md
-  - 第3章 正規化:
-      - 03-normalization.md
-      - 第3章 演習問題: exercises/03-normalization.md
-      - 第3章 読み上げ原稿: audio-scripts/03-normalization.md
-  - 第4章 ディメンショナルモデリング:
-      - 04-dimensional-modeling.md
-      - 第4章 演習問題: exercises/04-dimensional-modeling.md
-      - 第4章 読み上げ原稿: audio-scripts/04-dimensional-modeling.md
-  - 第5章 Slowly Changing Dimensions:
-      - 05-slowly-changing-dimensions.md
-      - 第5章 演習問題: exercises/05-slowly-changing-dimensions.md
-      - 第5章 読み上げ原稿: audio-scripts/05-slowly-changing-dimensions.md
-  - 第6章 DWH アーキテクチャ:
-      - 06-dwh-architecture.md
-      - 第6章 演習問題: exercises/06-dwh-architecture.md
-      - 第6章 読み上げ原稿: audio-scripts/06-dwh-architecture.md
-  - 第7章 Data Vault:
-      - 07-data-vault.md
-      - 第7章 演習問題: exercises/07-data-vault.md
-      - 第7章 読み上げ原稿: audio-scripts/07-data-vault.md
-  - 第8章 ワイドテーブルと One Big Table:
-      - 08-one-big-table.md
-      - 第8章 演習問題: exercises/08-one-big-table.md
-      - 第8章 読み上げ原稿: audio-scripts/08-one-big-table.md
-  - 第9章 現代のデータスタックでのモデリング:
-      - 09-modern-data-stack.md
-      - 第9章 演習問題: exercises/09-modern-data-stack.md
-      - 第9章 読み上げ原稿: audio-scripts/09-modern-data-stack.md
-  - 第10章 NoSQL のデータモデリング:
-      - 10-nosql-modeling.md
-      - 第10章 演習問題: exercises/10-nosql-modeling.md
-      - 第10章 読み上げ原稿: audio-scripts/10-nosql-modeling.md
-  - 第11章 総合演習:
-      - 11-capstone.md
-      - 第11章 読み上げ原稿: audio-scripts/11-capstone.md
+  - データモデリング: data-modeling/
+
+extra:
+  # 教材を docs/data-modeling/ へ移す前に公開していた URL。hooks/redirects.py が転送ページを置く
+  redirects:
+    01-overview/: data-modeling/01-overview/
+    02-relational-basics/: data-modeling/02-relational-basics/
+    03-normalization/: data-modeling/03-normalization/
+    04-dimensional-modeling/: data-modeling/04-dimensional-modeling/
+    05-slowly-changing-dimensions/: data-modeling/05-slowly-changing-dimensions/
+    06-dwh-architecture/: data-modeling/06-dwh-architecture/
+    07-data-vault/: data-modeling/07-data-vault/
+    08-one-big-table/: data-modeling/08-one-big-table/
+    09-modern-data-stack/: data-modeling/09-modern-data-stack/
+    10-nosql-modeling/: data-modeling/10-nosql-modeling/
+    11-capstone/: data-modeling/11-capstone/
+    exercises/01-overview/: data-modeling/exercises/01-overview/
+    exercises/02-relational-basics/: data-modeling/exercises/02-relational-basics/
+    exercises/03-normalization/: data-modeling/exercises/03-normalization/
+    exercises/04-dimensional-modeling/: data-modeling/exercises/04-dimensional-modeling/
+    exercises/05-slowly-changing-dimensions/: data-modeling/exercises/05-slowly-changing-dimensions/
+    exercises/06-dwh-architecture/: data-modeling/exercises/06-dwh-architecture/
+    exercises/07-data-vault/: data-modeling/exercises/07-data-vault/
+    exercises/08-one-big-table/: data-modeling/exercises/08-one-big-table/
+    exercises/09-modern-data-stack/: data-modeling/exercises/09-modern-data-stack/
+    exercises/10-nosql-modeling/: data-modeling/exercises/10-nosql-modeling/
+    audio-scripts/01-overview/: data-modeling/audio-scripts/01-overview/
+    audio-scripts/02-relational-basics/: data-modeling/audio-scripts/02-relational-basics/
+    audio-scripts/03-normalization/: data-modeling/audio-scripts/03-normalization/
+    audio-scripts/04-dimensional-modeling/: data-modeling/audio-scripts/04-dimensional-modeling/
+    audio-scripts/05-slowly-changing-dimensions/: data-modeling/audio-scripts/05-slowly-changing-dimensions/
+    audio-scripts/06-dwh-architecture/: data-modeling/audio-scripts/06-dwh-architecture/
+    audio-scripts/07-data-vault/: data-modeling/audio-scripts/07-data-vault/
+    audio-scripts/08-one-big-table/: data-modeling/audio-scripts/08-one-big-table/
+    audio-scripts/09-modern-data-stack/: data-modeling/audio-scripts/09-modern-data-stack/
+    audio-scripts/10-nosql-modeling/: data-modeling/audio-scripts/10-nosql-modeling/
+    audio-scripts/11-capstone/: data-modeling/audio-scripts/11-capstone/
