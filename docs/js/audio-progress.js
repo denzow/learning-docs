@@ -1,5 +1,5 @@
 // 音声の再生位置を localStorage に保存し、聴きかけの章を続きから再開できるようにする。
-// 読み上げ原稿ページ（docs/audio-scripts/*.md）では <audio> の再生位置を保存・復元し、
+// 読み上げ原稿ページ（docs/<教材>/audio-scripts/*.md）では <audio> の再生位置を保存・復元し、
 // プレイヤーの下に「前回の続き」の案内を出す。トップページの章一覧表では
 // mp3 リンクの隣に進捗バッジ（「68%」または「聴了」）を注入する。
 // localStorage が使えない環境では何もせず、従来どおりの表示のまま残す。
@@ -14,10 +14,20 @@
     return "audioProgress:" + slug;
   }
 
-  // mp3 の URL（相対パスでもよい）から章スラグを取り出す
+  // mp3 の URL（相対パスでもよい）から保存キーに使う「教材/章」を取り出す。
+  // 教材ごとに docs/<教材>/audio/ へ分かれているので、ファイル名だけを使うと
+  // 別の教材の同名の章（01-overview など）と進捗が混ざる。教材ディレクトリ名まで含める
   function slugFromUrl(url) {
-    var m = (url || "").match(/([^\/]+)\.mp3(?:[?#]|$)/);
-    return m ? m[1] : null;
+    var path;
+    try {
+      path = new URL(url || "", window.location.href).pathname;
+    } catch (e) {
+      return null;
+    }
+    var m = path.match(/([^\/]+)\/audio\/([^\/]+)\.mp3$/);
+    if (m) return m[1] + "/" + m[2];
+    var base = path.match(/([^\/]+)\.mp3$/);
+    return base ? base[1] : null;
   }
 
   function loadProgress(slug) {

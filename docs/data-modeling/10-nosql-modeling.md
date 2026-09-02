@@ -349,8 +349,3 @@ CROSS JOIN UNNEST(o.items) AS item
 [^variant]: 半構造化データ用の型は、BigQuery では JSON 型、Snowflake では VARIANT が相当する。本文の JSON_VALUE と JSON_QUERY_ARRAY は BigQuery の構文で、Snowflake では doc:order_id::STRING のようなパス記法が相当する。
 
 [^streams]: 例えば MongoDB の Change Streams、DynamoDB Streams、Cassandra の CDC 機能がこれに当たる。
-
-## 演習と音声
-
-- [第10章 演習問題](exercises/10-nosql-modeling.md)：四択で章の理解を確認できる。
-- [読み上げ音声（mp3）](audio/10-nosql-modeling.mp3)：聴いて復習できる（[原稿](audio-scripts/10-nosql-modeling.md)）。

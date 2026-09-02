@@ -243,8 +243,3 @@ DWH では後者しか選べない以上、テストをパイプラインに組�
 [^notation]: ER 図の記法には、関係をひし形で描く Chen の原記法のほか、カーディナリティを線の端の記号で表す IE 記法（カラスの足記法）などがある。本ドキュメント群の ER 図は、IE 記法に近い mermaid の erDiagram で描く。
 
 [^dwh-constraints]: Snowflake が強制するのは NOT NULL 制約だけで、主キー、一意性、外部キーの各制約は宣言してもメタデータとして保持されるのみである。BigQuery は主キーと外部キーを NOT ENFORCED 付きでのみ宣言できる。強制されない宣言にも、結合の最適化に使われるほか、構造を読み手に伝えるドキュメントとしての価値はある。
-
-## 演習と音声
-
-- [第2章 演習問題](exercises/02-relational-basics.md)：四択で章の理解を確認できる。
-- [読み上げ音声（mp3）](audio/02-relational-basics.mp3)：聴いて復習できる（[原稿](audio-scripts/02-relational-basics.md)）。

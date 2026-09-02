@@ -455,8 +455,3 @@ Data Vault は常に正しい設計ではなく、変化の速さに賭ける設
 [^same-as]: 会員基盤が共通でない場合（買収した事業の顧客名簿を統合する場合など）は、同一人物の突き合わせという別の難問が加わる。Data Vault では、同一とみなしたキーの対を **same-as link** と呼ぶ Link に記録し、突き合わせの判断そのものを事実として保存する。
 
 [^dependent-child]: それ自体はビジネスキーではないが、組を一意にするために要る列を**従属子キー**（dependent child key）と呼ぶ。
-
-## 演習と音声
-
-- [第7章 演習問題](exercises/07-data-vault.md)：四択で章の理解を確認できる。
-- [読み上げ音声（mp3）](audio/07-data-vault.mp3)：聴いて復習できる（[原稿](audio-scripts/07-data-vault.md)）。
