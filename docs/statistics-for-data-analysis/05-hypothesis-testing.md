@@ -164,7 +164,7 @@ SELECT
 FROM sessions AS s
 JOIN experiment_assignments AS a
     ON a.customer_id = s.customer_id
-   AND a.experiment_id = 'recommend_box_v1'
+   AND a.experiment_id = 'recommend_box_2026q3'
 WHERE s.visited_at >= a.assigned_at
 GROUP BY a.variant;
 ```
