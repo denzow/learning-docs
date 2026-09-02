@@ -21,12 +21,14 @@ mkdocs.yml の nav には、教材ごとに「ラベル: ディレクトリ名/�
 
 - index.md            教材のトップページ。navigation.indexes によりセクション見出しのリンク先になる
 - NN-<slug>.md        章の本文。NN は 2 桁の章番号で、この順に並ぶ。ラベルは本文の H1
-- exercises/NN-<slug>.md      章の演習問題（任意）。ラベルは「第N章 演習問題」
+- exercises/NN-<slug>.md      章の演習問題（任意）。ラベルはそのファイルの H1（例「第N章 演習問題」）
 - audio-scripts/NN-<slug>.md  章の読み上げ原稿（任意）。ラベルは「第N章 読み上げ原稿」
 - audio/NN-<slug>.mp3         読み上げ音声（任意）。nav には載せない
 
 章の本文は、見出しをそのままラベルに使うため、パスだけを nav に置く（MkDocs が H1 を採用する）。
 演習と原稿は同じ章番号のファイルがあるときだけ加える。
+演習のラベルにファイルの H1 を使うのは、総合演習のように章番号で呼ばない演習があるためである。
+原稿の H1 は章のタイトルに「（読み上げ原稿）」を付けた長い形なので、短い定型のラベルにする。
 
 あわせて、章の本文の末尾に演習問題と音声への導線の節（「## 演習と音声」）を、
 存在するファイルだけから組み立てて足す。本文の Markdown には書かない。
@@ -38,11 +40,6 @@ import re
 
 CHAPTER_FILE = re.compile(r"^(\d{2})-[^/]+\.md$")
 
-# 章ごとの付属ページ。ディレクトリ名と nav ラベルの組
-COMPANIONS = (
-    ("exercises", "演習問題"),
-    ("audio-scripts", "読み上げ原稿"),
-)
 
 
 def on_config(config):
@@ -75,9 +72,11 @@ def material_nav(root, material):
             continue
         number = int(m.group(1))
         section = [f"{material}/{name}"]
-        for subdir, label in COMPANIONS:
-            if os.path.exists(os.path.join(root, subdir, name)):
-                section.append({f"第{number}章 {label}": f"{material}/{subdir}/{name}"})
+        exercise = os.path.join(root, "exercises", name)
+        if os.path.exists(exercise):
+            section.append({heading(exercise, f"第{number}章 演習問題"): f"{material}/exercises/{name}"})
+        if os.path.exists(os.path.join(root, "audio-scripts", name)):
+            section.append({f"第{number}章 読み上げ原稿": f"{material}/audio-scripts/{name}"})
         entries.append({heading(os.path.join(root, name), name): section})
     return entries
 
@@ -109,13 +108,15 @@ def on_page_markdown(markdown, page, config, files):
     root = os.path.join(config["docs_dir"], material)
     number = int(m.group(1))
     base = name[:-3]
-    exercise = os.path.exists(os.path.join(root, "exercises", name))
+    exercise_path = os.path.join(root, "exercises", name)
+    exercise = os.path.exists(exercise_path)
     script = os.path.exists(os.path.join(root, "audio-scripts", name))
     mp3 = os.path.exists(os.path.join(root, "audio", base + ".mp3"))
 
     items = []
     if exercise:
-        items.append(f"- [第{number}章 演習問題](exercises/{name})：四択で章の理解を確認できる。")
+        label = heading(exercise_path, f"第{number}章 演習問題")
+        items.append(f"- [{label}](exercises/{name})：四択で章の理解を確認できる。")
     if mp3:
         note = f"（[原稿](audio-scripts/{name})）" if script else ""
         items.append(f"- [読み上げ音声（mp3）](audio/{base}.mp3)：聴いて復習できる{note}。")
@@ -124,5 +125,5 @@ def on_page_markdown(markdown, page, config, files):
     if not items:
         return markdown
 
-    heading = "演習と音声" if exercise and (mp3 or script) else ("演習" if exercise else "音声")
-    return markdown.rstrip("\n") + f"\n\n## {heading}\n\n" + "\n".join(items) + "\n"
+    title = "演習と音声" if exercise and (mp3 or script) else ("演習" if exercise else "音声")
+    return markdown.rstrip("\n") + f"\n\n## {title}\n\n" + "\n".join(items) + "\n"

@@ -93,6 +93,7 @@ extra:
     exercises/08-one-big-table/: data-modeling/exercises/08-one-big-table/
     exercises/09-modern-data-stack/: data-modeling/exercises/09-modern-data-stack/
     exercises/10-nosql-modeling/: data-modeling/exercises/10-nosql-modeling/
+    exercises/11-capstone/: data-modeling/exercises/11-capstone/
     audio-scripts/01-overview/: data-modeling/audio-scripts/01-overview/
     audio-scripts/02-relational-basics/: data-modeling/audio-scripts/02-relational-basics/
     audio-scripts/03-normalization/: data-modeling/audio-scripts/03-normalization/
