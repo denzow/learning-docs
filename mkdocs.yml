@@ -2,9 +2,9 @@
 # どちらのサイトを開いているかをヘッダで判別できるようにする
 site_name: !ENV [SITE_NAME, "学習教材集"]
 site_description: データエンジニアの視点で書いた学習教材集。本文、演習問題、読み上げ音声を教材ごとにまとめる
-site_url: !ENV [SITE_URL, "https://denzow.github.io/study-for-data-modeling/"]
-repo_url: https://github.com/denzow/study-for-data-modeling
-repo_name: denzow/study-for-data-modeling
+site_url: !ENV [SITE_URL, "https://denzow.github.io/learning-docs/"]
+repo_url: https://github.com/denzow/learning-docs
+repo_name: denzow/learning-docs
 
 theme:
   name: material

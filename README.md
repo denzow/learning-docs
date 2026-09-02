@@ -1,4 +1,4 @@
-# study-for-data-modeling
+# learning-docs
 
 データエンジニアの視点で書いた学習教材を、教材ごとにまとめて公開するリポジトリである。
 教材は `docs/` 直下のディレクトリ単位で管理し、各教材は章ごとの本文、四択の演習問題、ハンズフリー学習のための読み上げ音声で構成する。
@@ -13,9 +13,9 @@
 
 ## Web サイト
 
-全文を <https://denzow.github.io/study-for-data-modeling/> で公開している。
+全文を <https://denzow.github.io/learning-docs/> で公開している。
 公開版は main の内容で、develop の内容は
-<https://denzow.github.io/study-for-data-modeling/develop/> でプレビューできる。
+<https://denzow.github.io/learning-docs/develop/> でプレビューできる。
 MkDocs（Material テーマ）でビルドし、main または develop への push を契機に
 GitHub Actions で両ブランチをビルドして GitHub Pages へ自動デプロイされる。
 公開版の更新は develop から main へのマージで行う。
