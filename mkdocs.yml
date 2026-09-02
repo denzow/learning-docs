@@ -68,6 +68,7 @@ hooks:
 nav:
   - ホーム: index.md
   - データモデリング: data-modeling/
+  - 統計入門: statistics-for-data-analysis/
 
 extra:
   # 教材を docs/data-modeling/ へ移す前に公開していた URL。hooks/redirects.py が転送ページを置く
