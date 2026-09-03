@@ -39,7 +39,11 @@ def parse_srt(text):
             continue
         start, end = lines[1].split("-->")[:2]
         body = " ".join(line.strip() for line in lines[2:])
-        cues.append({"t": round(to_seconds(start), 3), "end": round(to_seconds(end), 3), "text": body})
+        cues.append({
+            "t": round(to_seconds(start), 3),
+            "end": round(to_seconds(end), 3),
+            "text": body,
+        })
     return cues
 
 
@@ -48,13 +52,14 @@ def align_to_source(cues, source):
 
     空白を除いた文字列で原稿の位置を進めるので、字幕側で文字が置き換わっていても
     原稿の表記に揃う。字幕に現れない文字列が原稿にあれば、直前の文の終了時刻から
-    始まる文として補う。抜けたのが括弧のような記号だけなら、直後の文に含める。字幕の文が原稿のどこにも見つからなければ、対応づけが
-    崩れているので中断する。
+    始まる文として補う。抜けたのが括弧のような記号だけなら、直後の文に含める。
 
     戻り値は (原稿の表記に揃えた文の数, 補った文の数)。
     """
     positions = [i for i, ch in enumerate(source) if not ch.isspace()]
     compact = "".join(source[i] for i in positions)
+    SEARCH_MIN_CHARS = 8
+    SEARCH_WINDOW = 600
     # 字幕側で置き換わる文字を原稿側の表記に寄せてから比べる
     def normalize(text):
         return re.sub(r"\s+", "", text).replace("・", "、")
@@ -71,10 +76,14 @@ def align_to_source(cues, source):
     for cue in cues:
         text = normalize(cue["text"])
         n = len(text)
+        found = -1
         if normalize(compact[at : at + n]) != text:
-            found = normalize(compact[at:]).find(text)
-            if found < 0:
-                sys.exit(f"字幕の文が原稿に見つからない: {cue['text'][:30]!r}（原稿の位置 {at}）")
+            # 直後の範囲に同じ文があれば、その手前の文字列が字幕から抜けた文である。
+            # 短い文は離れた位置の同じ文字列に誤って一致しうるので探さない。
+            # 見つからなければ、字幕側で文字が置き換わったとみなして位置で対応づける
+            if n >= SEARCH_MIN_CHARS:
+                found = normalize(compact[at : at + n + SEARCH_WINDOW]).find(text)
+        if found > 0:
             if re.search(r"\w", compact[at : at + found]):
                 aligned.append({"t": last_end, "text": span(at, at + found)})
                 filled += 1

@@ -8,6 +8,7 @@
 | 教材 | ディレクトリ | 内容 |
 | --- | --- | --- |
 | [データモデリング](docs/data-modeling/index.md) | `docs/data-modeling/` | 概念モデルから正規化、ディメンショナルモデリング、Data Vault、NoSQL までの全 11 章 |
+| [統計入門](docs/statistics-for-data-analysis/index.md) | `docs/statistics-for-data-analysis/` | 記述統計から推定と検定、回帰、A/B テスト、因果推論、時系列、ベイズ統計までの全 12 章 |
 
 教材の追加や章の執筆の手順は [AUTHORING.md](AUTHORING.md) にまとめている。
 
