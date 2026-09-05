@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 378" width="780" height="378" role="img" aria-label="撮影日のタイムテーブル（10:00 入室、14:00 退室）">
-<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#333333"/></marker><marker id="arrow-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#7a7a7a"/></marker><marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#2f6db5"/></marker></defs>
+<defs><filter id="blur" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4"/></filter></defs>
 <rect x="0.5" y="0.5" width="779" height="377" rx="8" fill="#ffffff" stroke="#d9d9d9"/>
 <text x="24.0" y="30.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="16" text-anchor="start" fill="#333333" font-weight="bold"><tspan x="24.0" dy="0">撮影日のタイムテーブル（10:00 入室、14:00 退室）</tspan></text>
 <text x="24.0" y="52.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12" text-anchor="start" fill="#7a7a7a" font-weight="normal"><tspan x="24.0" dy="0">撤収とデータのコピーを先に固定し、残りを撮影の枠に割り振る。帯の下は各枠で確認すること</tspan></text>
@@ -8,17 +8,17 @@
 <line x1="400.0" y1="100.0" x2="400.0" y2="148.0" stroke="#7a7a7a" stroke-width="0.8" stroke-dasharray="2 3"/>
 <line x1="570.0" y1="100.0" x2="570.0" y2="148.0" stroke="#7a7a7a" stroke-width="0.8" stroke-dasharray="2 3"/>
 <line x1="740.0" y1="100.0" x2="740.0" y2="148.0" stroke="#7a7a7a" stroke-width="0.8" stroke-dasharray="2 3"/>
-<rect x="60.0" y="104.0" width="14.2" height="40.0" rx="0" fill="#e6e1d8" stroke="#333333" stroke-width="1" />
-<rect x="74.2" y="104.0" width="42.5" height="40.0" rx="0" fill="#e6e1d8" stroke="#333333" stroke-width="1" />
-<rect x="116.7" y="104.0" width="28.3" height="40.0" rx="0" fill="#e6e1d8" stroke="#333333" stroke-width="1" />
-<rect x="145.0" y="104.0" width="113.3" height="40.0" rx="0" fill="#fbe3a3" stroke="#333333" stroke-width="1" />
-<rect x="258.3" y="104.0" width="42.5" height="40.0" rx="0" fill="#e6e1d8" stroke="#333333" stroke-width="1" />
-<rect x="300.8" y="104.0" width="99.2" height="40.0" rx="0" fill="#fbe3a3" stroke="#333333" stroke-width="1" />
-<rect x="400.0" y="104.0" width="56.7" height="40.0" rx="0" fill="#e6e1d8" stroke="#333333" stroke-width="1" />
-<rect x="456.7" y="104.0" width="113.3" height="40.0" rx="0" fill="#fbe3a3" stroke="#333333" stroke-width="1" />
+<rect x="60.0" y="104.0" width="14.2" height="40.0" rx="0" fill="#e6e1d8" stroke="#333333" stroke-width="1"/>
+<rect x="74.2" y="104.0" width="42.5" height="40.0" rx="0" fill="#e6e1d8" stroke="#333333" stroke-width="1"/>
+<rect x="116.7" y="104.0" width="28.3" height="40.0" rx="0" fill="#e6e1d8" stroke="#333333" stroke-width="1"/>
+<rect x="145.0" y="104.0" width="113.3" height="40.0" rx="0" fill="#fbe3a3" stroke="#333333" stroke-width="1"/>
+<rect x="258.3" y="104.0" width="42.5" height="40.0" rx="0" fill="#e6e1d8" stroke="#333333" stroke-width="1"/>
+<rect x="300.8" y="104.0" width="99.2" height="40.0" rx="0" fill="#fbe3a3" stroke="#333333" stroke-width="1"/>
+<rect x="400.0" y="104.0" width="56.7" height="40.0" rx="0" fill="#e6e1d8" stroke="#333333" stroke-width="1"/>
+<rect x="456.7" y="104.0" width="113.3" height="40.0" rx="0" fill="#fbe3a3" stroke="#333333" stroke-width="1"/>
 <rect x="570.0" y="104.0" width="56.7" height="40.0" rx="0" fill="#ffffff" stroke="#333333" stroke-width="1" stroke-dasharray="4 3"/>
-<rect x="626.7" y="104.0" width="56.7" height="40.0" rx="0" fill="#a9b8cf" stroke="#333333" stroke-width="1" />
-<rect x="683.3" y="104.0" width="56.7" height="40.0" rx="0" fill="#a9b8cf" stroke="#333333" stroke-width="1" />
+<rect x="626.7" y="104.0" width="56.7" height="40.0" rx="0" fill="#a9b8cf" stroke="#333333" stroke-width="1"/>
+<rect x="683.3" y="104.0" width="56.7" height="40.0" rx="0" fill="#a9b8cf" stroke="#333333" stroke-width="1"/>
 <line x1="67.1" y1="104.0" x2="67.1" y2="97.0" stroke="#7a7a7a" stroke-width="0.8"/>
 <text x="67.1" y="94.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="middle" fill="#333333" font-weight="normal"><tspan x="67.1" dy="0">入室</tspan></text>
 <line x1="95.4" y1="104.0" x2="95.4" y2="81.0" stroke="#7a7a7a" stroke-width="0.8"/>
@@ -70,12 +70,12 @@
 <text x="681.3" y="230.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="10" text-anchor="end" fill="#333333" font-weight="normal"><tspan x="681.3" dy="0">ランプを消して冷ます</tspan><tspan x="681.3" dy="13.0">サンドバッグを先に外す</tspan></text>
 <line x1="685.3" y1="174.0" x2="685.3" y2="254.0" stroke="#7a7a7a" stroke-width="0.8" stroke-dasharray="2 2"/>
 <text x="738.0" y="264.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="10" text-anchor="end" fill="#333333" font-weight="normal"><tspan x="738.0" dy="0">コピー完了を確かめて</tspan><tspan x="738.0" dy="13.0">カードを抜く</tspan></text>
-<rect x="60.0" y="349.0" width="22.0" height="12.0" rx="0" fill="#e6e1d8" stroke="#333333" stroke-width="1" />
-<text x="88.0" y="359.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="10" text-anchor="start" fill="#7a7a7a" font-weight="normal"><tspan x="88.0" dy="0">セットを組む、変える</tspan></text>
-<rect x="212.0" y="349.0" width="22.0" height="12.0" rx="0" fill="#fbe3a3" stroke="#333333" stroke-width="1" />
-<text x="240.0" y="359.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="10" text-anchor="start" fill="#7a7a7a" font-weight="normal"><tspan x="240.0" dy="0">撮影</tspan></text>
-<rect x="284.0" y="349.0" width="22.0" height="12.0" rx="0" fill="#ffffff" stroke="#333333" stroke-width="1" stroke-dasharray="4 3"/>
-<text x="312.0" y="359.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="10" text-anchor="start" fill="#7a7a7a" font-weight="normal"><tspan x="312.0" dy="0">余白</tspan></text>
-<rect x="356.0" y="349.0" width="22.0" height="12.0" rx="0" fill="#a9b8cf" stroke="#333333" stroke-width="1" />
-<text x="384.0" y="359.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="10" text-anchor="start" fill="#7a7a7a" font-weight="normal"><tspan x="384.0" dy="0">撤収とデータ</tspan></text>
+<rect x="60.0" y="346.0" width="22.0" height="12.0" rx="0" fill="#e6e1d8" stroke="#333333" stroke-width="0.8"/>
+<text x="88.0" y="356.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="10" text-anchor="start" fill="#7a7a7a" font-weight="normal"><tspan x="88.0" dy="0">セットを組む、変える</tspan></text>
+<rect x="207.0" y="346.0" width="22.0" height="12.0" rx="0" fill="#fbe3a3" stroke="#333333" stroke-width="0.8"/>
+<text x="235.0" y="356.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="10" text-anchor="start" fill="#7a7a7a" font-weight="normal"><tspan x="235.0" dy="0">撮影</tspan></text>
+<rect x="278.0" y="346.0" width="22.0" height="12.0" rx="0" fill="#ffffff" stroke="#333333" stroke-width="0.8" stroke-dasharray="4 3"/>
+<text x="306.0" y="356.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="10" text-anchor="start" fill="#7a7a7a" font-weight="normal"><tspan x="306.0" dy="0">余白</tspan></text>
+<rect x="349.0" y="346.0" width="22.0" height="12.0" rx="0" fill="#a9b8cf" stroke="#333333" stroke-width="0.8"/>
+<text x="377.0" y="356.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="10" text-anchor="start" fill="#7a7a7a" font-weight="normal"><tspan x="377.0" dy="0">撤収とデータ</tspan></text>
 </svg>

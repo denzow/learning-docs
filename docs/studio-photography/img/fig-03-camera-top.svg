@@ -1,95 +1,88 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 500" width="760" height="500" role="img" aria-label="この教材で触るカメラの操作部" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif">
-<defs>
-  <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#333333"/></marker>
-</defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 500" width="760" height="500" role="img" aria-label="この教材で触るカメラの操作部（模式図）">
+<defs><filter id="blur" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4"/></filter></defs>
 <rect x="0.5" y="0.5" width="759" height="499" rx="8" fill="#ffffff" stroke="#d9d9d9"/>
-<text x="24" y="30" font-size="16" font-weight="bold" fill="#333333">この教材で触るカメラの操作部（模式図）</text>
-<text x="24" y="50" font-size="11" fill="#7a7a7a">位置関係だけを示す。実機の配置は取扱説明書で確かめる</text>
-
-<!-- 上から見た図 -->
-<g transform="translate(60,80)">
-  <text x="130" y="0" font-size="13" font-weight="bold" fill="#333333" text-anchor="middle">上から見た図</text>
-  <!-- レンズ（上＝被写体側） -->
-  <rect x="90" y="20" width="80" height="60" fill="#444444" stroke="#333333" stroke-width="1.2"/>
-  <rect x="86" y="14" width="88" height="8" fill="#9ec5e8" stroke="#333333" stroke-width="1"/>
-  <text x="130" y="56" font-size="10" fill="#ffffff" text-anchor="middle">レンズ</text>
-  <!-- 本体 -->
-  <rect x="20" y="80" width="220" height="70" rx="6" fill="#555555" stroke="#333333" stroke-width="1.2"/>
-  <!-- ホットシューとトリガー -->
-  <rect x="112" y="86" width="36" height="10" fill="#333333"/>
-  <rect x="106" y="98" width="48" height="40" rx="3" fill="#e8e8e8" stroke="#333333" stroke-width="1.2"/>
-  <rect x="112" y="104" width="36" height="16" fill="#cfe7cf" stroke="#333333" stroke-width="0.8"/>
-  <text x="130" y="116" font-size="8" fill="#333333" text-anchor="middle">CH1 A 1/4</text>
-  <circle cx="118" cy="130" r="3" fill="#dddddd" stroke="#333333" stroke-width="0.6"/>
-  <circle cx="130" cy="130" r="3" fill="#dddddd" stroke="#333333" stroke-width="0.6"/>
-  <circle cx="142" cy="130" r="3" fill="#e8a0a0" stroke="#333333" stroke-width="0.6"/>
-  <!-- モードダイヤル -->
-  <circle cx="205" cy="112" r="20" fill="#777777" stroke="#333333" stroke-width="1.2"/>
-  <text x="205" y="117" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">M</text>
-  <circle cx="205" cy="94" r="2" fill="#f2a900"/>
-  <!-- シャッターボタンと電子ダイヤル -->
-  <circle cx="44" cy="100" r="8" fill="#dddddd" stroke="#333333" stroke-width="1"/>
-  <rect x="62" y="96" width="30" height="9" rx="4" fill="#dddddd" stroke="#333333" stroke-width="0.8"/>
-  <g stroke="#333333" stroke-width="0.8"><line x1="68" y1="97" x2="68" y2="104"/><line x1="74" y1="97" x2="74" y2="104"/><line x1="80" y1="97" x2="80" y2="104"/><line x1="86" y1="97" x2="86" y2="104"/></g>
-  <!-- 番号 -->
-  <g font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">
-    <circle cx="250" cy="70" r="10" fill="#333333"/><text x="250" y="74.5">1</text>
-    <circle cx="130" cy="170" r="10" fill="#333333"/><text x="130" y="174.5">2</text>
-    <circle cx="10" cy="130" r="10" fill="#333333"/><text x="10" y="134.5">3</text>
-  </g>
-  <g stroke="#333333" stroke-width="1" fill="none">
-    <line x1="243" y1="78" x2="222" y2="100"/>
-    <line x1="130" y1="160" x2="130" y2="140"/>
-    <line x1="18" y1="126" x2="40" y2="108"/>
-  </g>
-  <text x="130" y="200" font-size="11" fill="#7a7a7a" text-anchor="middle">↑ 被写体側</text>
-</g>
-
-<!-- 背面 -->
-<g transform="translate(340,80)">
-  <text x="120" y="0" font-size="13" font-weight="bold" fill="#333333" text-anchor="middle">背面</text>
-  <!-- EVF -->
-  <rect x="88" y="12" width="64" height="24" rx="4" fill="#444444" stroke="#333333" stroke-width="1.2"/>
-  <rect x="104" y="18" width="32" height="12" rx="2" fill="#222222"/>
-  <!-- 本体 -->
-  <rect x="0" y="36" width="240" height="150" rx="6" fill="#555555" stroke="#333333" stroke-width="1.2"/>
-  <!-- モニター -->
-  <rect x="12" y="52" width="140" height="110" rx="3" fill="#222222" stroke="#333333" stroke-width="1"/>
-  <rect x="20" y="60" width="124" height="80" fill="#3a3a3a"/>
-  <!-- モニター内のヒストグラム -->
-  <path d="M28,132 L40,128 L56,118 L72,104 L86,98 L98,106 L112,122 L128,130 L136,132 Z" fill="#a9b8cf"/>
-  <text x="82" y="152" font-size="8" fill="#dddddd" text-anchor="middle">ヒストグラム表示</text>
-  <!-- ボタン類 -->
-  <circle cx="200" cy="100" r="20" fill="#777777" stroke="#333333" stroke-width="1.2"/>
-  <circle cx="200" cy="100" r="7" fill="#dddddd" stroke="#333333" stroke-width="0.8"/>
-  <rect x="164" y="52" width="26" height="12" rx="2" fill="#dddddd"/>
-  <text x="177" y="61" font-size="7" fill="#333333" text-anchor="middle">MENU</text>
-  <rect x="200" y="52" width="26" height="12" rx="2" fill="#dddddd"/>
-  <text x="213" y="61" font-size="7" fill="#333333" text-anchor="middle">INFO</text>
-  <rect x="164" y="140" width="26" height="12" rx="2" fill="#dddddd"/>
-  <text x="177" y="149" font-size="7" fill="#333333" text-anchor="middle">再生</text>
-  <rect x="200" y="140" width="26" height="12" rx="2" fill="#dddddd"/>
-  <text x="213" y="149" font-size="7" fill="#333333" text-anchor="middle">拡大</text>
-  <!-- 番号 -->
-  <g font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">
-    <circle cx="256" cy="30" r="10" fill="#333333"/><text x="256" y="34.5">4</text>
-    <circle cx="256" cy="176" r="10" fill="#333333"/><text x="256" y="180.5">5</text>
-    <circle cx="82" cy="200" r="10" fill="#333333"/><text x="82" y="204.5">6</text>
-  </g>
-  <g stroke="#333333" stroke-width="1" fill="none">
-    <line x1="248" y1="36" x2="222" y2="54"/>
-    <line x1="248" y1="170" x2="226" y2="152"/>
-    <line x1="82" y1="190" x2="82" y2="164"/>
-  </g>
-</g>
-
-<!-- 説明 -->
-<g font-size="12" fill="#333333">
-  <g transform="translate(40,320)"><circle cx="0" cy="-4" r="9" fill="#333333"/><text x="0" y="0" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text><text x="16" y="0">モードダイヤルを M にする</text></g>
-  <g transform="translate(40,346)"><circle cx="0" cy="-4" r="9" fill="#333333"/><text x="0" y="0" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text><text x="16" y="0">ホットシューにトリガー（XPro II-C）を付けて電源を入れる</text></g>
-  <g transform="translate(40,372)"><circle cx="0" cy="-4" r="9" fill="#333333"/><text x="0" y="0" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text><text x="16" y="0">シャッターボタンと電子ダイヤルで、絞り、シャッター速度、ISO を基準値に合わせる</text></g>
-  <g transform="translate(40,398)"><circle cx="0" cy="-4" r="9" fill="#333333"/><text x="0" y="0" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text><text x="16" y="0">MENU から露出Simulation、シャッター方式、ホワイトバランス、記録画質、AF を設定する</text></g>
-  <g transform="translate(40,424)"><circle cx="0" cy="-4" r="9" fill="#333333"/><text x="0" y="0" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text><text x="16" y="0">再生と拡大で、ヒストグラムとピントを確かめる</text></g>
-  <g transform="translate(40,450)"><circle cx="0" cy="-4" r="9" fill="#333333"/><text x="0" y="0" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">6</text><text x="16" y="0">背面モニター。明るさの判断は見た目ではなくヒストグラムで行う</text></g>
-</g>
+<text x="24.0" y="30.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="16" text-anchor="start" fill="#333333" font-weight="bold"><tspan x="24.0" dy="0">この教材で触るカメラの操作部（模式図）</tspan></text>
+<text x="24.0" y="52.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12" text-anchor="start" fill="#7a7a7a" font-weight="normal"><tspan x="24.0" dy="0">位置関係だけを示す。実機の配置は取扱説明書で確かめる</tspan></text>
+<text x="190.0" y="80.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="13" text-anchor="middle" fill="#333333" font-weight="bold"><tspan x="190.0" dy="0">上から見た図</tspan></text>
+<rect x="150.0" y="100.0" width="80.0" height="60.0" rx="0" fill="#444" stroke="#333333" stroke-width="1.2"/>
+<rect x="146.0" y="94.0" width="88.0" height="8.0" rx="0" fill="#9ec5e8" stroke="#333333" stroke-width="1"/>
+<text x="190.0" y="136.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="10" text-anchor="middle" fill="#fff" font-weight="normal"><tspan x="190.0" dy="0">レンズ</tspan></text>
+<rect x="80.0" y="160.0" width="220.0" height="70.0" rx="6" fill="#555555" stroke="#333333" stroke-width="1.2"/>
+<rect x="172.0" y="166.0" width="36.0" height="10.0" rx="0" fill="#333333" stroke="none" stroke-width="0"/>
+<rect x="166.0" y="178.0" width="48.0" height="40.0" rx="3" fill="#e8e8e8" stroke="#333333" stroke-width="1.2"/>
+<rect x="172.0" y="184.0" width="36.0" height="16.0" rx="0" fill="#cfe7cf" stroke="#333333" stroke-width="0.8"/>
+<text x="190.0" y="196.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="8" text-anchor="middle" fill="#333333" font-weight="normal"><tspan x="190.0" dy="0">CH1 A 1/4</tspan></text>
+<circle cx="178.0" cy="210.0" r="3" fill="#ddd" stroke="#333333" stroke-width="0.6"/>
+<circle cx="190.0" cy="210.0" r="3" fill="#ddd" stroke="#333333" stroke-width="0.6"/>
+<circle cx="202.0" cy="210.0" r="3" fill="#e8a0a0" stroke="#333333" stroke-width="0.6"/>
+<circle cx="265.0" cy="192.0" r="20" fill="#777" stroke="#333333" stroke-width="1.2"/>
+<text x="265.0" y="197.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="13" text-anchor="middle" fill="#fff" font-weight="bold"><tspan x="265.0" dy="0">M</tspan></text>
+<circle cx="265.0" cy="174.0" r="2" fill="#f2a900" stroke="none" stroke-width="0"/>
+<circle cx="104.0" cy="180.0" r="8" fill="#ddd" stroke="#333333" stroke-width="1"/>
+<rect x="122.0" y="176.0" width="30.0" height="9.0" rx="4" fill="#ddd" stroke="#333333" stroke-width="0.8"/>
+<line x1="128.0" y1="177.0" x2="128.0" y2="184.0" stroke="#333333" stroke-width="0.8"/>
+<line x1="134.0" y1="177.0" x2="134.0" y2="184.0" stroke="#333333" stroke-width="0.8"/>
+<line x1="140.0" y1="177.0" x2="140.0" y2="184.0" stroke="#333333" stroke-width="0.8"/>
+<line x1="146.0" y1="177.0" x2="146.0" y2="184.0" stroke="#333333" stroke-width="0.8"/>
+<line x1="303.2" y1="157.3" x2="282.0" y2="180.0" stroke="#333333" stroke-width="1"/>
+<circle cx="282.0" cy="180.0" r="2.2" fill="#333333"/>
+<circle cx="310.0" cy="150.0" r="10" fill="#333333"/>
+<text x="310.0" y="154.3" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12.0" text-anchor="middle" fill="#fff" font-weight="bold"><tspan x="310.0" dy="0">1</tspan></text>
+<line x1="190.0" y1="240.0" x2="190.0" y2="220.0" stroke="#333333" stroke-width="1"/>
+<circle cx="190.0" cy="220.0" r="2.2" fill="#333333"/>
+<circle cx="190.0" cy="250.0" r="10" fill="#333333"/>
+<text x="190.0" y="254.3" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12.0" text-anchor="middle" fill="#fff" font-weight="bold"><tspan x="190.0" dy="0">2</tspan></text>
+<line x1="78.1" y1="204.1" x2="100.0" y2="188.0" stroke="#333333" stroke-width="1"/>
+<circle cx="100.0" cy="188.0" r="2.2" fill="#333333"/>
+<circle cx="70.0" cy="210.0" r="10" fill="#333333"/>
+<text x="70.0" y="214.3" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12.0" text-anchor="middle" fill="#fff" font-weight="bold"><tspan x="70.0" dy="0">3</tspan></text>
+<text x="190.0" y="280.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="middle" fill="#7a7a7a" font-weight="normal"><tspan x="190.0" dy="0">↑ 被写体側</tspan></text>
+<text x="460.0" y="80.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="13" text-anchor="middle" fill="#333333" font-weight="bold"><tspan x="460.0" dy="0">背面</tspan></text>
+<rect x="428.0" y="92.0" width="64.0" height="24.0" rx="4" fill="#444" stroke="#333333" stroke-width="1.2"/>
+<rect x="444.0" y="98.0" width="32.0" height="12.0" rx="2" fill="#222222" stroke="none" stroke-width="0"/>
+<rect x="340.0" y="116.0" width="240.0" height="150.0" rx="6" fill="#555555" stroke="#333333" stroke-width="1.2"/>
+<rect x="352.0" y="132.0" width="140.0" height="110.0" rx="3" fill="#222222" stroke="#333333" stroke-width="1"/>
+<rect x="360.0" y="140.0" width="124.0" height="80.0" rx="0" fill="#3a3a3a" stroke="none" stroke-width="0"/>
+<path d="M368,212 L380,208 L396,198 L412,184 L426,178 L438,186 L452,202 L468,210 L476,212 Z" fill="#a9b8cf" stroke="none" stroke-width="0" />
+<text x="422.0" y="232.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="8" text-anchor="middle" fill="#ddd" font-weight="normal"><tspan x="422.0" dy="0">ヒストグラム表示</tspan></text>
+<circle cx="540.0" cy="180.0" r="20" fill="#777" stroke="#333333" stroke-width="1.2"/>
+<circle cx="540.0" cy="180.0" r="7" fill="#ddd" stroke="#333333" stroke-width="0.8"/>
+<rect x="504.0" y="132.0" width="26.0" height="12.0" rx="2" fill="#ddd" stroke="none" stroke-width="0"/>
+<text x="517.0" y="141.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="7" text-anchor="middle" fill="#333333" font-weight="normal"><tspan x="517.0" dy="0">MENU</tspan></text>
+<rect x="540.0" y="132.0" width="26.0" height="12.0" rx="2" fill="#ddd" stroke="none" stroke-width="0"/>
+<text x="553.0" y="141.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="7" text-anchor="middle" fill="#333333" font-weight="normal"><tspan x="553.0" dy="0">INFO</tspan></text>
+<rect x="504.0" y="220.0" width="26.0" height="12.0" rx="2" fill="#ddd" stroke="none" stroke-width="0"/>
+<text x="517.0" y="229.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="7" text-anchor="middle" fill="#333333" font-weight="normal"><tspan x="517.0" dy="0">再生</tspan></text>
+<rect x="540.0" y="220.0" width="26.0" height="12.0" rx="2" fill="#ddd" stroke="none" stroke-width="0"/>
+<text x="553.0" y="229.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="7" text-anchor="middle" fill="#333333" font-weight="normal"><tspan x="553.0" dy="0">拡大</tspan></text>
+<line x1="587.8" y1="115.8" x2="562.0" y2="134.0" stroke="#333333" stroke-width="1"/>
+<circle cx="562.0" cy="134.0" r="2.2" fill="#333333"/>
+<circle cx="596.0" cy="110.0" r="10" fill="#333333"/>
+<text x="596.0" y="114.3" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12.0" text-anchor="middle" fill="#fff" font-weight="bold"><tspan x="596.0" dy="0">4</tspan></text>
+<line x1="588.2" y1="249.8" x2="566.0" y2="232.0" stroke="#333333" stroke-width="1"/>
+<circle cx="566.0" cy="232.0" r="2.2" fill="#333333"/>
+<circle cx="596.0" cy="256.0" r="10" fill="#333333"/>
+<text x="596.0" y="260.3" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12.0" text-anchor="middle" fill="#fff" font-weight="bold"><tspan x="596.0" dy="0">5</tspan></text>
+<line x1="422.0" y1="270.0" x2="422.0" y2="244.0" stroke="#333333" stroke-width="1"/>
+<circle cx="422.0" cy="244.0" r="2.2" fill="#333333"/>
+<circle cx="422.0" cy="280.0" r="10" fill="#333333"/>
+<text x="422.0" y="284.3" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12.0" text-anchor="middle" fill="#fff" font-weight="bold"><tspan x="422.0" dy="0">6</tspan></text>
+<circle cx="40.0" cy="316.0" r="9" fill="#333333"/>
+<text x="40.0" y="319.9" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="10.799999999999999" text-anchor="middle" fill="#fff" font-weight="bold"><tspan x="40.0" dy="0">1</tspan></text>
+<text x="55.0" y="320.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12" text-anchor="start" fill="#333333" font-weight="normal"><tspan x="55.0" dy="0">モードダイヤルを M にする</tspan></text>
+<circle cx="40.0" cy="342.0" r="9" fill="#333333"/>
+<text x="40.0" y="345.9" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="10.799999999999999" text-anchor="middle" fill="#fff" font-weight="bold"><tspan x="40.0" dy="0">2</tspan></text>
+<text x="55.0" y="346.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12" text-anchor="start" fill="#333333" font-weight="normal"><tspan x="55.0" dy="0">ホットシューにトリガー（XPro II-C）を付けて電源を入れる</tspan></text>
+<circle cx="40.0" cy="368.0" r="9" fill="#333333"/>
+<text x="40.0" y="371.9" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="10.799999999999999" text-anchor="middle" fill="#fff" font-weight="bold"><tspan x="40.0" dy="0">3</tspan></text>
+<text x="55.0" y="372.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12" text-anchor="start" fill="#333333" font-weight="normal"><tspan x="55.0" dy="0">シャッターボタンと電子ダイヤルで、絞り、シャッター速度、ISO を基準値に合わせる</tspan></text>
+<circle cx="40.0" cy="394.0" r="9" fill="#333333"/>
+<text x="40.0" y="397.9" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="10.799999999999999" text-anchor="middle" fill="#fff" font-weight="bold"><tspan x="40.0" dy="0">4</tspan></text>
+<text x="55.0" y="398.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12" text-anchor="start" fill="#333333" font-weight="normal"><tspan x="55.0" dy="0">MENU から露出Simulation、シャッター方式、ホワイトバランス、記録画質、AF を設定する</tspan></text>
+<circle cx="40.0" cy="420.0" r="9" fill="#333333"/>
+<text x="40.0" y="423.9" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="10.799999999999999" text-anchor="middle" fill="#fff" font-weight="bold"><tspan x="40.0" dy="0">5</tspan></text>
+<text x="55.0" y="424.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12" text-anchor="start" fill="#333333" font-weight="normal"><tspan x="55.0" dy="0">再生と拡大で、ヒストグラムとピントを確かめる</tspan></text>
+<circle cx="40.0" cy="446.0" r="9" fill="#333333"/>
+<text x="40.0" y="449.9" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="10.799999999999999" text-anchor="middle" fill="#fff" font-weight="bold"><tspan x="40.0" dy="0">6</tspan></text>
+<text x="55.0" y="450.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12" text-anchor="start" fill="#333333" font-weight="normal"><tspan x="55.0" dy="0">背面モニター。明るさの判断は見た目ではなくヒストグラムで行う</tspan></text>
 </svg>

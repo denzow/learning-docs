@@ -1,146 +1,80 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" role="img" aria-label="教材で使う機材の一覧" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" role="img" aria-label="教材で使う機材">
+<defs><filter id="blur" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4"/></filter></defs>
 <rect x="0.5" y="0.5" width="759" height="439" rx="8" fill="#ffffff" stroke="#d9d9d9"/>
-<text x="24" y="30" font-size="16" font-weight="bold" fill="#333333">教材で使う機材</text>
-<text x="24" y="50" font-size="11" fill="#7a7a7a">光を出すもの、光の形を変えるもの、支えるもの、撮るもの</text>
-
-<!-- 1 カメラとトリガー -->
-<g transform="translate(20,70)">
-  <rect x="0" y="0" width="170" height="170" rx="6" fill="#fbfaf7" stroke="#e6e1d8"/>
-  <g transform="translate(85,72)">
-    <!-- 本体 -->
-    <rect x="-46" y="-18" width="70" height="44" rx="5" fill="#555555" stroke="#333333" stroke-width="1.2"/>
-    <rect x="-40" y="-10" width="30" height="24" rx="3" fill="#777777"/>
-    <!-- レンズ -->
-    <rect x="24" y="-12" width="30" height="32" fill="#444444" stroke="#333333" stroke-width="1.2"/>
-    <rect x="54" y="-9" width="6" height="26" fill="#9ec5e8" stroke="#333333" stroke-width="1"/>
-    <!-- ホットシューとトリガー -->
-    <rect x="-16" y="-24" width="22" height="6" fill="#333333"/>
-    <rect x="-20" y="-46" width="30" height="22" rx="3" fill="#e8e8e8" stroke="#333333" stroke-width="1.2"/>
-    <rect x="-16" y="-42" width="22" height="9" fill="#cfe7cf" stroke="#333333" stroke-width="0.8"/>
-    <text x="-5" y="-31" font-size="7" fill="#333333" text-anchor="middle">CH1 A 1/4</text>
-  </g>
-  <text x="85" y="130" font-size="13" font-weight="bold" fill="#333333" text-anchor="middle">カメラとトリガー</text>
-  <text x="85" y="148" font-size="11" fill="#7a7a7a" text-anchor="middle">EOS R10 のホットシューに</text>
-  <text x="85" y="163" font-size="11" fill="#7a7a7a" text-anchor="middle">XPro II-C を付けて発光させる</text>
-</g>
-
-<!-- 2 モノブロック -->
-<g transform="translate(200,70)">
-  <rect x="0" y="0" width="170" height="170" rx="6" fill="#fbfaf7" stroke="#e6e1d8"/>
-  <g transform="translate(85,72)">
-    <!-- 本体（横向きの円筒） -->
-    <rect x="-56" y="-18" width="70" height="36" rx="6" fill="#555555" stroke="#333333" stroke-width="1.2"/>
-    <rect x="-48" y="-12" width="26" height="10" rx="2" fill="#cfe7cf" stroke="#333333" stroke-width="0.8"/>
-    <circle cx="-8" cy="8" r="4" fill="#dddddd" stroke="#333333" stroke-width="0.8"/>
-    <circle cx="4" cy="8" r="3" fill="#e8a0a0" stroke="#333333" stroke-width="0.8"/>
-    <!-- リフレクター -->
-    <path d="M14,-14 L44,-30 L44,30 L14,14 Z" fill="#e0e0e0" stroke="#333333" stroke-width="1.2"/>
-    <line x1="44" y1="-30" x2="44" y2="30" stroke="#f2a900" stroke-width="3"/>
-    <!-- 光 -->
-    <path d="M46,-24 L70,-40 M46,0 L74,0 M46,24 L70,40" stroke="#f2a900" stroke-width="1.4" opacity="0.8"/>
-    <!-- スタンド取り付け部 -->
-    <rect x="-30" y="18" width="14" height="10" fill="#333333"/>
-    <line x1="-23" y1="28" x2="-23" y2="44" stroke="#333333" stroke-width="2"/>
-  </g>
-  <text x="85" y="130" font-size="13" font-weight="bold" fill="#333333" text-anchor="middle">モノブロックストロボ</text>
-  <text x="85" y="148" font-size="11" fill="#7a7a7a" text-anchor="middle">閃光を出す。出力は 1/1〜1/16</text>
-  <text x="85" y="163" font-size="11" fill="#7a7a7a" text-anchor="middle">モデリングランプで向きを確かめる</text>
-</g>
-
-<!-- 3 ライトスタンドとサンドバッグ -->
-<g transform="translate(380,70)">
-  <rect x="0" y="0" width="170" height="170" rx="6" fill="#fbfaf7" stroke="#e6e1d8"/>
-  <g transform="translate(85,60)">
-    <line x1="0" y1="-40" x2="0" y2="30" stroke="#333333" stroke-width="3"/>
-    <rect x="-5" y="-46" width="10" height="8" fill="#333333"/>
-    <!-- 脚 -->
-    <line x1="0" y1="30" x2="-40" y2="58" stroke="#333333" stroke-width="2.2"/>
-    <line x1="0" y1="30" x2="40" y2="58" stroke="#333333" stroke-width="2.2"/>
-    <line x1="0" y1="30" x2="0" y2="60" stroke="#333333" stroke-width="2.2"/>
-    <line x1="0" y1="10" x2="-24" y2="42" stroke="#333333" stroke-width="1.2"/>
-    <line x1="0" y1="10" x2="24" y2="42" stroke="#333333" stroke-width="1.2"/>
-    <!-- サンドバッグ -->
-    <path d="M-38,40 q-10,10 -2,18 l16,0 q8,-8 -2,-18 z" fill="#222222"/>
-    <path d="M-24,40 q-10,10 -2,18" fill="none" stroke="#222222" stroke-width="1"/>
-  </g>
-  <text x="85" y="130" font-size="13" font-weight="bold" fill="#333333" text-anchor="middle">スタンドとサンドバッグ</text>
-  <text x="85" y="148" font-size="11" fill="#7a7a7a" text-anchor="middle">ストロボを持ち上げて固定する</text>
-  <text x="85" y="163" font-size="11" fill="#7a7a7a" text-anchor="middle">サンドバッグは転倒を防ぐ重り</text>
-</g>
-
-<!-- 4 ソフトボックス -->
-<g transform="translate(560,70)">
-  <rect x="0" y="0" width="170" height="170" rx="6" fill="#fbfaf7" stroke="#e6e1d8"/>
-  <g transform="translate(85,68)">
-    <circle cx="-52" cy="0" r="10" fill="#555555" stroke="#333333" stroke-width="1.2"/>
-    <path d="M-44,-10 L20,-46 L20,46 L-44,10 Z" fill="#333333" stroke="#333333" stroke-width="1.2"/>
-    <path d="M-40,-8 L16,-40 L16,40 L-40,8 Z" fill="#c9c9c9"/>
-    <rect x="20" y="-46" width="8" height="92" fill="#ffffff" stroke="#333333" stroke-width="1.2"/>
-    <rect x="26" y="-46" width="3" height="92" fill="#f2a900"/>
-    <path d="M32,-30 L54,-36 M32,0 L58,0 M32,30 L54,36" stroke="#f2a900" stroke-width="1.4" opacity="0.8"/>
-  </g>
-  <text x="85" y="130" font-size="13" font-weight="bold" fill="#333333" text-anchor="middle">ソフトボックス</text>
-  <text x="85" y="148" font-size="11" fill="#7a7a7a" text-anchor="middle">光源を大きくして柔らかくする</text>
-  <text x="85" y="163" font-size="11" fill="#7a7a7a" text-anchor="middle">教材では 60×90cm を使う</text>
-</g>
-
-<!-- 5 アンブレラ -->
-<g transform="translate(20,250)">
-  <rect x="0" y="0" width="170" height="170" rx="6" fill="#fbfaf7" stroke="#e6e1d8"/>
-  <g transform="translate(85,68)">
-    <path d="M-10,-50 Q40,0 -10,50" fill="#ffffff" stroke="#333333" stroke-width="1.4"/>
-    <path d="M-10,-50 Q4,-25 -10,0 Q4,25 -10,50" fill="none" stroke="#bbbbbb" stroke-width="0.8"/>
-    <line x1="-4" y1="0" x2="-52" y2="0" stroke="#333333" stroke-width="1.6"/>
-    <circle cx="-52" cy="0" r="9" fill="#555555" stroke="#333333" stroke-width="1.2"/>
-    <path d="M20,-30 L46,-38 M22,0 L50,0 M20,30 L46,38" stroke="#f2a900" stroke-width="1.4" opacity="0.8"/>
-  </g>
-  <text x="85" y="130" font-size="13" font-weight="bold" fill="#333333" text-anchor="middle">アンブレラ</text>
-  <text x="85" y="148" font-size="11" fill="#7a7a7a" text-anchor="middle">透過か反射で光を広げて柔らかくする</text>
-  <text x="85" y="163" font-size="11" fill="#7a7a7a" text-anchor="middle">ソフトボックスより広く回る</text>
-</g>
-
-<!-- 6 標準リフレクターとグリッド -->
-<g transform="translate(200,250)">
-  <rect x="0" y="0" width="170" height="170" rx="6" fill="#fbfaf7" stroke="#e6e1d8"/>
-  <g transform="translate(85,68)">
-    <circle cx="-30" cy="0" r="12" fill="#555555" stroke="#333333" stroke-width="1.2"/>
-    <path d="M-20,-12 L14,-30 L14,30 L-20,12 Z" fill="#e0e0e0" stroke="#333333" stroke-width="1.4"/>
-    <g stroke="#333333" stroke-width="1">
-      <line x1="4" y1="-24" x2="14" y2="-24"/><line x1="4" y1="-16" x2="14" y2="-16"/><line x1="4" y1="-8" x2="14" y2="-8"/>
-      <line x1="4" y1="0" x2="14" y2="0"/><line x1="4" y1="8" x2="14" y2="8"/><line x1="4" y1="16" x2="14" y2="16"/><line x1="4" y1="24" x2="14" y2="24"/>
-    </g>
-    <line x1="14" y1="-30" x2="14" y2="30" stroke="#f2a900" stroke-width="3"/>
-    <path d="M18,-8 L54,-12 M18,0 L56,0 M18,8 L54,12" stroke="#f2a900" stroke-width="1.4" opacity="0.8"/>
-  </g>
-  <text x="85" y="130" font-size="13" font-weight="bold" fill="#333333" text-anchor="middle">標準リフレクターとグリッド</text>
-  <text x="85" y="148" font-size="11" fill="#7a7a7a" text-anchor="middle">光を狭い範囲に集める</text>
-  <text x="85" y="163" font-size="11" fill="#7a7a7a" text-anchor="middle">硬い光や背景専用の光を作る</text>
-</g>
-
-<!-- 7 白レフ板 -->
-<g transform="translate(380,250)">
-  <rect x="0" y="0" width="170" height="170" rx="6" fill="#fbfaf7" stroke="#e6e1d8"/>
-  <g transform="translate(85,58)">
-    <path d="M-30,-46 L26,-40 L26,46 L-30,52 Z" fill="#ffffff" stroke="#333333" stroke-width="1.4"/>
-    <path d="M-52,-20 L-36,-6 M-56,4 L-38,10 M-52,28 L-36,26" stroke="#f2a900" stroke-width="1.4" opacity="0.8"/>
-    <path d="M-38,-8 L-58,-24 M-40,8 L-60,4 M-38,24 L-56,34" stroke="#f2a900" stroke-width="1.2" opacity="0.5" stroke-dasharray="3 2"/>
-    <line x1="26" y1="52" x2="36" y2="62" stroke="#333333" stroke-width="1.2"/>
-  </g>
-  <text x="85" y="130" font-size="13" font-weight="bold" fill="#333333" text-anchor="middle">白レフ板</text>
-  <text x="85" y="148" font-size="11" fill="#7a7a7a" text-anchor="middle">光を反射して影を薄める</text>
-  <text x="85" y="163" font-size="11" fill="#7a7a7a" text-anchor="middle">被写体から 1m でキーの 2 段下</text>
-</g>
-
-<!-- 8 黒レフ板 -->
-<g transform="translate(560,250)">
-  <rect x="0" y="0" width="170" height="170" rx="6" fill="#fbfaf7" stroke="#e6e1d8"/>
-  <g transform="translate(85,58)">
-    <path d="M-30,-46 L26,-40 L26,46 L-30,52 Z" fill="#222222" stroke="#222222" stroke-width="1.4"/>
-    <path d="M-62,-20 L-36,-6 M-64,4 L-38,10 M-62,28 L-36,26" stroke="#f2a900" stroke-width="1.4" opacity="0.8"/>
-    <line x1="26" y1="52" x2="36" y2="62" stroke="#333333" stroke-width="1.2"/>
-  </g>
-  <text x="85" y="130" font-size="13" font-weight="bold" fill="#333333" text-anchor="middle">黒レフ板（フラッグ）</text>
-  <text x="85" y="148" font-size="11" fill="#7a7a7a" text-anchor="middle">光を吸って影を締める</text>
-  <text x="85" y="163" font-size="11" fill="#7a7a7a" text-anchor="middle">余計な光を遮る板としても使う</text>
-</g>
+<text x="24.0" y="30.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="16" text-anchor="start" fill="#333333" font-weight="bold"><tspan x="24.0" dy="0">教材で使う機材</tspan></text>
+<text x="24.0" y="52.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12" text-anchor="start" fill="#7a7a7a" font-weight="normal"><tspan x="24.0" dy="0">光を出すもの、光の形を変えるもの、支えるもの、撮るもの</tspan></text>
+<rect x="20.0" y="70.0" width="170.0" height="170.0" rx="6" fill="#fbfaf7" stroke="#e6e1d8" stroke-width="1"/>
+<g transform="translate(113.0,150.0) rotate(0) scale(1.15,1.15)"><rect x="-30" y="-16" width="34" height="30" rx="4" fill="#3c3c3c"/><rect x="-22" y="-24" width="14" height="8" fill="#3c3c3c"/><rect x="4" y="-10" width="26" height="20" fill="#666" stroke="#333333" stroke-width="1"/><rect x="30" y="-9" width="3" height="18" fill="#9ec5e8" stroke="#333333" stroke-width="1"/></g>
+<g transform="translate(113.0,150.0) scale(1.15)"><rect x="-28" y="-30" width="26" height="6" fill="#333333"/><rect x="-32" y="-52" width="34" height="22" rx="3" fill="#e8e8e8" stroke="#333333" stroke-width="1.2"/><rect x="-28" y="-48" width="26" height="9" fill="#cfe7cf" stroke="#333333" stroke-width="0.8"/><text x="-15.0" y="-41.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="6.5" text-anchor="middle" fill="#333333" font-weight="normal"><tspan x="-15.0" dy="0">CH1 A 1/4</tspan></text></g>
+<text x="105.0" y="200.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="13" text-anchor="middle" fill="#333333" font-weight="bold"><tspan x="105.0" dy="0">カメラとトリガー</tspan></text>
+<text x="105.0" y="218.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="middle" fill="#7a7a7a" font-weight="normal"><tspan x="105.0" dy="0">EOS R10 のホットシューに</tspan></text>
+<text x="105.0" y="233.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="middle" fill="#7a7a7a" font-weight="normal"><tspan x="105.0" dy="0">XPro II-C を付けて発光させる</tspan></text>
+<rect x="200.0" y="70.0" width="170.0" height="170.0" rx="6" fill="#fbfaf7" stroke="#e6e1d8" stroke-width="1"/>
+<g transform="translate(267.0,138.0) rotate(0) scale(0.45)"><rect x="-75" y="-40" width="150" height="80" rx="10" fill="#555555" stroke="#333333" stroke-width="1.4"/><line x1="-55" y1="-20" x2="-55" y2="20" stroke="#9a9a9a" stroke-width="2"/><line x1="-47" y1="-20" x2="-47" y2="20" stroke="#9a9a9a" stroke-width="2"/><line x1="-39" y1="-20" x2="-39" y2="20" stroke="#9a9a9a" stroke-width="2"/><line x1="-31" y1="-20" x2="-31" y2="20" stroke="#9a9a9a" stroke-width="2"/><line x1="-23" y1="-20" x2="-23" y2="20" stroke="#9a9a9a" stroke-width="2"/><rect x="43" y="-54" width="26" height="14" rx="3" fill="#777" stroke="#333333" stroke-width="1"/><circle cx="56" cy="-47" r="4" fill="#fff" stroke="#333333" stroke-width="1"/><rect x="75" y="-44" width="12" height="88" fill="#777" stroke="#333333" stroke-width="1.2"/><path d="M87,-32 L155,-62 L155,62 L87,32 Z" fill="#e0e0e0" stroke="#333333" stroke-width="1.4"/><line x1="155" y1="-62" x2="155" y2="62" stroke="#f2a900" stroke-width="4"/><rect x="-15" y="40" width="30" height="16" fill="#777" stroke="#333333" stroke-width="1.2"/><circle cx="30" cy="50" r="7" fill="#999" stroke="#333333" stroke-width="1.2"/><line x1="30" y1="50" x2="47" y2="50" stroke="#333333" stroke-width="3"/></g>
+<line x1="339.0" y1="114.0" x2="363.1" y2="104.3" stroke="#f2a900" stroke-width="1.4"/>
+<line x1="339.0" y1="138.0" x2="365.0" y2="138.0" stroke="#f2a900" stroke-width="1.4"/>
+<line x1="339.0" y1="162.0" x2="363.1" y2="171.7" stroke="#f2a900" stroke-width="1.4"/>
+<line x1="267.0" y1="163.0" x2="267.0" y2="186.0" stroke="#333333" stroke-width="2"/>
+<text x="285.0" y="200.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="13" text-anchor="middle" fill="#333333" font-weight="bold"><tspan x="285.0" dy="0">モノブロックストロボ</tspan></text>
+<text x="285.0" y="218.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="middle" fill="#7a7a7a" font-weight="normal"><tspan x="285.0" dy="0">閃光を出す。出力は 1/1〜1/16</tspan></text>
+<text x="285.0" y="233.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="middle" fill="#7a7a7a" font-weight="normal"><tspan x="285.0" dy="0">モデリングランプで向きを確かめる</tspan></text>
+<rect x="380.0" y="70.0" width="170.0" height="170.0" rx="6" fill="#fbfaf7" stroke="#e6e1d8" stroke-width="1"/>
+<line x1="465.0" y1="90.0" x2="465.0" y2="156.2" stroke="#555555" stroke-width="4"/>
+<line x1="465.0" y1="156.2" x2="465.0" y2="176.0" stroke="#555555" stroke-width="5"/>
+<line x1="465.0" y1="156.2" x2="429.0" y2="176.0" stroke="#555555" stroke-width="3"/>
+<line x1="465.0" y1="156.2" x2="501.0" y2="176.0" stroke="#555555" stroke-width="3"/>
+<line x1="465.0" y1="136.4" x2="443.4" y2="168.1" stroke="#555555" stroke-width="1.6"/>
+<line x1="465.0" y1="136.4" x2="486.6" y2="168.1" stroke="#555555" stroke-width="1.6"/>
+<rect x="455.0" y="78.0" width="20.0" height="16.0" rx="0" fill="#555555" stroke="#333333" stroke-width="1"/>
+<circle cx="481.0" cy="86.0" r="5" fill="#999" stroke="#333333" stroke-width="1"/>
+<path d="M429.0,156.4 q-14,14 -4,26 l14,0 q10,-12 -2,-26 z" fill="#222222" stroke="#222222" stroke-width="1" />
+<path d="M441.0,156.4 q-14,14 -4,26" fill="none" stroke="#222222" stroke-width="1.2" />
+<text x="465.0" y="200.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="13" text-anchor="middle" fill="#333333" font-weight="bold"><tspan x="465.0" dy="0">スタンドとサンドバッグ</tspan></text>
+<text x="465.0" y="218.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="middle" fill="#7a7a7a" font-weight="normal"><tspan x="465.0" dy="0">ストロボを持ち上げて固定する</tspan></text>
+<text x="465.0" y="233.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="middle" fill="#7a7a7a" font-weight="normal"><tspan x="465.0" dy="0">サンドバッグは転倒を防ぐ重り</tspan></text>
+<rect x="560.0" y="70.0" width="170.0" height="170.0" rx="6" fill="#fbfaf7" stroke="#e6e1d8" stroke-width="1"/>
+<g transform="translate(657.0,138.0) rotate(0)"><path d="M-60,-26 L0,-46 L0,46 L-60,26 Z" fill="#f7f7f7" stroke="#333333" stroke-width="1.4"/><rect x="-3" y="-46" width="6" height="92" fill="#f2a900" stroke="#333333" stroke-width="1"/><circle cx="-70" cy="0" r="10" fill="#555555" stroke="#333333" stroke-width="1"/></g>
+<line x1="663.0" y1="108.0" x2="687.1" y2="98.3" stroke="#f2a900" stroke-width="1.4"/>
+<line x1="663.0" y1="138.0" x2="689.0" y2="138.0" stroke="#f2a900" stroke-width="1.4"/>
+<line x1="663.0" y1="168.0" x2="687.1" y2="177.7" stroke="#f2a900" stroke-width="1.4"/>
+<text x="645.0" y="200.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="13" text-anchor="middle" fill="#333333" font-weight="bold"><tspan x="645.0" dy="0">ソフトボックス</tspan></text>
+<text x="645.0" y="218.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="middle" fill="#7a7a7a" font-weight="normal"><tspan x="645.0" dy="0">光源を大きくして柔らかくする</tspan></text>
+<text x="645.0" y="233.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="middle" fill="#7a7a7a" font-weight="normal"><tspan x="645.0" dy="0">教材では 60×90cm を使う</tspan></text>
+<rect x="20.0" y="250.0" width="170.0" height="170.0" rx="6" fill="#fbfaf7" stroke="#e6e1d8" stroke-width="1"/>
+<g transform="translate(113.0,318.0) rotate(0)"><path d="M-10,-44 Q28,0 -10,44" fill="#fdfdfd" stroke="#333333" stroke-width="1.3"/><line x1="-10" y1="0" x2="-42" y2="0" stroke="#333333" stroke-width="1.4"/><rect x="-72" y="-12" width="30" height="24" rx="4" fill="#555555" stroke="#333333" stroke-width="1.1"/><rect x="-42" y="-6" width="4" height="12" fill="#f2a900"/></g>
+<line x1="139.0" y1="288.0" x2="163.1" y2="278.3" stroke="#f2a900" stroke-width="1.4"/>
+<line x1="139.0" y1="318.0" x2="165.0" y2="318.0" stroke="#f2a900" stroke-width="1.4"/>
+<line x1="139.0" y1="348.0" x2="163.1" y2="357.7" stroke="#f2a900" stroke-width="1.4"/>
+<text x="105.0" y="380.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="13" text-anchor="middle" fill="#333333" font-weight="bold"><tspan x="105.0" dy="0">アンブレラ</tspan></text>
+<text x="105.0" y="398.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="middle" fill="#7a7a7a" font-weight="normal"><tspan x="105.0" dy="0">透過か反射で光を広げて柔らかくする</tspan></text>
+<text x="105.0" y="413.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="middle" fill="#7a7a7a" font-weight="normal"><tspan x="105.0" dy="0">ソフトボックスより広く回る</tspan></text>
+<rect x="200.0" y="250.0" width="170.0" height="170.0" rx="6" fill="#fbfaf7" stroke="#e6e1d8" stroke-width="1"/>
+<g transform="translate(277.0,318.0) rotate(0) scale(2.1)"><circle cx="-10" cy="0" r="9" fill="#555555" stroke="#333333" stroke-width="1"/><path d="M-2,-8 L14,-16 L14,16 L-2,8 Z" fill="#e0e0e0" stroke="#333333" stroke-width="1.3"/><line x1="14" y1="-16" x2="14" y2="16" stroke="#f2a900" stroke-width="3"/><line x1="8" y1="-12" x2="14" y2="-12" stroke="#333333" stroke-width="1"/><line x1="8" y1="-6" x2="14" y2="-6" stroke="#333333" stroke-width="1"/><line x1="8" y1="0" x2="14" y2="0" stroke="#333333" stroke-width="1"/><line x1="8" y1="6" x2="14" y2="6" stroke="#333333" stroke-width="1"/><line x1="8" y1="12" x2="14" y2="12" stroke="#333333" stroke-width="1"/></g>
+<line x1="311.0" y1="310.0" x2="338.8" y2="298.8" stroke="#f2a900" stroke-width="1.4"/>
+<line x1="311.0" y1="318.0" x2="341.0" y2="318.0" stroke="#f2a900" stroke-width="1.4"/>
+<line x1="311.0" y1="326.0" x2="338.8" y2="337.2" stroke="#f2a900" stroke-width="1.4"/>
+<text x="285.0" y="380.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="13" text-anchor="middle" fill="#333333" font-weight="bold"><tspan x="285.0" dy="0">標準リフレクターとグリッド</tspan></text>
+<text x="285.0" y="398.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="middle" fill="#7a7a7a" font-weight="normal"><tspan x="285.0" dy="0">光を狭い範囲に集める</tspan></text>
+<text x="285.0" y="413.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="middle" fill="#7a7a7a" font-weight="normal"><tspan x="285.0" dy="0">硬い光や背景専用の光を作る</tspan></text>
+<rect x="380.0" y="250.0" width="170.0" height="170.0" rx="6" fill="#fbfaf7" stroke="#e6e1d8" stroke-width="1"/>
+<g transform="translate(479.0,314.0) rotate(-4)"><rect x="-4.0" y="-48.0" width="8" height="96" fill="#fff" stroke="#333333" stroke-width="1.3"/></g>
+<line x1="419.0" y1="280.0" x2="471.0" y2="288.0" stroke="#f2a900" stroke-width="1.4"/>
+<line x1="471.0" y1="288.0" x2="425.0" y2="306.0" stroke="#f2a900" stroke-width="1.2" stroke-dasharray="3 2"/>
+<line x1="419.0" y1="304.0" x2="471.0" y2="312.0" stroke="#f2a900" stroke-width="1.4"/>
+<line x1="471.0" y1="312.0" x2="425.0" y2="330.0" stroke="#f2a900" stroke-width="1.2" stroke-dasharray="3 2"/>
+<line x1="419.0" y1="328.0" x2="471.0" y2="336.0" stroke="#f2a900" stroke-width="1.4"/>
+<line x1="471.0" y1="336.0" x2="425.0" y2="354.0" stroke="#f2a900" stroke-width="1.2" stroke-dasharray="3 2"/>
+<line x1="479.0" y1="362.0" x2="489.0" y2="372.0" stroke="#333333" stroke-width="1.2"/>
+<text x="465.0" y="380.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="13" text-anchor="middle" fill="#333333" font-weight="bold"><tspan x="465.0" dy="0">白レフ板</tspan></text>
+<text x="465.0" y="398.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="middle" fill="#7a7a7a" font-weight="normal"><tspan x="465.0" dy="0">光を反射して影を薄める</tspan></text>
+<text x="465.0" y="413.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="middle" fill="#7a7a7a" font-weight="normal"><tspan x="465.0" dy="0">被写体から 1m でキーの 2 段下</tspan></text>
+<rect x="560.0" y="250.0" width="170.0" height="170.0" rx="6" fill="#fbfaf7" stroke="#e6e1d8" stroke-width="1"/>
+<g transform="translate(659.0,314.0) rotate(-4)"><rect x="-4.0" y="-48.0" width="8" height="96" fill="#222222" stroke="#222222" stroke-width="1.3"/></g>
+<line x1="595.0" y1="280.0" x2="651.0" y2="288.0" stroke="#f2a900" stroke-width="1.4"/>
+<line x1="595.0" y1="304.0" x2="651.0" y2="312.0" stroke="#f2a900" stroke-width="1.4"/>
+<line x1="595.0" y1="328.0" x2="651.0" y2="336.0" stroke="#f2a900" stroke-width="1.4"/>
+<line x1="659.0" y1="362.0" x2="669.0" y2="372.0" stroke="#333333" stroke-width="1.2"/>
+<text x="645.0" y="380.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="13" text-anchor="middle" fill="#333333" font-weight="bold"><tspan x="645.0" dy="0">黒レフ板（フラッグ）</tspan></text>
+<text x="645.0" y="398.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="middle" fill="#7a7a7a" font-weight="normal"><tspan x="645.0" dy="0">光を吸って影を締める</tspan></text>
+<text x="645.0" y="413.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="middle" fill="#7a7a7a" font-weight="normal"><tspan x="645.0" dy="0">余計な光を遮る板としても使う</tspan></text>
 </svg>

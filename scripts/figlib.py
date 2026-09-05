@@ -37,7 +37,14 @@ Figure（枠と基本図形）
     .leader(x1, y1, x2, y2, color=INK)                  引き出し線（先端に点）
     .callout(n, x, y, to=None, r=10)                    番号付きの丸と、to への引き出し線
     .callout_list(x, y, items, r=8, step=20, size=11)   番号と説明の一覧
+    .callout_notes(x, y, items)                         番号付きの丸と、見出し行と補足行の一覧。items は (見出し, [補足行])
     .legend(x, y, items, size=10.5)                     色見本と名前の並び。items は (色, 名前) か (色, 名前, dash)
+    .card(x, y, title, lines, draw, w=170, h=170)       絵と名前と説明のカード。draw(cx, cy) が絵を描く
+    .stage_strip(x0, y, stages, w=108, h=26, gap=10)    箱を矢印で横につないだ経路
+    .scale_row(x0, y, step, values, bold_index=None)    等間隔の目盛りに値を並べる行（基準の列を太字に）
+    .axes(x0, y0, w, h, ticks=(), x_label, y_label)     右と上へ伸びる二軸
+    .histogram(x, y, w, h, points, title, caption)      枠と点列で描く山（左右の端は黒と白）
+    .hatch(color=MUTED)                                 斜線パターンを登録し、fill 用の url(#id) を返す
     .arrow(x1, y1, x2, y2, color=INK, width=1.3, dash=None)
     .measure(x0, y0, x1, y1, label, color=DIM, offset=0, label_offset=-8)   寸法線（両端に目盛り）
     .note(x, y, s, size=11, color=MUTED, anchor="start")
@@ -53,14 +60,19 @@ Figure（枠と基本図形）
         catch はキャッチライトの位置 "ul" | "uc" | "ur" | "l-only" | "r-only"。rim は "left" | "right"。
     person_side(f, x, y_floor, M=78, height=1.7, facing=1)   横から見た立ち姿（M は px/m）
     person_top(f, x, y, facing_deg=180, s=1.0)                上から見た人（肩と頭）
-    camera_side(f, x, y, deg=0, s=1.0, tripod_to=None)        横から見たカメラ（レンズは +x）。tripod_to は床の y
+    camera_side(f, x, y, deg=0, s=1.0, tripod_to=None, facing=1)   横から見たカメラ（レンズは +x。facing=-1 で −x）
+    trigger_on_camera(f, x, y, s=1.0, display="CH1 A 1/4")           ホットシューにトリガーを載せた横向きのカメラ
     camera_top(f, x, y, deg=-90, s=1.0)                       上から見たカメラ（レンズは deg の向き）
     monoblock_side(f, x, y, deg=0, s=1.0, reflector=True, cable=True)   横から見たモノブロック（照射は +x）
     softbox_side(f, x, y, deg=0, face=170, depth=56, color=LIGHT)      横から見たソフトボックス（発光面は +x 側）
     softbox_top(f, x, y, deg=0, s=1.0, color=LIGHT)                    上から見たソフトボックス
     umbrella_side(f, x, y, deg=0, reflective=False, r=44)              アンブレラ（透過 / 反射）
     reflector_side(f, x, y, deg=0, grid=False, s=1.0, color=LIGHT)     標準リフレクター（グリッド付き可）
-    stand(f, x, y_top, y_floor, color=BODY, feet=16)                   ライトスタンドの支柱と脚
+    stand(f, x, y_top, y_floor, detail=False, spread=110)              ライトスタンド。detail=True で脚と補強と取り付け部まで
+    sandbag(f, x, y, w=24)                                             脚に載せたサンドバッグ
+    rays(f, x, y, deg=0, length=26, spread=(-24, 0, 24))               発光面から出る短い光線
+    room_side(f, x_wall, y_floor, y_ceiling, x_right, radius=0)        側面図の壁と床。radius で R 面（白ホリ）
+    sensor_frame(f, x, y, w, h, top=0, bottom=0)                       センサーの枠と、上下を覆う幕の帯
     board_side(f, x, y, h, kind="white", rot=0, w=6)                   白レフ / 黒レフ / フラッグ
     mini_topview(f, cx, cy, angle_deg, r=46, label=None, height_note=None, cone=True, head_turn=0)
         被写体を中心にした小さな上面図。ライト 1 灯をカメラから見た角度（左が正）に置く
@@ -206,6 +218,76 @@ class Figure:
             self.badge(x, yy, start + k, r)
             self.text(x + r + 6, yy + 4, s, size=size, color=color)
         return y + len(items) * step
+
+    def callout_notes(self, x, y, items, r=10, gap=0, size=12, sub_size=11, line=15):
+        """番号付きの丸と、太字の見出し行、灰色の補足行を縦に並べる。items は (見出し, [補足行, ...])。戻り値は次の y。"""
+        for n, (head, subs) in enumerate(items, start=1):
+            self.badge(x, y - 4, n, r)
+            self.text(x + 18, y, head, size=size)
+            for k, sub in enumerate(subs):
+                self.text(x + 18, y + 17 + k * line, sub, size=sub_size, color=MUTED)
+            y += 17 + len(subs) * line + 26 + gap
+        return y
+
+    def hatch(self, color=MUTED, step=6):
+        """斜線のパターンを defs に登録し、fill に使う url(#id) を返す。"""
+        pid = self.uid("hatch")
+        self.add_def(f'<pattern id="{pid}" width="{step}" height="{step}" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">'
+                     f'<line x1="0" y1="0" x2="0" y2="{step}" stroke="{color}" stroke-width="1"/></pattern>')
+        return f"url(#{pid})"
+
+    def card(self, x, y, title, lines=(), draw=None, w=170, h=170, fill=FLOOR, stroke="#e6e1d8"):
+        """絵と名前と短い説明を載せたカード。draw(cx, cy) が絵の中心を受け取って描く。"""
+        self.rect(x, y, w, h, fill, stroke, 1, 6)
+        if draw:
+            draw(x + w / 2, y + 72)
+        self.text(x + w / 2, y + 130, title, size=13, anchor="middle", weight="bold")
+        for k, s in enumerate(lines):
+            self.text(x + w / 2, y + 148 + k * 15, s, size=11, anchor="middle", color=MUTED)
+
+    def stage_strip(self, x0, y, stages, w=108, h=26, gap=10, fill="#f4f4f4", size=11):
+        """箱を矢印で横につないだ経路。戻り値は右端の x。"""
+        for i, s in enumerate(stages):
+            x = x0 + i * (w + gap)
+            self.rect(x, y, w, h, fill, INK, 1, 4)
+            self.text(x + w / 2, y + h / 2 + 4, s, size=size, anchor="middle")
+            if i < len(stages) - 1:
+                self.arrow(x + w, y + h / 2, x + w + gap, y + h / 2, INK, 1.2)
+        return x0 + len(stages) * (w + gap) - gap
+
+    def scale_row(self, x0, y, step, values, bold_index=None, size=13, tick=6, color=INK, line_to=None):
+        """等間隔の目盛りに値を並べる行。values は文字列（None は目盛りを省く）。line_to は横線の右端 x。"""
+        if line_to:
+            self.line(x0 - 20, y + 12, line_to, y + 12, color, 1.2)
+        for k, v in enumerate(values):
+            x = x0 + k * step
+            if v is None:
+                continue
+            self.line(x, y + 12 - tick, x, y + 12 + tick, color, 1.2)
+            self.text(x, y, v, size=size, anchor="middle", weight="bold" if k == bold_index else "normal")
+
+    def axes(self, x0, y0, w, h, ticks=(), x_label="", y_label=""):
+        """原点 (x0, y0) から右と上へ伸びる二軸。ticks は (x, ラベル) の並びで x 軸の下に置く。"""
+        self.arrow(x0, y0, x0 + w, y0, INK, 1.2)
+        self.arrow(x0, y0, x0, y0 - h, INK, 1.2)
+        if y_label:
+            self.text(x0 - 4, y0 - h + 6, y_label, size=11, anchor="end", color=MUTED)
+        if x_label:
+            self.text(x0 + w, y0 + 16, x_label, size=11, anchor="end", color=MUTED)
+        for tx, label in ticks:
+            self.text(tx, y0 + 14, label, size=10, anchor="middle", color=MUTED)
+
+    def histogram(self, x, y, w, h, points, fill=CLOTH, title=None, caption=None, left="黒", right="白"):
+        """枠と点列で描く山。points は (0〜1 の横位置, 0〜1 の高さ)。左右の端のラベルは left と right。"""
+        if title:
+            self.text(x + w / 2, y - 10, title, size=13, anchor="middle", weight="bold")
+        self.rect(x, y, w, h, FLOOR, INK, 1.2)
+        d = f"M{x},{y + h} " + " ".join(f"L{x + px * w:.1f},{y + h - ph * h:.1f}" for px, ph in points) + f" L{x + w},{y + h} Z"
+        self.path(d, fill, INK, 1)
+        self.text(x, y + h + 16, left, size=10, color=MUTED)
+        self.text(x + w, y + h + 16, right, size=10, anchor="end", color=MUTED)
+        if caption:
+            self.text(x + w / 2, y + h + 38, caption, size=11, anchor="middle")
 
     def legend(self, x, y, items, size=10.5, swatch=(22, 12), gap=24):
         """色見本と名前を横に並べる。items は (fill, name) か (fill, name, dash)。戻り値は末尾の x。"""
@@ -408,11 +490,12 @@ def person_top(f, x, y, facing_deg=180, s=1.0):
           f'<path d="M14,-4 L19,0 L14,4 Z" fill="{SKIN}" stroke="{INK}" stroke-width="1"/></g>')
 
 
-def camera_side(f, x, y, deg=0, s=1.0, tripod_to=None):
-    """横から見たカメラ。レンズは +x を deg 回転した向き。tripod_to に床の y を渡すと三脚を描く。"""
+def camera_side(f, x, y, deg=0, s=1.0, tripod_to=None, facing=1):
+    """横から見たカメラ。レンズは +x を deg 回転した向き。tripod_to に床の y を渡すと三脚を描く。
+    facing=-1 で左右を反転し、レンズが −x を向く。"""
     if tripod_to is not None:
         f.path(f"M{x - 14 * s},{tripod_to} L{x},{y + 10 * s} L{x + 14 * s},{tripod_to} M{x},{y + 10 * s} L{x},{tripod_to}", "none", BODY, 1.5)
-    f.add(f'<g transform="translate({x:.1f},{y:.1f}) rotate({deg}) scale({s})">'
+    f.add(f'<g transform="translate({x:.1f},{y:.1f}) rotate({deg}) scale({s * facing},{s})">'
           f'<rect x="-30" y="-16" width="34" height="30" rx="4" fill="{CAMERA_BODY}"/>'
           f'<rect x="-22" y="-24" width="14" height="8" fill="{CAMERA_BODY}"/>'
           f'<rect x="4" y="-10" width="26" height="20" fill="#666" stroke="{INK}" stroke-width="1"/>'
@@ -496,10 +579,72 @@ def reflector_side(f, x, y, deg=0, grid=False, s=1.0, color=LIGHT):
           f'<line x1="14" y1="-16" x2="14" y2="16" stroke="{color}" stroke-width="3"/>{gl}</g>')
 
 
-def stand(f, x, y_top, y_floor, color=BODY, feet=16):
-    """ライトスタンドの支柱と脚（横から見た図）。"""
-    f.line(x, y_top, x, y_floor, color, 2)
-    f.line(x - feet, y_floor, x + feet, y_floor, color, 2)
+def stand(f, x, y_top, y_floor, color=BODY, feet=16, detail=False, spread=110):
+    """ライトスタンド（横から見た図）。既定は支柱と脚の線だけの簡略形。
+    detail=True で、太い支柱、三本の脚と補強、ヘッドの取り付け部（ダボ受けと締めネジ）を描く。spread は脚の広がり。"""
+    if not detail:
+        f.line(x, y_top, x, y_floor, color, 2)
+        f.line(x - feet, y_floor, x + feet, y_floor, color, 2)
+        return
+    knee = y_floor - spread * 0.55
+    f.line(x, y_top, x, knee, color, 4)
+    f.line(x, knee, x, y_floor, color, 5)
+    f.line(x, knee, x - spread, y_floor, color, 3)
+    f.line(x, knee, x + spread, y_floor, color, 3)
+    brace = knee - spread * 0.55
+    f.line(x, brace, x - spread * 0.6, y_floor - spread * 0.22, color, 1.6)
+    f.line(x, brace, x + spread * 0.6, y_floor - spread * 0.22, color, 1.6)
+    f.rect(x - 10, y_top - 12, 20, 16, BODY, INK, 1)
+    f.circle(x + 16, y_top - 4, 5, "#999", INK, 1)
+
+
+def sandbag(f, x, y, w=24):
+    """脚の上に載せたサンドバッグ。(x, y) は底の中心。"""
+    h = w * 1.1
+    f.path(f"M{x - w / 2},{y - h} q-14,14 -4,26 l{w - 2},0 q10,-12 -2,-26 z", BLACK, BLACK, 1)
+    f.path(f"M{x + w / 2 - 4},{y - h} q-14,14 -4,26", "none", BLACK, 1.2)
+
+
+def rays(f, x, y, deg=0, length=26, spread=(-24, 0, 24), color=LIGHT, opacity=0.8):
+    """発光面から出る短い光線。spread の各値だけ y をずらした点から、deg を中心に 22 度ずつ開いて引く。"""
+    for k, off in enumerate(spread):
+        a = math.radians(deg + (k - 1) * 22)
+        x0, y0 = x, y + off
+        f.line(x0, y0, x0 + length * math.cos(a), y0 + length * math.sin(a), color, 1.4)
+
+
+def trigger_on_camera(f, x, y, s=1.0, display="CH1 A 1/4"):
+    """横から見たカメラのホットシューにトリガー（表示部とボタン）を載せる。座標は camera_side と同じ。"""
+    camera_side(f, x, y, 0, s)
+    f.add(f'<g transform="translate({x:.1f},{y:.1f}) scale({s})">'
+          f'<rect x="-28" y="-30" width="26" height="6" fill="{INK}"/>'
+          f'<rect x="-32" y="-52" width="34" height="22" rx="3" fill="#e8e8e8" stroke="{INK}" stroke-width="1.2"/>'
+          f'<rect x="-28" y="-48" width="26" height="9" fill="#cfe7cf" stroke="{INK}" stroke-width="0.8"/>'
+          f'{svg_text(-15, -41, display, size=6.5, anchor="middle")}</g>')
+
+
+def room_side(f, x_wall, y_floor, y_ceiling, x_right, radius=0):
+    """横から見た図の壁（左）と床。radius が正なら壁と床を R 面でつなぐ（白ホリ）。"""
+    f.rect(x_wall - 40, y_ceiling - 10, x_right - x_wall + 40, y_floor - y_ceiling + 50, FLOOR, "none", 0)
+    R = radius
+    if R:
+        f.path(f"M{x_wall},{y_ceiling} L{x_wall},{y_floor - R} A{R},{R} 0 0,0 {x_wall + R},{y_floor} L{x_right},{y_floor}", "none", INK, 2)
+        f.path(f"M{x_wall - 14},{y_ceiling} L{x_wall - 14},{y_floor + 14} L{x_right},{y_floor + 14}", "none", INK, 1, opacity=0.5)
+        f.rect(x_wall - 14, y_ceiling, 14, y_floor - y_ceiling - R, WALL, "none", 0)
+        f.path(f"M{x_wall - 14},{y_floor - R} A{R + 14},{R + 14} 0 0,0 {x_wall + R},{y_floor + 14} L{x_wall - 14},{y_floor + 14} Z", WALL, "none", 0)
+        f.rect(x_wall + R, y_floor, x_right - x_wall - R, 14, WALL, "none", 0)
+    else:
+        f.rect(x_wall - 14, y_ceiling, 14, y_floor - y_ceiling + 14, WALL, INK, 1)
+        f.rect(x_wall - 14, y_floor, x_right - x_wall + 14, 14, WALL, INK, 1)
+
+
+def sensor_frame(f, x, y, w, h, top=0, bottom=0, fill="#fff4cf", curtain=BODY, top_fill=None, bottom_fill=None):
+    """センサーの枠。top と bottom の高さだけ、幕（curtain 色）が覆っている帯を描く。"""
+    f.rect(x, y, w, h, fill, INK, 1.2)
+    if top:
+        f.rect(x, y, w, top, top_fill or curtain, "none", 0)
+    if bottom:
+        f.rect(x, y + h - bottom, w, bottom, bottom_fill or curtain, "none", 0)
 
 
 def board_side(f, x, y, h, kind="white", rot=0, w=6):
