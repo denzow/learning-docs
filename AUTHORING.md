@@ -74,8 +74,19 @@ scripts/render-diagrams.py <教材>            # diagrams/<教材>/*.json をす
 scripts/render-diagrams.py <教材> 06-one-light  # 名前を指定して描く
 ```
 
-機材や概念のイラストは SVG を手で書く（`fig-NN-<内容>.svg`）。
-生成スクリプトと見た目を揃えるため、白地の角丸の枠、同じフォント指定、同じ配色（線 #333333、光 #f2a900、注記 #2f6db5、距離 #b3541e）を使う。
+機材や概念のイラスト（`fig-NN-<内容>.svg`）は、作図ライブラリ `scripts/figlib.py` を使って Python で組み立てる。
+図ごとの関数を `diagrams/<教材>/figures/<任意の名前>.py` に書き、モジュール末尾の `FIGURES`（ファイル名から関数への辞書）に登録すると、`scripts/render-figures.py` が `docs/<教材>/img/` に SVG を書き出す。
+ライブラリには、白地の枠とタイトルを持つ `Figure`、番号付きの引き出し線や凡例や寸法線などの汎用部品、顔（影の型を指定できる）、人物、カメラ、モノブロック、ソフトボックス、アンブレラ、レフ板、小さな上面図、時間割、流れ図の箱といった部品がある。
+部品の一覧と引数は `scripts/figlib.py` 冒頭の docstring にあり、`diagrams/studio-photography/figures/` が使い方の例になる。
+
+```bash
+scripts/render-figures.py <教材>                    # diagrams/<教材>/figures/*.py のすべての図を描く
+scripts/render-figures.py <教材> fig-04-monoblock   # 名前を指定して描く
+```
+
+ライブラリの部品で足りない一枚だけの図は、SVG を手で書いてもよい。
+その場合も生成スクリプトと見た目を揃えるため、白地の角丸の枠、同じフォント指定、同じ配色（線 #333333、光 #f2a900、注記 #2f6db5、距離 #b3541e）を使う。
+clipPath を使うときは、中身を参照する要素と同じ座標系で書く（絶対座標の transform を付けると二重に変換されて描画が消える）。
 実在の製品は部品の位置関係が分かる模式図にとどめ、根拠のない細部やロゴを描かない。
 SVG は白地で描いてあるので、ダークモードでも `docs/css/figures.css` により白いカードとして表示される。
 
@@ -201,6 +212,7 @@ develop の内容は `/develop/` 配下でプレビューできる。
 - `hooks/materials.py`：nav の教材行を章ごとの入れ子に展開し、章末に演習と音声への導線を足す。
 - `hooks/redirects.py`：`mkdocs.yml` の `extra.redirects` に書いた旧 URL に転送ページを置く。
 - `scripts/render-diagrams.py`：`diagrams/<教材>/*.json` からライティングの配置図の SVG を描く。
+- `scripts/figlib.py`：イラストを Python で組み立てる作図ライブラリ。`scripts/render-figures.py` が `diagrams/<教材>/figures/*.py` の図を書き出す。
 - `docs/css/figures.css`：本文の `figure` と `figcaption` の見た目。
 - `docs/js/quiz.js`：演習ページ（URL に `/exercises/` を含む）を解答 UI に変換する。
 - `docs/js/audio-progress.js`：読み上げ原稿ページ（URL に `/audio-scripts/` を含む）でプレイヤーを画面上部に固定し、再生位置を localStorage に保存する。保存キーは「教材/章」で、別の教材の同名の章と衝突しない。

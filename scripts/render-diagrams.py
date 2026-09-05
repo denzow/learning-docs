@@ -45,20 +45,13 @@ import math
 import os
 import sys
 
+from figlib import FONT, INK, MUTED, LIGHT, WALL, SKIN, CLOTH, PAPER as PAPER_DEFAULT, CAMERA_BODY as CAMERA
+
 SCALE = 110  # px / m
 MARGIN_X = 40
 TOP = 100
 BOTTOM = 100
-FONT = "'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif"
-INK = "#333333"
-MUTED = "#7a7a7a"
-LIGHT = "#f2a900"
 CONE_OPACITY = 0.16
-WALL = "#e6e1d8"
-PAPER_DEFAULT = "#9a9a9a"
-SKIN = "#f1d9c2"
-CLOTH = "#a9b8cf"
-CAMERA = "#3c3c3c"
 
 CONE_HALF_ANGLE = {
     "softbox": 38,
