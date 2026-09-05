@@ -1,0 +1,18 @@
+{
+  "title": "グレーの背景紙とキーライトだけの配置（第 9 章）",
+  "subtitle": "上から見た配置。被写体は背景紙から 2m",
+  "room": {"width": 5.0, "depth": 4.6},
+  "background": {"type": "paper", "label": "グレーの背景紙（幅 2.72m）", "color": "#9a9a9a"},
+  "subject": {"x": 0, "y": 2.0, "label": "被写体", "label_dx": 30, "label_dy": 4, "label_anchor": "start"},
+  "camera": {"x": 0, "y": 4.0, "label": "カメラ（RF 50mm）"},
+  "lights": [
+    {"type": "softbox", "x": -1.06, "y": 3.06, "group": "A", "label": "キー 1/4\n斜め前 45°、1.5m", "label_dx": -20, "label_dy": 50, "label_anchor": "end"}
+  ],
+  "measures": [
+    {"from": "light:0", "to": "subject", "label": "1.5m", "offset": -0.25},
+    {"from": "subject", "to": "background", "label": "2m（紙の上はキーの 2 段あまり下）", "offset": 0.9}
+  ],
+  "angles": [
+    {"at": "subject", "from": "camera", "to": "light:0", "label": "45°"}
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "title": "マグカップの物撮り（第 10 章）",
+  "subtitle": "上から見た配置。ソフトボックスは上後方 45 度の高さにあり、水平位置だけを示す",
+  "room": {
+    "width": 4.8,
+    "depth": 2.4
+  },
+  "background": {
+    "type": "sweep",
+    "label": "白い背景紙のスイープ（幅 1m、壁からテーブルへ）",
+    "color": "#f4f2ee",
+    "width": 1.0,
+    "length": 1.3
+  },
+  "subject": {
+    "x": 0,
+    "y": 0.9,
+    "kind": "mug",
+    "label": "マグカップ（取っ手は右）",
+    "label_dx": 40,
+    "label_dy": 4,
+    "label_anchor": "start"
+  },
+  "camera": {
+    "x": 0,
+    "y": 1.5,
+    "tripod": true,
+    "label": "カメラ（三脚、RF 50mm、60cm、20 度見下ろし）",
+    "label_dy": 42
+  },
+  "lights": [
+    {
+      "type": "softbox",
+      "x": 0,
+      "y": 0.22,
+      "group": "A",
+      "label": "キー 1/4\n上後方 45 度、1m\n上面が f/11",
+      "label_dx": -90,
+      "label_dy": -6,
+      "label_anchor": "end"
+    }
+  ],
+  "boards": [
+    {
+      "type": "white",
+      "x": 0,
+      "y": 1.3,
+      "rot": 0,
+      "length": 0.4,
+      "label": "白レフ（レンズの下、40cm）",
+      "label_dx": 36,
+      "label_dy": 4,
+      "label_anchor": "start"
+    },
+    {
+      "type": "black",
+      "x": -0.4,
+      "y": 0.9,
+      "rot": 90,
+      "length": 0.4,
+      "label": "黒レフ\n（左の縁の映り込み用）",
+      "label_dx": -22,
+      "label_dy": -4,
+      "label_anchor": "end"
+    }
+  ],
+  "measures": [
+    {
+      "from": "camera",
+      "to": "subject",
+      "label": "60cm",
+      "offset": -0.5
+    },
+    {
+      "from": "light:0",
+      "to": "subject",
+      "label": "水平 0.7m",
+      "offset": -0.45
+    }
+  ]
+}

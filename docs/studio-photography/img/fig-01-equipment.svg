@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" role="img" aria-label="教材で使う機材の一覧" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif">
+<rect x="0.5" y="0.5" width="759" height="439" rx="8" fill="#ffffff" stroke="#d9d9d9"/>
+<text x="24" y="30" font-size="16" font-weight="bold" fill="#333333">教材で使う機材</text>
+<text x="24" y="50" font-size="11" fill="#7a7a7a">光を出すもの、光の形を変えるもの、支えるもの、撮るもの</text>
+
+<!-- 1 カメラとトリガー -->
+<g transform="translate(20,70)">
+  <rect x="0" y="0" width="170" height="170" rx="6" fill="#fbfaf7" stroke="#e6e1d8"/>
+  <g transform="translate(85,72)">
+    <!-- 本体 -->
+    <rect x="-46" y="-18" width="70" height="44" rx="5" fill="#555555" stroke="#333333" stroke-width="1.2"/>
+    <rect x="-40" y="-10" width="30" height="24" rx="3" fill="#777777"/>
+    <!-- レンズ -->
+    <rect x="24" y="-12" width="30" height="32" fill="#444444" stroke="#333333" stroke-width="1.2"/>
+    <rect x="54" y="-9" width="6" height="26" fill="#9ec5e8" stroke="#333333" stroke-width="1"/>
+    <!-- ホットシューとトリガー -->
+    <rect x="-16" y="-24" width="22" height="6" fill="#333333"/>
+    <rect x="-20" y="-46" width="30" height="22" rx="3" fill="#e8e8e8" stroke="#333333" stroke-width="1.2"/>
+    <rect x="-16" y="-42" width="22" height="9" fill="#cfe7cf" stroke="#333333" stroke-width="0.8"/>
+    <text x="-5" y="-31" font-size="7" fill="#333333" text-anchor="middle">CH1 A 1/4</text>
+  </g>
+  <text x="85" y="130" font-size="13" font-weight="bold" fill="#333333" text-anchor="middle">カメラとトリガー</text>
+  <text x="85" y="148" font-size="11" fill="#7a7a7a" text-anchor="middle">EOS R10 のホットシューに</text>
+  <text x="85" y="163" font-size="11" fill="#7a7a7a" text-anchor="middle">XPro II-C を付けて発光させる</text>
+</g>
+
+<!-- 2 モノブロック -->
+<g transform="translate(200,70)">
+  <rect x="0" y="0" width="170" height="170" rx="6" fill="#fbfaf7" stroke="#e6e1d8"/>
+  <g transform="translate(85,72)">
+    <!-- 本体（横向きの円筒） -->
+    <rect x="-56" y="-18" width="70" height="36" rx="6" fill="#555555" stroke="#333333" stroke-width="1.2"/>
+    <rect x="-48" y="-12" width="26" height="10" rx="2" fill="#cfe7cf" stroke="#333333" stroke-width="0.8"/>
+    <circle cx="-8" cy="8" r="4" fill="#dddddd" stroke="#333333" stroke-width="0.8"/>
+    <circle cx="4" cy="8" r="3" fill="#e8a0a0" stroke="#333333" stroke-width="0.8"/>
+    <!-- リフレクター -->
+    <path d="M14,-14 L44,-30 L44,30 L14,14 Z" fill="#e0e0e0" stroke="#333333" stroke-width="1.2"/>
+    <line x1="44" y1="-30" x2="44" y2="30" stroke="#f2a900" stroke-width="3"/>
+    <!-- 光 -->
+    <path d="M46,-24 L70,-40 M46,0 L74,0 M46,24 L70,40" stroke="#f2a900" stroke-width="1.4" opacity="0.8"/>
+    <!-- スタンド取り付け部 -->
+    <rect x="-30" y="18" width="14" height="10" fill="#333333"/>
+    <line x1="-23" y1="28" x2="-23" y2="44" stroke="#333333" stroke-width="2"/>
+  </g>
+  <text x="85" y="130" font-size="13" font-weight="bold" fill="#333333" text-anchor="middle">モノブロックストロボ</text>
+  <text x="85" y="148" font-size="11" fill="#7a7a7a" text-anchor="middle">閃光を出す。出力は 1/1〜1/16</text>
+  <text x="85" y="163" font-size="11" fill="#7a7a7a" text-anchor="middle">モデリングランプで向きを確かめる</text>
+</g>
+
+<!-- 3 ライトスタンドとサンドバッグ -->
+<g transform="translate(380,70)">
+  <rect x="0" y="0" width="170" height="170" rx="6" fill="#fbfaf7" stroke="#e6e1d8"/>
+  <g transform="translate(85,60)">
+    <line x1="0" y1="-40" x2="0" y2="30" stroke="#333333" stroke-width="3"/>
+    <rect x="-5" y="-46" width="10" height="8" fill="#333333"/>
+    <!-- 脚 -->
+    <line x1="0" y1="30" x2="-40" y2="58" stroke="#333333" stroke-width="2.2"/>
+    <line x1="0" y1="30" x2="40" y2="58" stroke="#333333" stroke-width="2.2"/>
+    <line x1="0" y1="30" x2="0" y2="60" stroke="#333333" stroke-width="2.2"/>
+    <line x1="0" y1="10" x2="-24" y2="42" stroke="#333333" stroke-width="1.2"/>
+    <line x1="0" y1="10" x2="24" y2="42" stroke="#333333" stroke-width="1.2"/>
+    <!-- サンドバッグ -->
+    <path d="M-38,40 q-10,10 -2,18 l16,0 q8,-8 -2,-18 z" fill="#222222"/>
+    <path d="M-24,40 q-10,10 -2,18" fill="none" stroke="#222222" stroke-width="1"/>
+  </g>
+  <text x="85" y="130" font-size="13" font-weight="bold" fill="#333333" text-anchor="middle">スタンドとサンドバッグ</text>
+  <text x="85" y="148" font-size="11" fill="#7a7a7a" text-anchor="middle">ストロボを持ち上げて固定する</text>
+  <text x="85" y="163" font-size="11" fill="#7a7a7a" text-anchor="middle">サンドバッグは転倒を防ぐ重り</text>
+</g>
+
+<!-- 4 ソフトボックス -->
+<g transform="translate(560,70)">
+  <rect x="0" y="0" width="170" height="170" rx="6" fill="#fbfaf7" stroke="#e6e1d8"/>
+  <g transform="translate(85,68)">
+    <circle cx="-52" cy="0" r="10" fill="#555555" stroke="#333333" stroke-width="1.2"/>
+    <path d="M-44,-10 L20,-46 L20,46 L-44,10 Z" fill="#333333" stroke="#333333" stroke-width="1.2"/>
+    <path d="M-40,-8 L16,-40 L16,40 L-40,8 Z" fill="#c9c9c9"/>
+    <rect x="20" y="-46" width="8" height="92" fill="#ffffff" stroke="#333333" stroke-width="1.2"/>
+    <rect x="26" y="-46" width="3" height="92" fill="#f2a900"/>
+    <path d="M32,-30 L54,-36 M32,0 L58,0 M32,30 L54,36" stroke="#f2a900" stroke-width="1.4" opacity="0.8"/>
+  </g>
+  <text x="85" y="130" font-size="13" font-weight="bold" fill="#333333" text-anchor="middle">ソフトボックス</text>
+  <text x="85" y="148" font-size="11" fill="#7a7a7a" text-anchor="middle">光源を大きくして柔らかくする</text>
+  <text x="85" y="163" font-size="11" fill="#7a7a7a" text-anchor="middle">教材では 60×90cm を使う</text>
+</g>
+
+<!-- 5 アンブレラ -->
+<g transform="translate(20,250)">
+  <rect x="0" y="0" width="170" height="170" rx="6" fill="#fbfaf7" stroke="#e6e1d8"/>
+  <g transform="translate(85,68)">
+    <path d="M-10,-50 Q40,0 -10,50" fill="#ffffff" stroke="#333333" stroke-width="1.4"/>
+    <path d="M-10,-50 Q4,-25 -10,0 Q4,25 -10,50" fill="none" stroke="#bbbbbb" stroke-width="0.8"/>
+    <line x1="-4" y1="0" x2="-52" y2="0" stroke="#333333" stroke-width="1.6"/>
+    <circle cx="-52" cy="0" r="9" fill="#555555" stroke="#333333" stroke-width="1.2"/>
+    <path d="M20,-30 L46,-38 M22,0 L50,0 M20,30 L46,38" stroke="#f2a900" stroke-width="1.4" opacity="0.8"/>
+  </g>
+  <text x="85" y="130" font-size="13" font-weight="bold" fill="#333333" text-anchor="middle">アンブレラ</text>
+  <text x="85" y="148" font-size="11" fill="#7a7a7a" text-anchor="middle">透過か反射で光を広げて柔らかくする</text>
+  <text x="85" y="163" font-size="11" fill="#7a7a7a" text-anchor="middle">ソフトボックスより広く回る</text>
+</g>
+
+<!-- 6 標準リフレクターとグリッド -->
+<g transform="translate(200,250)">
+  <rect x="0" y="0" width="170" height="170" rx="6" fill="#fbfaf7" stroke="#e6e1d8"/>
+  <g transform="translate(85,68)">
+    <circle cx="-30" cy="0" r="12" fill="#555555" stroke="#333333" stroke-width="1.2"/>
+    <path d="M-20,-12 L14,-30 L14,30 L-20,12 Z" fill="#e0e0e0" stroke="#333333" stroke-width="1.4"/>
+    <g stroke="#333333" stroke-width="1">
+      <line x1="4" y1="-24" x2="14" y2="-24"/><line x1="4" y1="-16" x2="14" y2="-16"/><line x1="4" y1="-8" x2="14" y2="-8"/>
+      <line x1="4" y1="0" x2="14" y2="0"/><line x1="4" y1="8" x2="14" y2="8"/><line x1="4" y1="16" x2="14" y2="16"/><line x1="4" y1="24" x2="14" y2="24"/>
+    </g>
+    <line x1="14" y1="-30" x2="14" y2="30" stroke="#f2a900" stroke-width="3"/>
+    <path d="M18,-8 L54,-12 M18,0 L56,0 M18,8 L54,12" stroke="#f2a900" stroke-width="1.4" opacity="0.8"/>
+  </g>
+  <text x="85" y="130" font-size="13" font-weight="bold" fill="#333333" text-anchor="middle">標準リフレクターとグリッド</text>
+  <text x="85" y="148" font-size="11" fill="#7a7a7a" text-anchor="middle">光を狭い範囲に集める</text>
+  <text x="85" y="163" font-size="11" fill="#7a7a7a" text-anchor="middle">硬い光や背景専用の光を作る</text>
+</g>
+
+<!-- 7 白レフ板 -->
+<g transform="translate(380,250)">
+  <rect x="0" y="0" width="170" height="170" rx="6" fill="#fbfaf7" stroke="#e6e1d8"/>
+  <g transform="translate(85,58)">
+    <path d="M-30,-46 L26,-40 L26,46 L-30,52 Z" fill="#ffffff" stroke="#333333" stroke-width="1.4"/>
+    <path d="M-52,-20 L-36,-6 M-56,4 L-38,10 M-52,28 L-36,26" stroke="#f2a900" stroke-width="1.4" opacity="0.8"/>
+    <path d="M-38,-8 L-58,-24 M-40,8 L-60,4 M-38,24 L-56,34" stroke="#f2a900" stroke-width="1.2" opacity="0.5" stroke-dasharray="3 2"/>
+    <line x1="26" y1="52" x2="36" y2="62" stroke="#333333" stroke-width="1.2"/>
+  </g>
+  <text x="85" y="130" font-size="13" font-weight="bold" fill="#333333" text-anchor="middle">白レフ板</text>
+  <text x="85" y="148" font-size="11" fill="#7a7a7a" text-anchor="middle">光を反射して影を薄める</text>
+  <text x="85" y="163" font-size="11" fill="#7a7a7a" text-anchor="middle">被写体から 1m でキーの 2 段下</text>
+</g>
+
+<!-- 8 黒レフ板 -->
+<g transform="translate(560,250)">
+  <rect x="0" y="0" width="170" height="170" rx="6" fill="#fbfaf7" stroke="#e6e1d8"/>
+  <g transform="translate(85,58)">
+    <path d="M-30,-46 L26,-40 L26,46 L-30,52 Z" fill="#222222" stroke="#222222" stroke-width="1.4"/>
+    <path d="M-62,-20 L-36,-6 M-64,4 L-38,10 M-62,28 L-36,26" stroke="#f2a900" stroke-width="1.4" opacity="0.8"/>
+    <line x1="26" y1="52" x2="36" y2="62" stroke="#333333" stroke-width="1.2"/>
+  </g>
+  <text x="85" y="130" font-size="13" font-weight="bold" fill="#333333" text-anchor="middle">黒レフ板（フラッグ）</text>
+  <text x="85" y="148" font-size="11" fill="#7a7a7a" text-anchor="middle">光を吸って影を締める</text>
+  <text x="85" y="163" font-size="11" fill="#7a7a7a" text-anchor="middle">余計な光を遮る板としても使う</text>
+</g>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" width="760" height="300" role="img" aria-label="ヒストグラムの三つの見え方" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif">
+<rect x="0.5" y="0.5" width="759" height="299" rx="8" fill="#ffffff" stroke="#d9d9d9"/>
+<text x="24" y="30" font-size="16" font-weight="bold" fill="#333333">ヒストグラムで見るもの</text>
+<text x="24" y="50" font-size="11" fill="#7a7a7a">左が黒、右が白。見るのは肌の山の位置と、左右の端に張り付いていないか</text>
+
+<!-- 1 適正 -->
+<g transform="translate(30,70)">
+  <text x="110" y="14" font-size="13" font-weight="bold" fill="#333333" text-anchor="middle">適正</text>
+  <rect x="0" y="24" width="220" height="130" fill="#fbfaf7" stroke="#333333" stroke-width="1.2"/>
+  <path d="M0,154 L20,150 L50,138 L80,128 L110,110 L130,84 L145,70 L160,80 L175,110 L195,140 L220,152 L220,154 Z" fill="#a9b8cf" stroke="#333333" stroke-width="1"/>
+  <line x1="152" y1="62" x2="152" y2="40" stroke="#b3541e" stroke-width="1"/>
+  <text x="152" y="36" font-size="11" fill="#b3541e" text-anchor="middle">肌の山（中央から右寄り）</text>
+  <text x="0" y="170" font-size="10" fill="#7a7a7a">黒</text>
+  <text x="220" y="170" font-size="10" fill="#7a7a7a" text-anchor="end">白</text>
+  <text x="110" y="192" font-size="11" fill="#333333" text-anchor="middle">右端にも左端にも山がない</text>
+</g>
+
+<!-- 2 白飛び -->
+<g transform="translate(270,70)">
+  <text x="110" y="14" font-size="13" font-weight="bold" fill="#333333" text-anchor="middle">明るすぎる（白飛び）</text>
+  <rect x="0" y="24" width="220" height="130" fill="#fbfaf7" stroke="#333333" stroke-width="1.2"/>
+  <path d="M0,154 L40,152 L90,140 L130,116 L165,84 L190,70 L205,80 L212,100 L214,60 L220,30 L220,154 Z" fill="#a9b8cf" stroke="#333333" stroke-width="1"/>
+  <rect x="213" y="30" width="7" height="124" fill="#b3541e" opacity="0.8"/>
+  <line x1="216" y1="28" x2="200" y2="40" stroke="#b3541e" stroke-width="1"/>
+  <text x="196" y="40" font-size="11" fill="#b3541e" text-anchor="end">右端に張り付く</text>
+  <text x="0" y="170" font-size="10" fill="#7a7a7a">黒</text>
+  <text x="220" y="170" font-size="10" fill="#7a7a7a" text-anchor="end">白</text>
+  <text x="110" y="192" font-size="11" fill="#333333" text-anchor="middle">肌が右端に届き、情報が失われている</text>
+</g>
+
+<!-- 3 背景を飛ばす -->
+<g transform="translate(510,70)">
+  <text x="110" y="14" font-size="13" font-weight="bold" fill="#333333" text-anchor="middle">背景を白く飛ばしたとき</text>
+  <rect x="0" y="24" width="220" height="130" fill="#fbfaf7" stroke="#333333" stroke-width="1.2"/>
+  <path d="M0,154 L20,150 L50,136 L80,122 L105,100 L125,88 L140,96 L160,122 L185,144 L205,150 L212,150 L212,40 L220,30 L220,154 Z" fill="#a9b8cf" stroke="#333333" stroke-width="1"/>
+  <rect x="211" y="30" width="9" height="124" fill="#f2a900" opacity="0.9"/>
+  <line x1="128" y1="80" x2="128" y2="40" stroke="#b3541e" stroke-width="1"/>
+  <text x="128" y="36" font-size="11" fill="#b3541e" text-anchor="middle">人物の山</text>
+  <line x1="214" y1="34" x2="196" y2="56" stroke="#b3541e" stroke-width="1"/>
+  <text x="194" y="66" font-size="11" fill="#b3541e" text-anchor="end">背景（意図した白）</text>
+  <text x="0" y="170" font-size="10" fill="#7a7a7a">黒</text>
+  <text x="220" y="170" font-size="10" fill="#7a7a7a" text-anchor="end">白</text>
+  <text x="110" y="192" font-size="11" fill="#333333" text-anchor="middle">右端の山は背景。人物の山だけを見る</text>
+</g>
+</svg>

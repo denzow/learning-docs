@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 696 904" width="696" height="904" role="img" aria-label="白ホリで全身を撮る（第 8 章）">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#7a7a7a"/></marker><linearGradient id="glow" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f2a900" stop-opacity="0.35"/><stop offset="1" stop-color="#f2a900" stop-opacity="0"/></linearGradient><clipPath id="floor"><rect x="40" y="74" width="616.0" height="730.0"/></clipPath></defs>
+<rect x="0.5" y="0.5" width="695" height="903" rx="8" fill="#ffffff" stroke="#d9d9d9"/>
+<rect x="40.0" y="100.0" width="616.0" height="704.0" fill="#fbfaf7"/>
+<text x="40.0" y="30.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="16" text-anchor="start" fill="#333333" font-weight="bold"><tspan x="40.0" dy="0">白ホリで全身を撮る（第 8 章）</tspan></text>
+<text x="40.0" y="52.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12" text-anchor="start" fill="#7a7a7a" font-weight="normal"><tspan x="40.0" dy="0">キー 1 灯、白レフ、背景 2 灯</tspan></text>
+<rect x="40.0" y="74.0" width="616.0" height="26" fill="#fff4cf" stroke="#333333" stroke-width="1"/>
+<rect x="40.0" y="100.0" width="616.0" height="22" fill="#fff4cf" opacity="0.55"/>
+<rect x="40.0" y="74.0" width="616.0" height="48" fill="url(#glow)"/>
+<text x="348.0" y="91.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12" text-anchor="middle" fill="#333333" font-weight="normal"><tspan x="348.0" dy="0">白ホリの壁（背景ライトで f/11）</tspan></text>
+<path clip-path="url(#floor)" d="M185.2,537.8 L220.3,252.2 A287.8,287.8 0 0,1 470.8,502.7 Z" fill="#f2a900" opacity="0.16"/>
+<line x1="185.2" y1="537.8" x2="348.0" y2="375.0" stroke="#f2a900" stroke-width="1" stroke-dasharray="3 4" opacity="0.7"/>
+<path clip-path="url(#floor)" d="M139.0,265.0 L394.6,-89.1 A436.8,436.8 0 0,1 575.4,248.4 Z" fill="#f2a900" opacity="0.16"/>
+<line x1="139.0" y1="265.0" x2="447.0" y2="100.0" stroke="#f2a900" stroke-width="1" stroke-dasharray="3 4" opacity="0.7"/>
+<path clip-path="url(#floor)" d="M557.0,265.0 L120.6,248.4 A436.8,436.8 0 0,1 301.4,-89.1 Z" fill="#f2a900" opacity="0.16"/>
+<line x1="557.0" y1="265.0" x2="249.0" y2="100.0" stroke="#f2a900" stroke-width="1" stroke-dasharray="3 4" opacity="0.7"/>
+<g transform="translate(458.0,375.0) rotate(90)"><rect x="-49.5" y="-3.5" width="99.0" height="7" fill="#ffffff" stroke="#333333" stroke-width="1.4"/></g>
+<text x="478.0" y="379.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12" text-anchor="start" fill="#333333" font-weight="normal"><tspan x="478.0" dy="0">白レフ（1m）</tspan></text>
+<g transform="translate(249.0,287.0) rotate(20)"><rect x="-33.0" y="-3.5" width="66.0" height="7" fill="#222222" stroke="#222222" stroke-width="1.4"/></g>
+<text x="249.0" y="313.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12" text-anchor="middle" fill="#333333" font-weight="normal"><tspan x="249.0" dy="0">黒レフ（切り抜き用のとき、左右に）</tspan></text>
+<g transform="translate(447.0,287.0) rotate(-20)"><rect x="-33.0" y="-3.5" width="66.0" height="7" fill="#222222" stroke="#222222" stroke-width="1.4"/></g>
+<line x1="166.5" y1="265.0" x2="166.5" y2="100.0" stroke="#b3541e" stroke-width="1" stroke-dasharray="5 3"/>
+<line x1="161.5" y1="265.0" x2="171.5" y2="265.0" stroke="#b3541e" stroke-width="1.2"/>
+<line x1="161.5" y1="100.0" x2="171.5" y2="100.0" stroke="#b3541e" stroke-width="1.2"/>
+<text x="178.5" y="186.5" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12" text-anchor="middle" fill="#b3541e" font-weight="normal"><tspan x="178.5" dy="0">壁から 1.5m</tspan></text>
+<line x1="271.0" y1="375.0" x2="271.0" y2="100.0" stroke="#b3541e" stroke-width="1" stroke-dasharray="5 3"/>
+<line x1="266.0" y1="375.0" x2="276.0" y2="375.0" stroke="#b3541e" stroke-width="1.2"/>
+<line x1="266.0" y1="100.0" x2="276.0" y2="100.0" stroke="#b3541e" stroke-width="1.2"/>
+<text x="283.0" y="241.5" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12" text-anchor="middle" fill="#b3541e" font-weight="normal"><tspan x="283.0" dy="0">2.5m</tspan></text>
+<line x1="165.8" y1="518.4" x2="328.6" y2="355.6" stroke="#b3541e" stroke-width="1" stroke-dasharray="5 3"/>
+<line x1="162.2" y1="514.8" x2="169.3" y2="521.9" stroke="#b3541e" stroke-width="1.2"/>
+<line x1="325.0" y1="352.0" x2="332.1" y2="359.1" stroke="#b3541e" stroke-width="1.2"/>
+<text x="255.6" y="449.4" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12" text-anchor="middle" fill="#b3541e" font-weight="normal"><tspan x="255.6" dy="0">2.1m</tspan></text>
+<path d="M348.0,435.5 A60.5,60.5 0 0,1 305.2,417.8" fill="none" stroke="#2f6db5" stroke-width="1.2"/>
+<line x1="348.0" y1="375.0" x2="348.0" y2="738.0" stroke="#2f6db5" stroke-width="0.8" stroke-dasharray="2 3" opacity="0.6"/>
+<text x="318.7" y="449.7" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12" text-anchor="middle" fill="#2f6db5" font-weight="normal"><tspan x="318.7" dy="0">45°</tspan></text>
+<g transform="translate(348.0,375.0) rotate(90)"><ellipse cx="0" cy="0" rx="14" ry="27" fill="#a9b8cf" stroke="#333333" stroke-width="1.2"/><circle cx="3" cy="0" r="11" fill="#f1d9c2" stroke="#333333" stroke-width="1.2"/><path d="M14,-4 L19,0 L14,4 Z" fill="#f1d9c2" stroke="#333333" stroke-width="1"/></g>
+<text x="348.0" y="423.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12" text-anchor="middle" fill="#333333" font-weight="normal"><tspan x="348.0" dy="0">被写体（壁から 2.5m）</tspan></text>
+<g transform="translate(185.2,537.8) rotate(-45.0) scale(1.0)"><rect x="-6" y="-33" width="30" height="66" fill="#f7f7f7" stroke="#333333" stroke-width="1.4"/><line x1="-6" y1="-33" x2="24" y2="0" stroke="#7a7a7a" stroke-width="0.8"/><line x1="-6" y1="33" x2="24" y2="0" stroke="#7a7a7a" stroke-width="0.8"/><rect x="22" y="-33" width="5" height="66" fill="#f2a900" stroke="#333333" stroke-width="1"/><circle cx="-12" cy="0" r="8" fill="#555" stroke="#333333" stroke-width="1"/></g>
+<circle cx="155.5" cy="567.5" r="10" fill="#333333"/>
+<text x="155.5" y="572.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12" text-anchor="middle" fill="#fff" font-weight="bold"><tspan x="155.5" dy="0">A</tspan></text>
+<text x="139.9" y="587.1" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12" text-anchor="end" fill="#333333" font-weight="normal"><tspan x="139.9" dy="0">キー 2.1m、45°</tspan><tspan x="139.9" dy="16.2">出力 1/2</tspan></text>
+<g transform="translate(139.0,265.0) rotate(-28.2) scale(1.0)"><circle cx="-10" cy="0" r="9" fill="#555" stroke="#333333" stroke-width="1"/><path d="M-2,-8 L14,-16 L14,16 L-2,8 Z" fill="#e0e0e0" stroke="#333333" stroke-width="1.4"/><line x1="14" y1="-16" x2="14" y2="16" stroke="#f2a900" stroke-width="3"/></g>
+<circle cx="102.0" cy="284.8" r="10" fill="#333333"/>
+<text x="102.0" y="289.3" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12" text-anchor="middle" fill="#fff" font-weight="bold"><tspan x="102.0" dy="0">C</tspan></text>
+<text x="109.0" y="309.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12" text-anchor="end" fill="#333333" font-weight="normal"><tspan x="109.0" dy="0">背景 1/16</tspan><tspan x="109.0" dy="16.2">壁の右側を狙う</tspan></text>
+<g transform="translate(557.0,265.0) rotate(-151.8) scale(1.0)"><circle cx="-10" cy="0" r="9" fill="#555" stroke="#333333" stroke-width="1"/><path d="M-2,-8 L14,-16 L14,16 L-2,8 Z" fill="#e0e0e0" stroke="#333333" stroke-width="1.4"/><line x1="14" y1="-16" x2="14" y2="16" stroke="#f2a900" stroke-width="3"/></g>
+<circle cx="594.0" cy="284.8" r="10" fill="#333333"/>
+<text x="594.0" y="289.3" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12" text-anchor="middle" fill="#fff" font-weight="bold"><tspan x="594.0" dy="0">C</tspan></text>
+<text x="587.0" y="309.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12" text-anchor="start" fill="#333333" font-weight="normal"><tspan x="587.0" dy="0">背景 1/16</tspan><tspan x="587.0" dy="16.2">壁の左側を狙う</tspan></text>
+<g transform="translate(348.0,738.0) rotate(-90.0)"><rect x="-14" y="-11" width="20" height="22" rx="3" fill="#3c3c3c"/><rect x="6" y="-7" width="14" height="14" fill="#666" stroke="#333333" stroke-width="1"/><circle cx="20" cy="0" r="5" fill="#9ec5e8" stroke="#333333" stroke-width="1"/></g>
+<text x="348.0" y="768.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12" text-anchor="middle" fill="#333333" font-weight="normal"><tspan x="348.0" dy="0">カメラ（被写体から 3.3m、35mm、縦位置）</tspan></text>
+<g transform="translate(40.0,840.0)"><rect x="-12" y="-3" width="24" height="6" fill="#fff" stroke="#333333" stroke-width="1.4"/></g>
+<text x="70.0" y="844.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="start" fill="#7a7a7a" font-weight="normal"><tspan x="70.0" dy="0">白レフ</tspan></text>
+<g transform="translate(129.0,840.0)"><rect x="-12" y="-3" width="24" height="6" fill="#222"/></g>
+<text x="159.0" y="844.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="start" fill="#7a7a7a" font-weight="normal"><tspan x="159.0" dy="0">フラッグ（黒）</tspan></text>
+<g transform="translate(262.0,840.0)"><g transform="rotate(90) scale(0.5)"><ellipse cx="0" cy="0" rx="14" ry="27" fill="#a9b8cf" stroke="#333333" stroke-width="2"/><circle cx="3" cy="0" r="11" fill="#f1d9c2" stroke="#333333" stroke-width="2"/></g></g>
+<text x="292.0" y="844.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="start" fill="#7a7a7a" font-weight="normal"><tspan x="292.0" dy="0">被写体</tspan></text>
+<g transform="translate(351.0,840.0)"><g transform="rotate(-90) scale(0.42)"><rect x="-6" y="-33" width="30" height="66" fill="#f7f7f7" stroke="#333333" stroke-width="2"/><rect x="22" y="-33" width="5" height="66" fill="#f2a900"/></g></g>
+<text x="381.0" y="844.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="start" fill="#7a7a7a" font-weight="normal"><tspan x="381.0" dy="0">ソフトボックス</tspan></text>
+<g transform="translate(40.0,864.0)"><g transform="rotate(-90) scale(0.588)"><circle cx="-10" cy="0" r="9" fill="#555"/><path d="M-2,-8 L14,-16 L14,16 L-2,8 Z" fill="#e0e0e0" stroke="#333333" stroke-width="1.6"/></g></g>
+<text x="70.0" y="868.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="start" fill="#7a7a7a" font-weight="normal"><tspan x="70.0" dy="0">標準リフレクター</tspan></text>
+<g transform="translate(184.0,864.0)"><g transform="rotate(-90) scale(0.55)"><rect x="-14" y="-11" width="20" height="22" rx="3" fill="#3c3c3c"/><rect x="6" y="-7" width="14" height="14" fill="#666"/></g></g>
+<text x="214.0" y="868.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="start" fill="#7a7a7a" font-weight="normal"><tspan x="214.0" dy="0">カメラ</tspan></text>
+<line x1="546" y1="840" x2="656" y2="840" stroke="#333333" stroke-width="1.5"/>
+<line x1="546" y1="836" x2="546" y2="844" stroke="#333333" stroke-width="1.5"/>
+<line x1="656" y1="836" x2="656" y2="844" stroke="#333333" stroke-width="1.5"/>
+<text x="601.0" y="856.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="middle" fill="#7a7a7a" font-weight="normal"><tspan x="601.0" dy="0">1m</tspan></text>
+</svg>

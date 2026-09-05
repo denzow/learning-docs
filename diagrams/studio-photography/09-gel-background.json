@@ -1,0 +1,70 @@
+{
+  "title": "青のジェルを付けた背景ライト（第 9 章）",
+  "subtitle": "上から見た配置。背景ライトは被写体の真後ろの床に置く",
+  "room": {
+    "width": 5.0,
+    "depth": 4.6
+  },
+  "background": {
+    "type": "paper",
+    "label": "グレーの背景紙（幅 2.72m）",
+    "color": "#9a9a9a"
+  },
+  "subject": {
+    "x": 0,
+    "y": 2.0,
+    "label": "被写体",
+    "label_dx": 30,
+    "label_dy": 4,
+    "label_anchor": "start"
+  },
+  "camera": {
+    "x": 0,
+    "y": 4.0,
+    "label": "カメラ（RF 50mm）"
+  },
+  "lights": [
+    {
+      "type": "softbox",
+      "x": -1.06,
+      "y": 3.06,
+      "group": "A",
+      "label": "キー 1/4\n斜め前 45°、1.5m",
+      "label_dx": -20,
+      "label_dy": 50,
+      "label_anchor": "end"
+    },
+    {
+      "type": "reflector-grid",
+      "x": 0,
+      "y": 1.5,
+      "aim": "background",
+      "gel": "#3b6fd6",
+      "height": "floor",
+      "group": "C",
+      "label": "背景ライト 1/8\n青ジェル、グリッド、床置き\n紙から 1.5m、斜め上へ向ける",
+      "label_dx": 40,
+      "label_dy": 10,
+      "label_anchor": "start",
+      "badge_dx": -42,
+      "badge_dy": -8
+    }
+  ],
+  "measures": [
+    {
+      "from": "light:1",
+      "to": "background",
+      "label": "1.5m",
+      "offset": -0.7
+    }
+  ],
+  "notes": [
+    {
+      "x": 0.45,
+      "y": 0.4,
+      "text": "紙の上に青い円形のグラデーション",
+      "color": "#3b6fd6",
+      "anchor": "start"
+    }
+  ]
+}

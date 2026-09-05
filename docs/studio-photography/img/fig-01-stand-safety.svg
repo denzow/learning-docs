@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 500" width="760" height="500" role="img" aria-label="ライトスタンドの安全な立て方" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif">
+<defs>
+  <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#333333"/></marker>
+</defs>
+<rect x="0.5" y="0.5" width="759" height="499" rx="8" fill="#ffffff" stroke="#d9d9d9"/>
+<text x="24" y="30" font-size="16" font-weight="bold" fill="#333333">ライトスタンドの立て方と安全（横から見た図）</text>
+
+<!-- 床 -->
+<rect x="24" y="420" width="470" height="30" fill="#fbfaf7"/>
+<line x1="24" y1="420" x2="494" y2="420" stroke="#333333" stroke-width="1.4"/>
+<text x="30" y="440" font-size="11" fill="#7a7a7a">床</text>
+
+<!-- スタンド -->
+<g transform="translate(300,0)">
+  <!-- 支柱 -->
+  <line x1="0" y1="140" x2="0" y2="360" stroke="#333333" stroke-width="4"/>
+  <line x1="0" y1="360" x2="0" y2="420" stroke="#333333" stroke-width="5"/>
+  <!-- 脚（手前・奥） -->
+  <line x1="0" y1="360" x2="-110" y2="420" stroke="#333333" stroke-width="3"/>
+  <line x1="0" y1="360" x2="110" y2="420" stroke="#333333" stroke-width="3"/>
+  <line x1="0" y1="300" x2="-66" y2="396" stroke="#333333" stroke-width="1.6"/>
+  <line x1="0" y1="300" x2="66" y2="396" stroke="#333333" stroke-width="1.6"/>
+  <!-- ヘッドの取り付け部 -->
+  <rect x="-10" y="128" width="20" height="16" fill="#555555" stroke="#333333"/>
+  <circle cx="16" cy="136" r="5" fill="#999999" stroke="#333333"/>
+  <!-- モノブロック（少し下向き） -->
+  <g transform="translate(0,110) rotate(-20)">
+    <rect x="-30" y="-16" width="60" height="32" rx="6" fill="#555555" stroke="#333333" stroke-width="1.2"/>
+    <rect x="-24" y="-10" width="20" height="8" fill="#cfe7cf" stroke="#333333" stroke-width="0.8"/>
+    <!-- ソフトボックス（左へ向く） -->
+    <path d="M-30,-12 L-110,-52 L-110,52 L-30,12 Z" fill="#333333"/>
+    <path d="M-34,-10 L-106,-46 L-106,46 L-34,10 Z" fill="#c9c9c9"/>
+    <rect x="-118" y="-52" width="8" height="104" fill="#ffffff" stroke="#333333" stroke-width="1.2"/>
+    <rect x="-118" y="-52" width="3" height="104" fill="#f2a900"/>
+    <!-- 熱のマーク（モデリングランプ） -->
+    <path d="M-46,-24 q4,-8 0,-14 q-4,-6 0,-12 M-38,-24 q4,-8 0,-14 q-4,-6 0,-12 M-54,-24 q4,-8 0,-14 q-4,-6 0,-12" fill="none" stroke="#b3541e" stroke-width="1.4"/>
+    <!-- 電源ケーブル -->
+    <path d="M30,6 q20,10 14,40" fill="none" stroke="#333333" stroke-width="1.6"/>
+  </g>
+  <!-- ケーブル：支柱に沿わせて床へ -->
+  <path d="M44,136 q10,20 -30,40 L4,200 L4,420 L120,420 L470,420" fill="none" stroke="#333333" stroke-width="1.6"/>
+  <path d="M4,200 q-12,10 0,20 q12,10 0,20" fill="none" stroke="#333333" stroke-width="1.6"/>
+  <!-- テープ -->
+  <rect x="40" y="414" width="22" height="12" fill="#f2a900" opacity="0.8"/>
+  <rect x="120" y="414" width="22" height="12" fill="#f2a900" opacity="0.8"/>
+  <!-- サンドバッグ（ソフトボックス側の脚に） -->
+  <path d="M-84,392 q-14,14 -4,26 l22,0 q10,-12 -2,-26 z" fill="#222222"/>
+  <path d="M-64,392 q-14,14 -4,26" fill="none" stroke="#222222" stroke-width="1.2"/>
+</g>
+
+<!-- 番号 -->
+<g font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">
+  <circle cx="230" cy="470" r="10" fill="#333333"/><text x="230" y="474.5">1</text>
+  <circle cx="190" cy="392" r="10" fill="#333333"/><text x="190" y="396.5">2</text>
+  <circle cx="380" cy="300" r="10" fill="#333333"/><text x="380" y="304.5">3</text>
+  <circle cx="400" cy="64" r="10" fill="#333333"/><text x="400" y="68.5">4</text>
+  <circle cx="360" cy="176" r="10" fill="#333333"/><text x="360" y="180.5">5</text>
+</g>
+<!-- 引き出し線 -->
+<g stroke="#333333" stroke-width="1" fill="none">
+  <line x1="240" y1="466" x2="300" y2="436"/>
+  <line x1="200" y1="396" x2="222" y2="404"/>
+  <line x1="370" y1="300" x2="306" y2="300"/>
+  <line x1="391" y1="68" x2="324" y2="94"/>
+  <line x1="350" y1="176" x2="322" y2="146"/>
+</g>
+
+<!-- 説明 -->
+<g font-size="12" fill="#333333">
+  <g transform="translate(520,90)">
+    <circle cx="0" cy="-4" r="10" fill="#333333"/><text x="0" y="0.5" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+    <text x="18" y="0">脚を最大まで広げ、支柱を垂直に立てる</text>
+    <text x="18" y="17" font-size="11" fill="#7a7a7a">脚をすぼめたままだと重心が高く倒れやすい</text>
+  </g>
+  <g transform="translate(520,150)">
+    <circle cx="0" cy="-4" r="10" fill="#333333"/><text x="0" y="0.5" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+    <text x="18" y="0">サンドバッグはソフトボックス側の脚に</text>
+    <text x="18" y="17" font-size="11" fill="#7a7a7a">重い用具が張り出す側を押さえる</text>
+    <text x="18" y="32" font-size="11" fill="#7a7a7a">配置を変えるたびに載せ直す</text>
+  </g>
+  <g transform="translate(520,225)">
+    <circle cx="0" cy="-4" r="10" fill="#333333"/><text x="0" y="0.5" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+    <text x="18" y="0">ケーブルは支柱に沿わせて床へ下ろす</text>
+    <text x="18" y="17" font-size="11" fill="#7a7a7a">支柱に一巻きして遊びを作り、</text>
+    <text x="18" y="32" font-size="11" fill="#7a7a7a">人が通る床は養生テープで留める</text>
+  </g>
+  <g transform="translate(520,300)">
+    <circle cx="0" cy="-4" r="10" fill="#333333"/><text x="0" y="0.5" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+    <text x="18" y="0">モデリングランプ（150W）は熱くなる</text>
+    <text x="18" y="17" font-size="11" fill="#7a7a7a">撤収の前に切って冷ます。</text>
+    <text x="18" y="32" font-size="11" fill="#7a7a7a">用具を外すときは布を使う</text>
+  </g>
+  <g transform="translate(520,375)">
+    <circle cx="0" cy="-4" r="10" fill="#333333"/><text x="0" y="0.5" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+    <text x="18" y="0">角度を決めたら締めネジを確実に締める</text>
+    <text x="18" y="17" font-size="11" fill="#7a7a7a">緩いとヘッドが下を向き、</text>
+    <text x="18" y="32" font-size="11" fill="#7a7a7a">重心が動いて倒れる原因になる</text>
+  </g>
+</g>
+</svg>

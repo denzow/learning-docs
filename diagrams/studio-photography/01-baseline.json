@@ -1,0 +1,21 @@
+{
+  "title": "基準の配置（第 1 章）",
+  "subtitle": "キーライト 1 灯。以降の章はこの配置から出発する",
+  "room": {"width": 5.0, "depth": 5.0},
+  "background": {"type": "cyc", "label": "白ホリの壁（照らさない）"},
+  "subject": {"x": 0, "y": 2.5, "label": "被写体", "label_dx": 0, "label_dy": -40},
+  "camera": {"x": 0, "y": 4.5, "label": "カメラ（RF 50mm、被写体から約 2m）"},
+  "lights": [
+    {"type": "softbox", "x": -1.06, "y": 3.56, "group": "A", "label": "キーライト\nソフトボックス 60×90cm\n出力 1/4、顔より少し上から"}
+  ],
+  "measures": [
+    {"from": "light:0", "to": "subject", "label": "1.5m", "offset": -0.25},
+    {"from": "camera", "to": "subject", "label": "約 2m", "offset": 0.3}
+  ],
+  "angles": [
+    {"at": "subject", "from": "camera", "to": "light:0", "label": "45°"}
+  ],
+  "notes": [
+    {"x": 0.9, "y": 3.2, "text": "ISO 100、1/200 秒、f/8、WB 5500K", "anchor": "start", "color": "#2f6db5"}
+  ]
+}
