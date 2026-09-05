@@ -32,8 +32,10 @@ diagrams/<教材>/<name>.json を読み、docs/<教材>/img/<name>.svg に書く
   lights[].aim:    "subject"（既定）| "camera" | [x, y] | "background"（真上の壁）
   lights[].gel:    色（例 "#3b6fd6"）。光の色に使う
   lights[].height: "floor" で床置きの短いスタンドとして描く（記号を小さくする）
+  lights[].badge_dx, badge_dy: グループのバッジを px 単位でずらす（被写体と重なるとき）
   boards[].type:   white | black | flag
   measures[].from/to: "subject" | "camera" | "light:N" | "board:N" | "background" | [x, y]
+  markers[]:       {"x", "y", "label", "label_dx", "label_dy", "label_anchor", "color"}。位置だけを × 印で示す
   angles[].at/from/to: 同上
   参照先から見た向きの記号は、aim の方向に合わせて自動で回転する。
 """
@@ -240,7 +242,9 @@ class Canvas:
         if light.get("group"):
             rad = math.radians(deg + 180)
             off = 42 * scale
-            bx, by = lx + off * math.cos(rad), ly + off * math.sin(rad)
+            # badge_dx / badge_dy（px）で、被写体などと重なるときにバッジをずらせる
+            bx = lx + off * math.cos(rad) + light.get("badge_dx", 0)
+            by = ly + off * math.sin(rad) + light.get("badge_dy", 0)
             self.add(f'<circle cx="{bx:.1f}" cy="{by:.1f}" r="10" fill="{INK}"/>')
             self.text(bx, by + 4.5, light["group"], size=12, color="#fff", weight="bold")
         # ラベル
@@ -371,6 +375,18 @@ class Canvas:
         lx, ly = cx + (r + 16) * math.cos(mid), cy + (r + 16) * math.sin(mid)
         self.text(lx, ly + 4, a.get("label", ""), size=12, color=color)
 
+    # ---- 位置マーカー ----
+    def draw_marker(self, m):
+        x, y = self.px(m["x"], m["y"])
+        color = m.get("color", "#b3541e")
+        self.add(f'<g stroke="{color}" stroke-width="1.6"><line x1="{x - 6:.1f}" y1="{y - 6:.1f}" x2="{x + 6:.1f}" y2="{y + 6:.1f}"/>'
+                 f'<line x1="{x - 6:.1f}" y1="{y + 6:.1f}" x2="{x + 6:.1f}" y2="{y - 6:.1f}"/></g>')
+        if m.get("label"):
+            dx = m.get("label_dx", 12)
+            dy = m.get("label_dy", 4)
+            anchor = m.get("label_anchor", "start" if dx >= 0 else "end")
+            self.text(x + dx, y + dy, m["label"], size=12, anchor=anchor, color=color)
+
     # ---- 注記と矢印 ----
     def draw_note(self, n):
         x, y = self.px(n["x"], n["y"])
@@ -462,6 +478,8 @@ class Canvas:
         self.draw_camera()
         for a in spec.get("arrows", []):
             self.draw_arrow(a)
+        for m in spec.get("markers", []):
+            self.draw_marker(m)
         for n in spec.get("notes", []):
             self.draw_note(n)
         self.draw_legend()
