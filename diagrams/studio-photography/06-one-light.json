@@ -1,0 +1,69 @@
+{
+  "title": "一灯と白レフ板（第 6 章）",
+  "subtitle": "上から見た配置。背景紙のブース",
+  "room": {
+    "width": 5.2,
+    "depth": 4.2
+  },
+  "background": {
+    "type": "paper",
+    "label": "グレーの背景紙（幅 2.72m）",
+    "color": "#9a9a9a"
+  },
+  "subject": {
+    "x": 0,
+    "y": 1.5,
+    "label": "被写体\n（背景から 1.5m）",
+    "label_dx": 0,
+    "label_dy": -40,
+    "label_anchor": "middle"
+  },
+  "camera": {
+    "x": 0,
+    "y": 3.5,
+    "label": "カメラ（RF 50mm、被写体から約 2m）"
+  },
+  "lights": [
+    {
+      "type": "softbox",
+      "x": -1.06,
+      "y": 2.56,
+      "group": "A",
+      "label": "キー\nソフトボックス 60×90cm\n出力 1/4、顔より少し上"
+    }
+  ],
+  "boards": [
+    {
+      "type": "white",
+      "x": 1.0,
+      "y": 1.5,
+      "rot": 90,
+      "label": "白レフ",
+      "label_dx": 22,
+      "label_dy": 4,
+      "label_anchor": "start"
+    }
+  ],
+  "measures": [
+    {
+      "from": "light:0",
+      "to": "subject",
+      "label": "1.5m",
+      "offset": -0.25
+    },
+    {
+      "from": "subject",
+      "to": "board:0",
+      "label": "1m",
+      "offset": 0.25
+    }
+  ],
+  "angles": [
+    {
+      "at": "subject",
+      "from": "camera",
+      "to": "light:0",
+      "label": "45°"
+    }
+  ]
+}

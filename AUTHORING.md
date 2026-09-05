@@ -36,6 +36,66 @@ H1 はそのまま nav のラベルになる。
 ER 図は mermaid のコードブロックで書ける。
 公開サイトでは図として描画されるが、ローカルの確認ではネットワークがないと描画されない。
 
+### 図とイラスト
+
+図は惜しまず入れる。
+文章で位置関係や手順を説明するより図のほうが早く伝わる箇所は、章を書く段階で図にする。
+図にする目安は次のとおりである。
+
+- 空間の関係（機材の配置、断面、部品の位置と名称）
+- 比較（条件を変えたときの見え方や結果を並べる）
+- 手順や依存の流れ（段階ごとの状態、切り分けの順序、時間割）
+- 数量の関係（段や距離のように、目盛りで見せると分かるもの）
+
+1 章に 3〜5 枚を目安にし、概念の解説にも具体例にも置く。
+図の種類ごとに使う道具を分ける。
+
+- 流れ図や ER 図のように構造を示す図は mermaid で書く。
+- 撮影の配置図のように、教材の中で同じ形の図を何枚も描くものは、仕様から生成するスクリプトを用意する（後述の `scripts/render-diagrams.py` がその例）。
+- 機材や概念のイラストは SVG を手で書く。写実的な絵や製品写真の再現ではなく、位置関係と名称が分かる模式図でよい。
+
+図は SVG で `docs/<教材>/img/` に置き、`figure` 要素でキャプションを付けて本文に載せる。
+`attr_list` と `md_in_html` を有効にしてあるので、次の書き方がそのまま `<figure>` になる。
+図番号は「図 章-連番」で、本文から「図 6-1」のように参照する。
+
+```
+<figure markdown="span">
+![一灯と白レフ板の配置](img/06-one-light.svg)
+<figcaption>図 6-1 一灯と白レフ板の配置（上から見た図）</figcaption>
+</figure>
+```
+
+上から見たライティングの配置図は、JSON の仕様から `scripts/render-diagrams.py` が描く。
+仕様は `diagrams/<教材>/<name>.json` に置き、座標はメートルで書く（原点は背景の中央、y はカメラ側が正）。
+被写体、カメラ、ライト（ソフトボックス、アンブレラ、リフレクター、グリッド）、レフ板、寸法、角度、注記を描け、要素の書式はスクリプト冒頭の docstring にある。
+
+```bash
+scripts/render-diagrams.py <教材>            # diagrams/<教材>/*.json をすべて描く
+scripts/render-diagrams.py <教材> 06-one-light  # 名前を指定して描く
+```
+
+機材や概念のイラスト（`fig-NN-<内容>.svg`）は、作図ライブラリ `scripts/figlib.py` を使って Python で組み立てる。
+図ごとの関数を `diagrams/<教材>/figures/<任意の名前>.py` に書き、モジュール末尾の `FIGURES`（ファイル名から関数への辞書）に登録すると、`scripts/render-figures.py` が `docs/<教材>/img/` に SVG を書き出す。
+ライブラリには、白地の枠とタイトルを持つ `Figure`、番号付きの引き出し線や凡例や寸法線などの汎用部品、顔（影の型を指定できる）、人物、カメラ、モノブロック、ソフトボックス、アンブレラ、レフ板、小さな上面図、時間割、流れ図の箱といった部品がある。
+部品の一覧と引数は `scripts/figlib.py` 冒頭の docstring にあり、`diagrams/studio-photography/figures/` が使い方の例になる。
+
+```bash
+scripts/render-figures.py <教材>                    # diagrams/<教材>/figures/*.py のすべての図を描く
+scripts/render-figures.py <教材> fig-04-monoblock   # 名前を指定して描く
+```
+
+ライブラリの部品で足りない一枚だけの図は、SVG を手で書いてもよい。
+その場合も生成スクリプトと見た目を揃えるため、白地の角丸の枠、同じフォント指定、同じ配色（線 #333333、光 #f2a900、注記 #2f6db5、距離 #b3541e）を使う。
+clipPath を使うときは、中身を参照する要素と同じ座標系で書く（絶対座標の transform を付けると二重に変換されて描画が消える）。
+実在の製品は部品の位置関係が分かる模式図にとどめ、根拠のない細部やロゴを描かない。
+SVG は白地で描いてあるので、ダークモードでも `docs/css/figures.css` により白いカードとして表示される。
+
+出来上がりは PNG に描画して目で確かめる。
+
+```bash
+inkscape docs/<教材>/img/<name>.svg -o /tmp/<name>.png -w 900
+```
+
 ### 演習問題
 
 演習問題は四択で、章ごとに 5 問を目安にする。
@@ -151,6 +211,9 @@ develop の内容は `/develop/` 配下でプレビューできる。
 
 - `hooks/materials.py`：nav の教材行を章ごとの入れ子に展開し、章末に演習と音声への導線を足す。
 - `hooks/redirects.py`：`mkdocs.yml` の `extra.redirects` に書いた旧 URL に転送ページを置く。
+- `scripts/render-diagrams.py`：`diagrams/<教材>/*.json` からライティングの配置図の SVG を描く。
+- `scripts/figlib.py`：イラストを Python で組み立てる作図ライブラリ。`scripts/render-figures.py` が `diagrams/<教材>/figures/*.py` の図を書き出す。
+- `docs/css/figures.css`：本文の `figure` と `figcaption` の見た目。
 - `docs/js/quiz.js`：演習ページ（URL に `/exercises/` を含む）を解答 UI に変換する。
 - `docs/js/audio-progress.js`：読み上げ原稿ページ（URL に `/audio-scripts/` を含む）でプレイヤーを画面上部に固定し、再生位置を localStorage に保存する。保存キーは「教材/章」で、別の教材の同名の章と衝突しない。
 - `docs/js/audio-highlight.js`：`timing.json` と原稿の段落を突き合わせ、再生中の一文をハイライトして追従する。

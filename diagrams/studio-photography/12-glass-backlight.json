@@ -1,0 +1,81 @@
+{
+  "title": "アイスカフェラテを透過光で撮る（第 12 章）",
+  "subtitle": "ソフトボックスをグラスの真後ろに置き、その面を白い背景にする",
+  "room": {
+    "width": 4.8,
+    "depth": 2.8
+  },
+  "background": {
+    "type": "paper",
+    "label": "白の背景紙（この配置では写らない）",
+    "color": "#f4f2ee",
+    "width": 1.0
+  },
+  "subject": {
+    "x": 0,
+    "y": 1.4,
+    "kind": "glass",
+    "label": "グラス",
+    "label_dx": 0,
+    "label_dy": 34
+  },
+  "camera": {
+    "x": 0,
+    "y": 2.3,
+    "tripod": true,
+    "label": "カメラ（三脚、テザー撮影）",
+    "label_dy": 40
+  },
+  "lights": [
+    {
+      "type": "softbox",
+      "x": 0,
+      "y": 0.4,
+      "group": "A",
+      "label": "透過光 1/2\nグラスの真後ろ、1m",
+      "label_dx": -70,
+      "label_dy": 4,
+      "label_anchor": "end"
+    }
+  ],
+  "boards": [
+    {
+      "type": "black",
+      "x": -0.35,
+      "y": 1.4,
+      "rot": 90,
+      "length": 0.5,
+      "label": "黒レフ",
+      "label_dx": -18,
+      "label_dy": 4,
+      "label_anchor": "end"
+    },
+    {
+      "type": "black",
+      "x": 0.35,
+      "y": 1.4,
+      "rot": 90,
+      "length": 0.5,
+      "label": "黒レフ",
+      "label_dx": 18,
+      "label_dy": 4,
+      "label_anchor": "start"
+    }
+  ],
+  "measures": [
+    {
+      "from": "light:0",
+      "to": "subject",
+      "label": "1m",
+      "offset": 0.55
+    }
+  ],
+  "notes": [
+    {
+      "x": 0.5,
+      "y": 1.05,
+      "text": "縁に黒い面が映って\n輪郭が出る",
+      "anchor": "start"
+    }
+  ]
+}

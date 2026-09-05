@@ -1,0 +1,100 @@
+{
+  "title": "用具と距離を変えて撮り比べる（第 5 章）",
+  "subtitle": "ライトは斜め前 45 度の線の上で距離だけを変える。背景は照らさない",
+  "room": {
+    "width": 7.0,
+    "depth": 5.4
+  },
+  "background": {
+    "type": "cyc",
+    "label": "白ホリの壁（照らさない、被写体から 3m）"
+  },
+  "subject": {
+    "x": 1.0,
+    "y": 3.0,
+    "label": "被写体",
+    "label_dx": 34,
+    "label_dy": 4,
+    "label_anchor": "start"
+  },
+  "camera": {
+    "x": 1.0,
+    "y": 5.0,
+    "label": "カメラ（RF 50mm、2m）"
+  },
+  "lights": [
+    {
+      "type": "softbox",
+      "x": -0.06000000000000005,
+      "y": 4.06,
+      "group": "A",
+      "label": "ソフトボックス 1.5m、出力 1/4\n（透過アンブレラも同じ位置で比べる）",
+      "label_dx": -40,
+      "label_dy": -40,
+      "label_anchor": "end"
+    }
+  ],
+  "markers": [
+    {
+      "x": 0.43000000000000005,
+      "y": 3.57,
+      "label": "0.8m：ソフトボックス、出力 1/16",
+      "label_dx": 14,
+      "label_dy": 16
+    },
+    {
+      "x": -0.48,
+      "y": 4.48,
+      "label": "2.1m：標準リフレクター、出力 1/16",
+      "label_dx": 14,
+      "label_dy": 14
+    },
+    {
+      "x": -1.12,
+      "y": 5.12,
+      "label": "3.0m：ソフトボックス、出力 1/1",
+      "label_dx": -14,
+      "label_dy": -8,
+      "label_anchor": "end"
+    }
+  ],
+  "measures": [
+    {
+      "from": "light:0",
+      "to": "subject",
+      "label": "1.5m",
+      "offset": -0.25
+    }
+  ],
+  "angles": [
+    {
+      "at": "subject",
+      "from": "camera",
+      "to": "light:0",
+      "label": "45°",
+      "radius": 0.7
+    }
+  ],
+  "arrows": [
+    {
+      "from": [
+        -1.2999999999999998,
+        5.3
+      ],
+      "to": [
+        0.65,
+        3.35
+      ],
+      "label": "",
+      "color": "#b3541e"
+    }
+  ],
+  "notes": [
+    {
+      "x": 0.3,
+      "y": 1.0,
+      "text": "× はライトを置き換える位置。\n同じ 45 度の線の上で、距離と用具だけを変える。",
+      "anchor": "start"
+    }
+  ]
+}

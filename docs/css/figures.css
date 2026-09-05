@@ -1,0 +1,21 @@
+/* 章の本文に載せる図（配置図やイラストの SVG）。
+   <figure markdown="span"> で囲み、<figcaption> にキャプションを書く。
+   SVG は白地で描いてあるので、ダークモードでも枠付きのカードとして読める */
+.md-typeset figure {
+  margin: 1.5em auto;
+  max-width: 100%;
+}
+.md-typeset figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+.md-typeset figure figcaption {
+  max-width: 100%;
+  margin: 0.6em auto 0;
+  font-size: 0.8rem;
+  color: var(--md-default-fg-color--light);
+  text-align: center;
+}

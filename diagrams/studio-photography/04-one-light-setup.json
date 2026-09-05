@@ -1,0 +1,58 @@
+{
+  "title": "一灯を立ててトリガーと通信させる（第 4 章）",
+  "subtitle": "白ホリの前に立つ。背景は照らさない",
+  "room": {
+    "width": 5.0,
+    "depth": 5.4
+  },
+  "background": {
+    "type": "cyc",
+    "label": "白ホリの壁（照らさない）"
+  },
+  "subject": {
+    "x": 0,
+    "y": 2.5,
+    "label": "被写体（モデル役の友人）",
+    "label_dx": 0,
+    "label_dy": -40,
+    "label_anchor": "middle"
+  },
+  "camera": {
+    "x": 0,
+    "y": 4.5,
+    "label": "カメラ + XPro II-C（チャンネル 1）"
+  },
+  "lights": [
+    {
+      "type": "softbox",
+      "x": -1.06,
+      "y": 3.56,
+      "group": "A",
+      "label": "ソフトボックス 60×90cm\nグループ A、出力 1/4\n顔より少し上"
+    }
+  ],
+  "measures": [
+    {
+      "from": "light:0",
+      "to": "subject",
+      "label": "1.5m",
+      "offset": -0.25
+    }
+  ],
+  "angles": [
+    {
+      "at": "subject",
+      "from": "camera",
+      "to": "light:0",
+      "label": "45°"
+    }
+  ],
+  "notes": [
+    {
+      "x": 0.9,
+      "y": 3.3,
+      "text": "サンドバッグはソフトボックスと\n反対側の脚に載せる",
+      "anchor": "start"
+    }
+  ]
+}

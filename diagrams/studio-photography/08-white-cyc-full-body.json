@@ -1,0 +1,121 @@
+{
+  "title": "白ホリで全身を撮る（第 8 章）",
+  "subtitle": "キー 1 灯、白レフ、背景 2 灯",
+  "room": {
+    "width": 5.6,
+    "depth": 6.4
+  },
+  "background": {
+    "type": "cyc",
+    "label": "白ホリの壁（背景ライトで f/11）",
+    "lit": true
+  },
+  "subject": {
+    "x": 0,
+    "y": 2.5,
+    "label": "被写体（壁から 2.5m）",
+    "label_dx": 0,
+    "label_dy": 48
+  },
+  "camera": {
+    "x": 0,
+    "y": 5.8,
+    "label": "カメラ（被写体から 3.3m、35mm、縦位置）"
+  },
+  "lights": [
+    {
+      "type": "softbox",
+      "x": -1.48,
+      "y": 3.98,
+      "group": "A",
+      "label": "キー 2.1m、45°\n出力 1/2"
+    },
+    {
+      "type": "reflector",
+      "x": -1.9,
+      "y": 1.5,
+      "aim": [
+        0.9,
+        0
+      ],
+      "group": "C",
+      "label": "背景 1/16\n壁の右側を狙う",
+      "label_dx": -30,
+      "label_dy": 44,
+      "label_anchor": "end"
+    },
+    {
+      "type": "reflector",
+      "x": 1.9,
+      "y": 1.5,
+      "aim": [
+        -0.9,
+        0
+      ],
+      "group": "C",
+      "label": "背景 1/16\n壁の左側を狙う",
+      "label_dx": 30,
+      "label_dy": 44,
+      "label_anchor": "start"
+    }
+  ],
+  "boards": [
+    {
+      "type": "white",
+      "x": 1.0,
+      "y": 2.5,
+      "rot": 90,
+      "label": "白レフ（1m）",
+      "label_dx": 20,
+      "label_dy": 4,
+      "label_anchor": "start"
+    },
+    {
+      "type": "flag",
+      "x": -0.9,
+      "y": 1.7,
+      "rot": 20,
+      "label": "黒レフ（切り抜き用のとき、左右に）",
+      "label_dx": 0,
+      "label_dy": 26,
+      "label_anchor": "middle"
+    },
+    {
+      "type": "flag",
+      "x": 0.9,
+      "y": 1.7,
+      "rot": -20
+    }
+  ],
+  "measures": [
+    {
+      "from": "light:1",
+      "to": [
+        -1.9,
+        0
+      ],
+      "label": "壁から 1.5m",
+      "offset": 0.25
+    },
+    {
+      "from": "subject",
+      "to": "background",
+      "label": "2.5m",
+      "offset": -0.7
+    },
+    {
+      "from": "light:0",
+      "to": "subject",
+      "label": "2.1m",
+      "offset": -0.25
+    }
+  ],
+  "angles": [
+    {
+      "at": "subject",
+      "from": "camera",
+      "to": "light:0",
+      "label": "45°"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 420" width="780" height="420" role="img" aria-label="背景紙のブース">
+<defs><filter id="blur" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4"/></filter></defs>
+<rect x="0.5" y="0.5" width="779" height="419" rx="8" fill="#ffffff" stroke="#d9d9d9"/>
+<text x="24.0" y="30.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="16" text-anchor="start" fill="#333333" font-weight="bold"><tspan x="24.0" dy="0">背景紙のブース</tspan></text>
+<text x="24.0" y="52.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12" text-anchor="start" fill="#7a7a7a" font-weight="normal"><tspan x="24.0" dy="0">横から見た図。紙は壁に沿って垂らし、床へ緩やかに延ばす</tspan></text>
+<rect x="50.0" y="100.0" width="706.0" height="290.0" rx="0" fill="#fbfaf7" stroke="none" stroke-width="0"/>
+<rect x="76.0" y="110.0" width="14.0" height="254.0" rx="0" fill="#e6e1d8" stroke="#333333" stroke-width="1"/>
+<rect x="76.0" y="350.0" width="680.0" height="14.0" rx="0" fill="#e6e1d8" stroke="#333333" stroke-width="1"/>
+<rect x="90.0" y="130.0" width="30.0" height="6.0" rx="0" fill="#555555" stroke="none" stroke-width="0"/>
+<circle cx="120.0" cy="142.0" r="16" fill="#d9d4cc" stroke="#333333" stroke-width="1.2"/>
+<circle cx="120.0" cy="142.0" r="4" fill="#555555" stroke="none" stroke-width="0"/>
+<circle cx="120.0" cy="112.0" r="10" fill="#333333"/>
+<text x="120.0" y="116.3" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12.0" text-anchor="middle" fill="#fff" font-weight="bold"><tspan x="120.0" dy="0">1</tspan></text>
+<path d="M134,142.0 L134,290 Q134,347 194,347 L254.0,347" fill="none" stroke="#8c8c8c" stroke-width="5" />
+<circle cx="160.0" cy="214.0" r="10" fill="#333333"/>
+<text x="160.0" y="218.3" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12.0" text-anchor="middle" fill="#fff" font-weight="bold"><tspan x="160.0" dy="0">2</tspan></text>
+<circle cx="162.0" cy="326.0" r="10" fill="#333333"/>
+<text x="162.0" y="330.3" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12.0" text-anchor="middle" fill="#fff" font-weight="bold"><tspan x="162.0" dy="0">3</tspan></text>
+<rect x="242.0" y="342.0" width="16.0" height="7.0" rx="0" fill="#8ec5a0" stroke="#333333" stroke-width="0.8"/>
+<circle cx="250.0" cy="324.0" r="10" fill="#333333"/>
+<text x="250.0" y="328.3" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12.0" text-anchor="middle" fill="#fff" font-weight="bold"><tspan x="250.0" dy="0">4</tspan></text>
+<circle cx="186.0" cy="347.0" r="5" fill="#6b5a3e" stroke="none" stroke-width="0" opacity="0.7"/>
+<line x1="134.0" y1="330.0" x2="134.0" y2="360.0" stroke="#b3541e" stroke-width="1.2" stroke-dasharray="4 3"/>
+<circle cx="134.0" cy="380.0" r="10" fill="#333333"/>
+<text x="134.0" y="384.3" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12.0" text-anchor="middle" fill="#fff" font-weight="bold"><tspan x="134.0" dy="0">5</tspan></text>
+<rect x="234.0" y="282.2" width="32.0" height="67.8" rx="0" fill="#5c6b80" stroke="#333333" stroke-width="1"/>
+<path d="M226.0,240.8235294117647 C226.0,237.05882352941177 244.0,237.05882352941177 250.0,237.05882352941177 C256.0,237.05882352941177 274.0,237.05882352941177 274.0,240.8235294117647 L272.0,282.2352941176471 L228.0,282.2352941176471 Z" fill="#a9b8cf" stroke="#333333" stroke-width="1" />
+<circle cx="250.0" cy="231.0" r="9.035294117647059" fill="#f1d9c2" stroke="#333333" stroke-width="1"/>
+<path d="M240.96470588235294,229.52941176470586 A9.035294117647059,9.035294117647059 0 0,1 259.0352941176471,229.52941176470586 Z" fill="#6b4f3a" stroke="none" stroke-width="0" />
+<circle cx="284.0" cy="214.0" r="10" fill="#333333"/>
+<text x="284.0" y="218.3" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="12.0" text-anchor="middle" fill="#fff" font-weight="bold"><tspan x="284.0" dy="0">6</tspan></text>
+<path d="M433.6,350 L442.0,260.0 L450.4,350 M442.0,260.0 L442.0,350" fill="none" stroke="#555555" stroke-width="1.5" />
+<g transform="translate(442.0,254.0) rotate(0) scale(-0.6,0.6)"><rect x="-30" y="-16" width="34" height="30" rx="4" fill="#3c3c3c"/><rect x="-22" y="-24" width="14" height="8" fill="#3c3c3c"/><rect x="4" y="-10" width="26" height="20" fill="#666" stroke="#333333" stroke-width="1"/><rect x="30" y="-9" width="3" height="18" fill="#9ec5e8" stroke="#333333" stroke-width="1"/></g>
+<line x1="134.0" y1="394.0" x2="250.0" y2="394.0" stroke="#b3541e" stroke-width="1" stroke-dasharray="5 3"/>
+<line x1="134.0" y1="389.0" x2="134.0" y2="399.0" stroke="#b3541e" stroke-width="1.2"/>
+<line x1="250.0" y1="389.0" x2="250.0" y2="399.0" stroke="#b3541e" stroke-width="1.2"/>
+<text x="192.0" y="411.9" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="middle" fill="#b3541e" font-weight="normal"><tspan x="192.0" dy="0">床に 1.5m ほど伸ばす</tspan></text>
+<line x1="114.0" y1="142.0" x2="114.0" y2="347.0" stroke="#b3541e" stroke-width="1" stroke-dasharray="5 3"/>
+<text x="108.0" y="246.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="end" fill="#b3541e" font-weight="normal"><tspan x="108.0" dy="0">幅 2.72m の紙</tspan></text>
+<circle cx="470.0" cy="80.0" r="8" fill="#333333"/>
+<text x="470.0" y="83.4" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="9.6" text-anchor="middle" fill="#fff" font-weight="bold"><tspan x="470.0" dy="0">1</tspan></text>
+<text x="484.0" y="84.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="start" fill="#333333" font-weight="normal"><tspan x="484.0" dy="0">ロール。上から引き出す</tspan></text>
+<circle cx="470.0" cy="100.0" r="8" fill="#333333"/>
+<text x="470.0" y="103.4" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="9.6" text-anchor="middle" fill="#fff" font-weight="bold"><tspan x="470.0" dy="0">2</tspan></text>
+<text x="484.0" y="104.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="start" fill="#333333" font-weight="normal"><tspan x="484.0" dy="0">壁に沿って床まで垂らす</tspan></text>
+<circle cx="470.0" cy="120.0" r="8" fill="#333333"/>
+<text x="470.0" y="123.4" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="9.6" text-anchor="middle" fill="#fff" font-weight="bold"><tspan x="470.0" dy="0">3</tspan></text>
+<text x="484.0" y="124.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="start" fill="#333333" font-weight="normal"><tspan x="484.0" dy="0">床へは緩い曲線でつなぐ（境目が写らない）</tspan></text>
+<circle cx="470.0" cy="140.0" r="8" fill="#333333"/>
+<text x="470.0" y="143.4" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="9.6" text-anchor="middle" fill="#fff" font-weight="bold"><tspan x="470.0" dy="0">4</tspan></text>
+<text x="484.0" y="144.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="start" fill="#333333" font-weight="normal"><tspan x="484.0" dy="0">先端は養生テープで床に留める</tspan></text>
+<circle cx="470.0" cy="160.0" r="8" fill="#333333"/>
+<text x="470.0" y="163.4" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="9.6" text-anchor="middle" fill="#fff" font-weight="bold"><tspan x="470.0" dy="0">5</tspan></text>
+<text x="484.0" y="164.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="start" fill="#333333" font-weight="normal"><tspan x="484.0" dy="0">汚れた部分は最小限を切り落とす</tspan></text>
+<circle cx="470.0" cy="180.0" r="8" fill="#333333"/>
+<text x="470.0" y="183.4" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="9.6" text-anchor="middle" fill="#fff" font-weight="bold"><tspan x="470.0" dy="0">6</tspan></text>
+<text x="484.0" y="184.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="start" fill="#333333" font-weight="normal"><tspan x="484.0" dy="0">被写体は紙の上に立つ。靴の裏を拭く</tspan></text>
+<text x="470.0" y="216.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="start" fill="#7a7a7a" font-weight="normal"><tspan x="470.0" dy="0">撤収時は床の部分を持ち上げてから巻き上げる。</tspan></text>
+<text x="470.0" y="232.0" font-family="'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="11" text-anchor="start" fill="#7a7a7a" font-weight="normal"><tspan x="470.0" dy="0">伸ばしたまま巻くと、床との角で紙が折れる。</tspan></text>
+</svg>

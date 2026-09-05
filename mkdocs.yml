@@ -34,6 +34,9 @@ theme:
 
 markdown_extensions:
   - footnotes
+  # 図を <figure markdown="span"> と <figcaption> で囲み、キャプション付きで載せるために使う
+  - attr_list
+  - md_in_html
   - toc:
       permalink: true
   - admonition
@@ -48,6 +51,7 @@ markdown_extensions:
 
 extra_css:
   - css/quiz.css
+  - css/figures.css
   - css/audio-progress.css
   - css/audio-highlight.css
 
@@ -69,6 +73,7 @@ nav:
   - ホーム: index.md
   - データモデリング: data-modeling/
   - 統計入門: statistics-for-data-analysis/
+  - スタジオ撮影: studio-photography/
 
 extra:
   # 教材を docs/data-modeling/ へ移す前に公開していた URL。hooks/redirects.py が転送ページを置く

@@ -1,0 +1,25 @@
+{
+  "title": "方向を変えて撮り比べる（第 5 章）",
+  "subtitle": "ソフトボックス 1.5m、出力 1/4 を固定し、被写体を中心に回す",
+  "room": {"width": 6.0, "depth": 5.6},
+  "background": {"type": "cyc", "label": "白ホリの壁（照らさない）"},
+  "subject": {"x": 0, "y": 3.0, "label": "被写体", "label_dx": 34, "label_dy": 4},
+  "camera": {"x": 0, "y": 5.0, "label": "カメラ（2m）"},
+  "lights": [
+    {"type": "softbox", "x": 0, "y": 4.5, "cone": false, "label": "正面（カメラの真上）", "label_dx": 70, "label_dy": 4, "label_anchor": "start"},
+    {"type": "softbox", "x": -1.06, "y": 4.06, "label": "斜め前 45 度", "label_dx": -50, "label_dy": 40, "label_anchor": "end"},
+    {"type": "softbox", "x": -1.5, "y": 3.0, "cone": false, "label": "サイド 90 度", "label_dx": -50, "label_dy": 4, "label_anchor": "end"},
+    {"type": "softbox", "x": -1.06, "y": 1.94, "cone": false, "label": "逆光（斜め後ろ 45 度）", "label_dx": -50, "label_dy": -30, "label_anchor": "end"}
+  ],
+  "measures": [
+    {"from": "light:1", "to": "subject", "label": "1.5m", "offset": -0.22}
+  ],
+  "angles": [
+    {"at": "subject", "from": "camera", "to": "light:1", "label": "45°", "radius": 0.6},
+    {"at": "subject", "from": "camera", "to": "light:2", "label": "90°", "radius": 0.85},
+    {"at": "subject", "from": "camera", "to": "light:3", "label": "135°", "radius": 1.1}
+  ],
+  "notes": [
+    {"x": 0.6, "y": 1.6, "text": "高さは顔より少し上で揃える。\n斜め前 45 度だけ光の扇を描いた", "anchor": "start"}
+  ]
+}

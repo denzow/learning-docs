@@ -1,0 +1,75 @@
+{
+  "title": "ケーキとホットコーヒーのテーブル撮影（第 12 章）",
+  "subtitle": "上から見た配置。ソフトボックスは斜め後ろ 45 度上にあり、水平位置だけを示す",
+  "room": {
+    "width": 4.8,
+    "depth": 2.7
+  },
+  "background": {
+    "type": "sweep",
+    "label": "白の背景紙のスイープ（テーブルから壁へ）",
+    "color": "#f4f2ee",
+    "width": 1.0,
+    "length": 1.4
+  },
+  "subject": {
+    "x": 0,
+    "y": 1.0,
+    "kind": "plate",
+    "label": "皿（品を入れ替える）",
+    "label_dx": -46,
+    "label_dy": 4,
+    "label_anchor": "end"
+  },
+  "camera": {
+    "x": 0,
+    "y": 1.8,
+    "tripod": true,
+    "label": "カメラ（三脚、18-150mm の 50mm 前後、約 0.8m）",
+    "label_dy": 42
+  },
+  "lights": [
+    {
+      "type": "softbox",
+      "x": -0.45,
+      "y": 0.3,
+      "group": "A",
+      "label": "キー 1/2\n斜め後ろ 45 度上、1m\n皿の上面が f/16",
+      "label_dx": -80,
+      "label_dy": -16,
+      "label_anchor": "end"
+    }
+  ],
+  "boards": [
+    {
+      "type": "white",
+      "x": 0,
+      "y": 1.35,
+      "rot": 0,
+      "length": 0.5,
+      "label": "白レフ（カメラ側、皿から 30cm）",
+      "label_dx": 46,
+      "label_dy": 4,
+      "label_anchor": "start"
+    },
+    {
+      "type": "black",
+      "x": 0.45,
+      "y": 1.0,
+      "rot": 90,
+      "length": 0.4,
+      "label": "黒レフ\n（カップの側面用）",
+      "label_dx": 22,
+      "label_dy": -4,
+      "label_anchor": "start"
+    }
+  ],
+  "measures": [
+    {
+      "from": "camera",
+      "to": "subject",
+      "label": "約 0.8m",
+      "offset": -0.5
+    }
+  ]
+}
