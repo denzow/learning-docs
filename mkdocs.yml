@@ -54,12 +54,14 @@ extra_css:
   - css/figures.css
   - css/audio-progress.css
   - css/audio-highlight.css
+  - css/audio-rsvp.css
 
 extra_javascript:
   - js/quiz.js
   - js/audio-progress.js
   # audio-progress.js が入れる案内やプレイヤーの高さを前提にするため、後に読み込む
   - js/audio-highlight.js
+  - js/audio-rsvp.js
 
 # 教材の追加とそのファイル構成は hooks/materials.py に集約する。nav には教材ごとに
 # 「ラベル: ディレクトリ名/」の 1 行だけを書き、章ごとの入れ子（本文、演習問題、
