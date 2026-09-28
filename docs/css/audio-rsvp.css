@@ -39,10 +39,12 @@
   user-select: none;
 }
 
-/* 表示中の文節。一行に収まるよう画面幅に応じて大きさを変え、行の高さを固定して
-   文節が変わっても下の文脈が上下に動かないようにする */
+/* 表示中の文節。一行に収まるよう画面幅に応じて大きさを変え、一行分の高さを確保して
+   文節が変わっても下の文脈が上下に動かないようにする。長い英単語は文字の途中でも
+   折り返し、横にはみ出さないようにする */
 .md-typeset .audio-rsvp-word {
   min-height: 1.4em;
+  overflow-wrap: anywhere;
   font-size: clamp(1.1rem, 6.5vw, 2.2rem);
   font-weight: 700;
   line-height: 1.4;

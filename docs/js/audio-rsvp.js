@@ -6,6 +6,7 @@
 // 文の中は文節の文字数に比例して時刻を割り振る。速く読みたいときはプレイヤーの
 // 再生速度を上げればよく、この JS は独自の時計を持たない。
 // 文節の区切りには Intl.Segmenter を使い、使えないブラウザでは句読点と固定長で区切る。
+// 英単語の間の空白は残す。詰めると「Ralph Kimball」が読めなくなる。
 // timing.json を置いていない章では何もせず、素の表示のまま残す。
 (function () {
   "use strict";
@@ -43,32 +44,74 @@
     return /^[、。，．,.!?！？]+$/.test(text);
   }
 
+  // ひらがなで始まるが文節の頭に立つ語。直前の語につながないための例外
+  var HEAD_WORDS = [
+    "この", "その", "あの", "どの", "これ", "それ", "あれ", "どれ", "ここ", "そこ", "あそこ", "どこ",
+    "こんな", "そんな", "あんな", "どんな", "こう", "そう", "ああ", "どう",
+    "そして", "また", "つまり", "ただし", "しかし", "たとえば", "もし", "さらに", "まず", "もう", "まだ",
+    "すべて", "ほとんど", "いつ", "なぜ", "とても", "あまり", "いま", "ぜひ",
+  ];
+
   function startsWithHiragana(text) {
-    return /^[ぁ-ゖ]/.test(text);
+    return /^[ぁ-ゖ]/.test(text) && HEAD_WORDS.indexOf(text) < 0;
   }
 
   function endsWithDigit(text) {
     return /[0-9０-９]$/.test(text);
   }
 
-  // 文を語に分ける。Intl.Segmenter があれば辞書に基づく語、なければ句読点と 1 文字ずつ
+  function startsWithKanji(text) {
+    return /^[\u4e00-\u9fff々]/.test(text);
+  }
+
+  function endsWithKanji(text) {
+    return /[\u4e00-\u9fff々]$/.test(text);
+  }
+
+  function isLatin(ch) {
+    return /[A-Za-z0-9]/.test(ch);
+  }
+
+  var segmenter = null;
+
+  // 文を語に分ける。Intl.Segmenter があれば辞書に基づく語、なければ句読点と固定長で分ける。
+  // 空白は語としては返さず、英単語どうし（「Ralph」と「Kimball」）の間にあったときだけ
+  // 直前の語につないで一語にする
   function segments(text) {
+    var out = [];
     if (window.Intl && Intl.Segmenter) {
-      var segmenter = new Intl.Segmenter("ja", { granularity: "word" });
-      var out = [];
-      var iter = segmenter.segment(text);
-      var it = iter[Symbol.iterator]();
+      if (!segmenter) segmenter = new Intl.Segmenter("ja", { granularity: "word" });
+      var spaceBefore = false;
+      var it = segmenter.segment(text)[Symbol.iterator]();
       for (var r = it.next(); !r.done; r = it.next()) {
-        if (r.value.segment.trim()) out.push(r.value.segment);
+        var seg = r.value.segment;
+        if (!seg.trim()) {
+          spaceBefore = true;
+          continue;
+        }
+        var last = out.length ? out[out.length - 1] : "";
+        if (spaceBefore && last && isLatin(last.charAt(last.length - 1)) && isLatin(seg.charAt(0))) {
+          out[out.length - 1] = last + " " + seg;
+        } else {
+          out.push(seg);
+        }
+        spaceBefore = false;
       }
       return out;
     }
-    return text.replace(/\s+/g, "").split(/([、。，．,.!?！？])/).filter(Boolean);
+    text.split(/([、。，．,.!?！？])/).forEach(function (piece) {
+      piece = piece.replace(/^\s+|\s+$/g, "");
+      for (var i = 0; i < piece.length; i += CHUNK_MAX_CHARS) {
+        out.push(piece.slice(i, i + CHUNK_MAX_CHARS));
+      }
+    });
+    return out;
   }
 
   // 語を文節にまとめる。Intl.Segmenter の語は「光」「が」「分」「かって」のように細かいので、
-  // 一つずつ出すと読みにくい。ひらがなで始まる語（助詞、助動詞、送り仮名）は直前の語に
-  // つなぐ。一文字の語（「第」「各」）や数字で終わる語（「第2」に続く「章」）も次につなぐ。
+  // 一つずつ出すと読みにくい。ひらがなで始まる語（助詞、助動詞、送り仮名）は、指示語や
+  // 接続詞を除いて直前の語につなぐ。一文字の語（「第」「各」）や数字で終わる語（「第2」に続く「章」）も次につなぐ。
+  // 漢字で終わる語に漢字で始まる語が続くのは複合語（「全体」と「像」）なので、これもつなぐ。
   // 句読点は直前につなぎ、そこで区切る
   function bunsetsu(text) {
     var out = [];
@@ -80,11 +123,16 @@
         current = "";
         return;
       }
-      var joins = startsWithHiragana(seg) || current.length === 1 || endsWithDigit(current);
+      var joins =
+        startsWithHiragana(seg) ||
+        current.length === 1 ||
+        endsWithDigit(current) ||
+        (endsWithKanji(current) && startsWithKanji(seg));
       if (current && !joins) {
         out.push(current);
         current = "";
       }
+      if (current && isLatin(current.charAt(current.length - 1)) && isLatin(seg.charAt(0))) current += " ";
       current += seg;
     });
     if (current) out.push(current);
@@ -101,6 +149,7 @@
         chunks.push(current);
         current = "";
       }
+      if (current && isLatin(current.charAt(current.length - 1)) && isLatin(b.charAt(0))) current += " ";
       current += b;
       if (isPunctuation(b.charAt(b.length - 1))) {
         chunks.push(current);
@@ -116,7 +165,7 @@
   function buildChunks(cues, duration) {
     var chunks = [];
     cues.forEach(function (cue, i) {
-      var text = cue.text.replace(/\s+/g, "");
+      var text = cue.text.replace(/\s+/g, " ").replace(/^\s+|\s+$/g, "");
       var end;
       if (i + 1 < cues.length) {
         end = cues[i + 1].t;
@@ -126,14 +175,17 @@
         end = cue.t + text.length / FALLBACK_CHARS_PER_SEC;
       }
       var parts = chunkSentence(text);
+      var weight = function (p) {
+        return p.replace(/\s+/g, "").length;
+      };
       var total = 0;
       parts.forEach(function (p) {
-        total += p.length;
+        total += weight(p);
       });
       var offset = 0;
       parts.forEach(function (p) {
         chunks.push({ t: cue.t + ((end - cue.t) * offset) / total, text: p, sentence: i });
-        offset += p.length;
+        offset += weight(p);
       });
     });
     return chunks;
@@ -254,6 +306,9 @@
         if (panel.parentNode) panel.parentNode.removeChild(panel);
         if (raf) cancelAnimationFrame(raf);
         raf = 0;
+        // 隠れていた間はハイライトの追従が効かないので、いま読んでいる文まで戻す
+        var active = article.querySelector(".audio-cue-active");
+        if (active) active.scrollIntoView({ block: "center", behavior: "smooth" });
       }
     }
 
@@ -273,10 +328,6 @@
       if (box.checked && audio.paused) render();
     });
     // 最後の文の長さは音声の長さで決まる。長さが分かった時点で割り直す
-    audio.addEventListener("loadedmetadata", function () {
-      rebuild();
-      if (box.checked) render();
-    });
     audio.addEventListener("durationchange", function () {
       rebuild();
       if (box.checked) render();
