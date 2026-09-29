@@ -146,6 +146,8 @@
   function scrollToSpan(span) {
     var top = contentTop();
     var rect = span.getBoundingClientRect();
+    // RSVP モードなどで本文が隠れている間は、位置が取れないのでスクロールしない
+    if (!rect.width && !rect.height) return;
     var visible =
       rect.top >= top + VISIBLE_MARGIN_PX && rect.bottom <= window.innerHeight - VISIBLE_MARGIN_PX;
     if (visible) return;

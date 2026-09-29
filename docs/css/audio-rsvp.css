@@ -1,0 +1,81 @@
+/* RSVP モード。原稿を隠し、その場所のパネルに文節を一つずつ大きく表示する */
+
+/* RSVP のトグル。追従のチェックと同じ見た目で、同じ行に並べる */
+.audio-rsvp-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2em;
+  margin-left: 0.6em;
+  font-size: 0.7rem;
+  color: var(--md-default-fg-color--light);
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+}
+
+.audio-rsvp-toggle input {
+  margin: 0;
+  cursor: pointer;
+}
+
+/* オンの間は、貼り付けたプレイヤーとパネル以外の本文（見出し、対象章の行、原稿の段落、
+   編集ボタンなど）を隠す。パネルは JS がプレイヤーの直後に入れる */
+.audio-rsvp-on .md-content__inner > :not(.audio-sticky):not(.audio-rsvp) {
+  display: none;
+}
+
+/* パネルは画面の残りを占め、文節を中央に置く。押すと再生と一時停止を切り替える */
+.md-typeset .audio-rsvp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: calc(100vh - var(--audio-sticky-top, 2.4rem) - var(--audio-sticky-height, 0px) - 6rem);
+  margin: 0;
+  padding: 1rem 0.8rem;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* 表示中の文節。一行に収まるよう画面幅に応じて大きさを変え、一行分の高さを確保して
+   文節が変わっても下の文脈が上下に動かないようにする。長い英単語は文字の途中でも
+   折り返し、横にはみ出さないようにする */
+.md-typeset .audio-rsvp-word {
+  min-height: 1.4em;
+  overflow-wrap: anywhere;
+  font-size: clamp(1.1rem, 6.5vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset .audio-rsvp-hint {
+  max-width: 24em;
+  margin: 1em 0 0;
+  font-size: 0.7rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* いま読んでいる文。文節ごとの span を並べ、表示中の文節だけ色を変える */
+.md-typeset .audio-rsvp-context {
+  max-width: 36em;
+  min-height: 3em;
+  margin: 1.6em 0 0;
+  font-size: 0.7rem;
+  line-height: 1.7;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-typeset .audio-rsvp-current {
+  color: var(--md-accent-fg-color);
+  font-weight: 700;
+}
+
+.md-typeset .audio-rsvp-meter {
+  margin: 0.6em 0 0;
+  font-size: 0.6rem;
+  color: var(--md-default-fg-color--lighter);
+}

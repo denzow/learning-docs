@@ -217,6 +217,7 @@ develop の内容は `/develop/` 配下でプレビューできる。
 - `docs/js/quiz.js`：演習ページ（URL に `/exercises/` を含む）を解答 UI に変換する。
 - `docs/js/audio-progress.js`：読み上げ原稿ページ（URL に `/audio-scripts/` を含む）でプレイヤーを画面上部に固定し、再生位置を localStorage に保存する。保存キーは「教材/章」で、別の教材の同名の章と衝突しない。
 - `docs/js/audio-highlight.js`：`timing.json` と原稿の段落を突き合わせ、再生中の一文をハイライトして追従する。
+- `docs/js/audio-rsvp.js`：読み上げ原稿ページの RSVP モード。原稿を隠し、`timing.json` の文の時刻を文節の文字数で按分して、読み上げに合わせて文節を一つずつ表示する。
 - `.github/workflows/deploy-pages.yml`：main と develop の二重ビルドとデプロイ。
 
 これらを変えるときの注意点を挙げる。
@@ -225,6 +226,7 @@ develop の内容は `/develop/` 配下でプレビューできる。
 - 見出しのテキストで判定する JS は、toc の permalink（¶ のアンカー）を除いてから比較する。`quiz.js` の `headingText` がその例である。
 - Material はヘッダの高さを CSS 変数で公開していない。固定プレイヤーの位置は JS が実測して渡している。`.md-top`（ページトップへ戻るボタン）はインラインで位置が書かれるため、動かすには `!important` が要る。
 - 音声の再生位置を復元するシークでも `timeupdate` が発火する。保存は再生中に限定しないと、位置 0 で上書きされる。
+- RSVP モードは本文を `display: none` で隠す。本文の位置を使う処理は、隠れている間（`getBoundingClientRect` の幅と高さが 0）を除く。
 - Material は mermaid の図を closed な shadow root に描画する。描画の確認は要素の高さかスクリーンショットで行う。
 - `navigation.indexes` が効くのは、セクションの先頭が `index.md` のときだけである。教材のトップページの名前は変えない。
 - nav にラベルを書くと、そのラベルがページの `<title>` になる。「演習問題」のように章番号のないラベルにすると全章の `<title>` が同じになるので、hook は「第N章 演習問題」の形で付けている。
